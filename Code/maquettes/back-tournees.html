@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tournee du 12 aout 2026 | Maquette NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex flex-column lh-1" href="index.html">
+            <span class="fw-bold">NO MORE WASTE</span>
+            <small class="opacity-75" style="font-size:.7rem">Ensemble contre le gaspillage alimentaire</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-services.html"><i class="bi bi-calendar-event"></i> Nos services</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-candidature.html"><i class="bi bi-person-plus"></i> Devenir benevole</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-sm btn-outline-light ms-lg-2" href="back-tableau-de-bord.html">
+                        <i class="bi bi-speedometer2"></i> Back-office
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link disabled text-white-50">
+                        <i class="bi bi-person-circle"></i> staff@nomorewaste.fr
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Deconnexion</a>
+                </li>
+                <li class="nav-item dropdown ms-lg-2">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-globe2"></i> FR
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">Francais</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Italiano</a></li>
+                        <li><a class="dropdown-item" href="#">Portugues</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4 flex-grow-1">
+    <div class="alert alert-warning d-flex align-items-center gap-2 mb-4" role="alert">
+        <i class="bi bi-easel2 fs-5"></i>
+        <div><strong>Maquette</strong> &mdash; <code>POST /tournee-etapes/{id}/livraison</code> puis <code>GET /livraisons/{id}/pdf</code> &mdash; le <strong>recapitulatif PDF exige par le sujet</strong>.</div>
+    </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <h1 class="h3 mb-0"><i class="bi bi-truck"></i> Tournee du 12 aout 2026
+        <span class="badge text-bg-info align-middle">en_cours</span>
+    </h1>
+    <a href="back-tableau-de-bord.html" class="btn btn-sm btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Retour
+    </a>
+</div>
+
+<div class="row g-3 mb-3">
+    <div class="col-md-4">
+        <div class="card card-body shadow-sm">
+            <span class="text-body-secondary small">Chauffeur</span>
+            <span class="fw-semibold"><i class="bi bi-person-badge"></i> Paul Durand</span>
+            <span class="badge text-bg-success-subtle text-success-emphasis mt-1 align-self-start">
+                benevole valide
+            </span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-body shadow-sm">
+            <span class="text-body-secondary small">Progression</span>
+            <span class="fw-semibold">2 / 3 arrets livres</span>
+            <div class="progress mt-2" style="height:6px">
+                <div class="progress-bar bg-success" style="width:66%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-body shadow-sm">
+            <span class="text-body-secondary small">Produits distribues</span>
+            <span class="fw-semibold">8 articles</span>
+        </div>
+    </div>
+</div>
+
+<h2 class="h5 mb-2">Arrets de la tournee</h2>
+<div class="table-responsive">
+    <table class="table table-hover align-middle bg-body shadow-sm">
+        <thead class="table-light">
+            <tr>
+                <th class="text-center">Ordre</th><th>Beneficiaire</th>
+                <th>Heure prevue</th><th>Heure reelle</th>
+                <th class="text-center">Articles</th><th>Statut</th><th></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="text-center"><span class="badge rounded-pill text-bg-dark">1</span></td>
+                    <td class="fw-semibold">Restos du Coeur Paris 11<br>
+                        <small class="text-body-secondary fw-normal">association_caritative</small>
+                    </td>
+                    <td>10:30</td>
+                    <td>10:35</td>
+                    <td class="text-center">5</td>
+                    <td><span class="badge text-bg-success">livre</span></td>
+                    <td class="text-end"><a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> PDF</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><span class="badge rounded-pill text-bg-dark">2</span></td>
+                    <td class="fw-semibold">Secours Populaire Paris 12<br>
+                        <small class="text-body-secondary fw-normal">association_caritative</small>
+                    </td>
+                    <td>11:15</td>
+                    <td>11:20</td>
+                    <td class="text-center">3</td>
+                    <td><span class="badge text-bg-success">livre</span></td>
+                    <td class="text-end"><a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> PDF</a></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><span class="badge rounded-pill text-bg-dark">3</span></td>
+                    <td class="fw-semibold">Mme Rossi (particulier)<br>
+                        <small class="text-body-secondary fw-normal">particulier_detresse</small>
+                    </td>
+                    <td>12:00</td>
+                    <td>&mdash;</td>
+                    <td class="text-center">0</td>
+                    <td><span class="badge text-bg-secondary">a_faire</span></td>
+                    <td class="text-end"><button class="btn btn-sm btn-success"><i class="bi bi-check2"></i> Cloturer</button></td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="alert alert-light border mt-3 small mb-0">
+    <i class="bi bi-info-circle"></i>
+    Cloturer une livraison enchaine cinq operations : refus du doublon, verification
+    des produits, creation de la livraison, passage des produits au statut
+    <code>distribue</code>, et marquage de l'arret avec l'heure reelle.
+</div>
+
+</main>
+
+<footer class="border-top py-3 text-center text-body-secondary small">
+    NO MORE WASTE &mdash; 2026 &middot;
+    <a href="index.html" class="text-decoration-none">Retour au sommaire des maquettes</a>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

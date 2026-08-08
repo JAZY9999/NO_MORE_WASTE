@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nos services | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="bg-body border-bottom sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white"
+                  style="width:34px; height:34px">
+                <i class="bi bi-recycle fs-5"></i>
+            </span>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold" style="letter-spacing:.05em">NO MORE WASTE</span>
+                <small class="text-body-tertiary" style="font-size:.7rem">
+                    Ensemble contre le gaspillage alimentaire
+                </small>
+            </span>
+        </a>
+
+        <nav class="d-flex align-items-center gap-1 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-primary fw-semibold px-2 py-1" style="font-size:.9rem">Nos services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Devenir benevole</a>
+
+            <span class="vr mx-2 d-none d-md-inline"></span>
+
+            <div class="dropdown">
+                <button class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-translate"></i> FR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+
+            <a href="front-connexion.html" class="btn btn-sm btn-primary ms-1">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container py-5 flex-grow-1">
+        <div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mb-4"
+             style="font-size:.82rem">
+            <i class="bi bi-easel2 text-body-secondary"></i>
+            <div><strong>Maquette</strong> &mdash; <code>GET /services/</code> &mdash; route publique, aucune connexion requise.</div>
+        </div>
+
+<div class="mb-4">
+    <h1 class="display-6 fw-bold mb-2">Nos services</h1>
+    <p class="lead text-body-secondary mb-0" style="max-width:620px">
+        Gratuits, ouverts a tous, animes par nos benevoles. Inscrivez-vous a un creneau
+        en quelques clics.
+    </p>
+</div>
+
+<div class="d-flex gap-2 mb-4 flex-wrap">
+    <button class="btn btn-sm btn-primary rounded-pill">Tous</button>
+    <button class="btn btn-sm btn-outline-secondary rounded-pill">Cuisine</button>
+    <button class="btn btn-sm btn-outline-secondary rounded-pill">Conseil</button>
+    <button class="btn btn-sm btn-outline-secondary rounded-pill">Transport</button>
+    <button class="btn btn-sm btn-outline-secondary rounded-pill">Reparation</button>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <a href="front-service-detail.html" class="d-block h-100 border rounded p-4 text-decoration-none text-body bg-body">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis flex-shrink-0"
+                      style="width:44px; height:44px"><i class="bi bi-egg-fried fs-5"></i></span>
+                <div>
+                    <h2 class="h5 mb-1">Cours de cuisine anti-gaspi</h2>
+                    <p class="text-body-secondary mb-2" style="font-size:.88rem">Apprendre a cuisiner les restes et les invendus avec un benevole cuisinier.</p>
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis">
+                            3 creneaux ouverts
+                        </span>
+                        <small class="text-body-tertiary"><i class="bi bi-geo-alt"></i> Paris, Nantes</small>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="front-service-detail.html" class="d-block h-100 border rounded p-4 text-decoration-none text-body bg-body">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis flex-shrink-0"
+                      style="width:44px; height:44px"><i class="bi bi-lightbulb fs-5"></i></span>
+                <div>
+                    <h2 class="h5 mb-1">Conseil anti-gaspillage</h2>
+                    <p class="text-body-secondary mb-2" style="font-size:.88rem">Un benevole vous aide a reduire vos dechets alimentaires au quotidien.</p>
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis">
+                            5 creneaux ouverts
+                        </span>
+                        <small class="text-body-tertiary"><i class="bi bi-geo-alt"></i> Visio, Paris</small>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="front-service-detail.html" class="d-block h-100 border rounded p-4 text-decoration-none text-body bg-body">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis flex-shrink-0"
+                      style="width:44px; height:44px"><i class="bi bi-car-front fs-5"></i></span>
+                <div>
+                    <h2 class="h5 mb-1">Partage de vehicule</h2>
+                    <p class="text-body-secondary mb-2" style="font-size:.88rem">Mise a disposition d'un vehicule pour vos courses solidaires.</p>
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis">
+                            2 creneaux ouverts
+                        </span>
+                        <small class="text-body-tertiary"><i class="bi bi-geo-alt"></i> Nantes</small>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="front-service-detail.html" class="d-block h-100 border rounded p-4 text-decoration-none text-body bg-body">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis flex-shrink-0"
+                      style="width:44px; height:44px"><i class="bi bi-tools fs-5"></i></span>
+                <div>
+                    <h2 class="h5 mb-1">Petite reparation</h2>
+                    <p class="text-body-secondary mb-2" style="font-size:.88rem">Reparation de petit electromenager et de mobilier.</p>
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis">
+                            4 creneaux ouverts
+                        </span>
+                        <small class="text-body-tertiary"><i class="bi bi-geo-alt"></i> Paris</small>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-4 mt-auto bg-body-tertiary">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.82rem">
+        <div>
+            <div class="fw-semibold text-body">NO MORE WASTE</div>
+            <div>Association loi 1901 &mdash; Paris, Nantes, Marseille, Limoges, Naples, Porto, Dublin</div>
+        </div>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Benevoles | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 active bg-body-secondary border-start border-4 border-success fw-semibold">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+            <nav class="mb-3" style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none">Back-office</a></li>
+                    <li class="breadcrumb-item active">Benevoles</li>
+                </ol>
+            </nav>
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <code>GET /benevoles/?statut=...</code> &mdash; les onglets reprennent le filtre par statut de l'API.
+        </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+        <i class="bi bi-people text-success"></i> Benevoles
+    </h1>
+    
+</div>
+
+<ul class="nav nav-tabs mb-0 border-bottom border-2">
+    <li class="nav-item"><a class="nav-link rounded-0 active" href="#">Tous <span class="badge rounded-pill text-bg-secondary ms-1">4</span></a></li>
+    <li class="nav-item"><a class="nav-link rounded-0 text-body-secondary" href="#">Candidats <span class="badge rounded-pill text-bg-warning ms-1">1</span></a></li>
+    <li class="nav-item"><a class="nav-link rounded-0 text-body-secondary" href="#">En validation <span class="badge rounded-pill text-bg-warning ms-1">1</span></a></li>
+    <li class="nav-item"><a class="nav-link rounded-0 text-body-secondary" href="#">Valides <span class="badge rounded-pill text-bg-success ms-1">2</span></a></li>
+</ul>
+
+<div class="border border-2 border-top-0 rounded-0 bg-body">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead>
+                <tr class="border-bottom border-2">
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Benevole</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Statut</th>
+                    <th class="text-uppercase text-body-secondary text-center" style="font-size:.68rem; letter-spacing:.08em">Permis</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Documents</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Competences</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Durand Paul</div>
+                    <a href="mailto:paul.durand@test.fr" class="text-decoration-none small text-body-secondary">paul.durand@test.fr</a>
+                </td>
+                <td><span class="badge rounded-pill text-bg-secondary">candidat</span></td>
+                <td class="text-center"><i class="bi bi-car-front text-success" title="Permis"></i></td>
+                <td style="min-width:120px">
+                    <div class="d-flex justify-content-between" style="font-size:.75rem">
+                        <span>2/3 documents</span>
+                    </div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-warning" style="width:66%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border">chauffeur</span> <span class="badge rounded-pill text-bg-light border">cuisinier</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-outline-secondary">
+                        Ouvrir <i class="bi bi-chevron-right"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Bernard Sophie</div>
+                    <a href="mailto:s.bernard@test.fr" class="text-decoration-none small text-body-secondary">s.bernard@test.fr</a>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">valide</span></td>
+                <td class="text-center"><i class="bi bi-car-front text-success" title="Permis"></i></td>
+                <td style="min-width:120px">
+                    <div class="d-flex justify-content-between" style="font-size:.75rem">
+                        <span>3/3 documents</span>
+                    </div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:100%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border">chauffeur</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-outline-secondary">
+                        Ouvrir <i class="bi bi-chevron-right"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Lopez Marta</div>
+                    <a href="mailto:m.lopez@test.fr" class="text-decoration-none small text-body-secondary">m.lopez@test.fr</a>
+                </td>
+                <td><span class="badge rounded-pill text-bg-warning">en_validation</span></td>
+                <td class="text-center"><span class="text-body-tertiary">&mdash;</span></td>
+                <td style="min-width:120px">
+                    <div class="d-flex justify-content-between" style="font-size:.75rem">
+                        <span>1/2 documents</span>
+                    </div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-warning" style="width:50%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border">cuisinier</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-outline-secondary">
+                        Ouvrir <i class="bi bi-chevron-right"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Nguyen Kim</div>
+                    <a href="mailto:k.nguyen@test.fr" class="text-decoration-none small text-body-secondary">k.nguyen@test.fr</a>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">valide</span></td>
+                <td class="text-center"><span class="text-body-tertiary">&mdash;</span></td>
+                <td style="min-width:120px">
+                    <div class="d-flex justify-content-between" style="font-size:.75rem">
+                        <span>2/2 documents</span>
+                    </div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:100%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border">bricoleur</span> <span class="badge rounded-pill text-bg-light border">electricien</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-outline-secondary">
+                        Ouvrir <i class="bi bi-chevron-right"></i>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

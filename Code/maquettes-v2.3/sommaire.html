@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquettes V2.3 | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="border-bottom bg-body sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                  style="width:36px; height:36px"><i class="bi bi-recycle fs-5"></i></span>
+            <span class="fw-semibold" style="letter-spacing:.04em">NO MORE WASTE</span>
+        </a>
+
+        <nav class="d-flex align-items-center gap-4 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Benevolat</a>
+
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-body-secondary text-decoration-none dropdown-toggle p-0"
+                        data-bs-toggle="dropdown" style="font-size:.92rem">FR</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+
+            <a href="front-connexion.html" class="btn btn-sm btn-dark rounded-pill px-3">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container flex-grow-1" style="padding-top:4rem; padding-bottom:4rem">
+
+<div class="mb-5">
+    <span class="badge rounded-pill text-bg-dark mb-3">Version 2.3</span>
+    <h1 class="display-6 fw-bold mb-3">Maquettes NO MORE WASTE</h1>
+    <p class="fs-5 text-body-secondary mb-0" style="max-width:640px">
+        Variante de la V2.2 : deux densites opposees selon l'usage reel de chaque espace.
+    </p>
+</div>
+
+<div class="row g-5 mb-5">
+    <div class="col-md-6">
+        <div class="border-start border-3 border-dark ps-4">
+            <div class="fw-semibold mb-2">Back-office : dense</div>
+            <p class="text-body-secondary mb-0" style="font-size:.9rem">
+                Barre laterale <strong>sombre</strong>, tableaux compacts, onglets de
+                sous-navigation. C'est un outil utilise toute la journee : on veut voir
+                un maximum de lignes sans faire defiler, et separer nettement la
+                navigation du contenu.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="border-start border-3 border-primary ps-4">
+            <div class="fw-semibold mb-2">Front-office : aere</div>
+            <p class="text-body-secondary mb-0" style="font-size:.9rem">
+                Beaucoup d'espace, typographie large, listes separees par des filets
+                plutot que par des cartes. C'est une vitrine consultee quelques minutes :
+                on veut du confort de lecture, pas de la densite.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="border-top pt-4 mb-5">
+    <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Ce qui change par rapport a la V2.2</div>
+    <div class="row g-4 mt-1">
+        <div class="col-md-4">
+            <div class="fw-medium mb-1" style="font-size:.92rem">Barre laterale sombre</div>
+            <p class="text-body-secondary mb-0" style="font-size:.86rem">
+                Le contraste separe la navigation du contenu sans avoir besoin de bordures.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <div class="fw-medium mb-1" style="font-size:.92rem">Le bleu rendu aux actions</div>
+            <p class="text-body-secondary mb-0" style="font-size:.86rem">
+                La navigation etant sombre, le bleu ne sert plus qu'aux boutons d'action :
+                ils ressortent immediatement.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <div class="fw-medium mb-1" style="font-size:.92rem">Onglets de sous-navigation</div>
+            <p class="text-body-secondary mb-0" style="font-size:.86rem">
+                Les filtres par statut passent en onglets sous le titre : un clic au lieu
+                d'un menu deroulant.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-5">
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Front-office</div>
+            <small class="text-body-tertiary">aere, typographie large, beaucoup d'espace</small>
+        </div>
+        <div class="border-top">
+        <a href="index.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Accueil</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-services.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Catalogue des services</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-service-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Creneaux d'un service</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-candidature.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Candidature benevole</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-connexion.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Connexion</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Back-office</div>
+            <small class="text-body-tertiary">dense, barre laterale sombre, tableaux compacts</small>
+        </div>
+        <div class="border-top">
+        <a href="back-tableau-de-bord.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Tableau de bord</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-commercants.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Commercants</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Benevoles</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-benevole-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Detail benevole</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-collectes.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Collectes</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Stocks</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Tournees</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-services.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Services et creneaux</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="border-top mt-5 pt-4 text-body-secondary" style="font-size:.88rem">
+    Chaque maquette indique les routes d'API qu'elle consomme. Toutes existent et sont
+    testees (66/66), sauf le <em>tri</em> et la <em>pagination</em> des listes qui
+    demanderaient d'enrichir les routes de listing.
+</div>
+
+</main>
+
+<footer class="border-top py-5 mt-auto">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                          style="width:28px; height:28px"><i class="bi bi-recycle" style="font-size:.85rem"></i></span>
+                    <span class="fw-semibold" style="font-size:.9rem">NO MORE WASTE</span>
+                </div>
+                <p class="text-body-secondary mb-0" style="font-size:.84rem">
+                    Association loi 1901 luttant contre le gaspillage alimentaire.
+                </p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Villes</div>
+                <div class="text-body-secondary mt-2" style="font-size:.84rem">
+                    Paris &middot; Nantes &middot; Marseille &middot; Limoges<br>
+                    Naples &middot; Porto &middot; Dublin
+                </div>
+            </div>
+            <div class="col-6 col-md-4 text-md-end">
+                <a href="sommaire.html" class="text-decoration-none" style="font-size:.84rem">
+                    Sommaire des maquettes
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

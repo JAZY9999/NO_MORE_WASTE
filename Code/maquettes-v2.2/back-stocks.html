@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stocks | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end bg-body"
+       style="width:238px" id="barreLaterale">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+        <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white flex-shrink-0"
+              style="width:32px; height:32px">
+            <i class="bi bi-recycle"></i>
+        </span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-bold text-body" style="font-size:.8rem; letter-spacing:.05em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.64rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-columns-gap"></i> Tableau de bord
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-shop"></i> Commercants<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">12</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-people"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.62rem">3</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-basket"></i> Collectes<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">4</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none bg-primary bg-opacity-10 text-primary fw-semibold border-start border-3 border-primary" style="font-size:.85rem">
+            <i class="bi bi-box-seam"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.62rem">6</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-truck"></i> Tournees<span class="badge rounded-pill text-bg-primary ms-auto" style="font-size:.62rem">1</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-calendar-week"></i> Services<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">7</span>
+        </a>
+    </nav>
+
+    <div class="border-top p-3">
+        <div class="d-flex align-items-center gap-2">
+            <!-- Pastille d'initiales : evite d'avoir a stocker une photo. -->
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0"
+                  style="width:32px; height:32px; font-size:.72rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.74rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.64rem">admin_back</small>
+            </div>
+            <a href="#" class="text-body-tertiary" title="Deconnexion"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body-tertiary" style="min-width:0">
+<header class="bg-body border-bottom">
+        <div class="d-flex align-items-center gap-3 px-4 py-2 border-bottom">
+            <nav style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0" style="font-size:.78rem">
+                    <li class="breadcrumb-item">
+                        <a href="back-tableau-de-bord.html" class="text-decoration-none text-body-secondary">Back-office</a>
+                    </li>
+                    <li class="breadcrumb-item active">Stocks</li>
+                </ol>
+            </nav>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <div class="input-group input-group-sm" style="width:230px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher..." style="font-size:.8rem">
+                </div>
+                <button class="btn btn-sm btn-light position-relative" title="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                          style="font-size:.55rem">3</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-4 py-3">
+            <h1 class="h4 mb-0">Stocks</h1>
+            <div class="d-flex gap-2"><button class="btn btn-sm btn-light"><i class="bi bi-geo-alt"></i> Emplacements</button>
+              <button class="btn btn-sm btn-primary"><i class="bi bi-plus-lg"></i> Ajouter un produit</button></div>
+        </div>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4">
+        <div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mb-4"
+             style="font-size:.82rem">
+            <i class="bi bi-easel2 text-body-secondary"></i>
+            <div><strong>Maquette</strong> &mdash; <code>GET /produits/?code_barre=...</code> &mdash; <strong>la recherche rapide exigee par le sujet</strong>. L'index SQL sur la colonne rend la reponse quasi instantanee.</div>
+        </div>
+
+<!-- La recherche par code-barre est l'action principale de cet ecran :
+     pleine largeur, en haut, focus automatique. C'est le geste qu'un benevole
+     repete des dizaines de fois par jour avec une douchette. -->
+<div class="border rounded bg-body p-3 mb-3">
+    <label for="cb" class="form-label fw-semibold mb-2">
+        <i class="bi bi-upc-scan text-primary"></i> Rechercher un produit par code-barre
+    </label>
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control" id="cb"
+               placeholder="Scannez ou saisissez un code-barre" autofocus>
+        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+    </div>
+    <div class="form-text">
+        La douchette se comporte comme un clavier : le champ se remplit seul et le
+        formulaire part a la validation. Aucun materiel specifique n'est necessaire.
+    </div>
+</div>
+
+<div class="row g-3 mb-3">
+    <div class="col-6 col-lg-3">
+        <div class="border rounded bg-body p-3">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">En stock</div>
+            <div class="fs-4 fw-semibold text-success">128</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="border rounded bg-body p-3">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Reserves</div>
+            <div class="fs-4 fw-semibold text-warning-emphasis">14</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="border rounded bg-body p-3">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">DLC sous 3 jours</div>
+            <div class="fs-4 fw-semibold text-danger">6</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="border rounded bg-body p-3">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Distribues (mois)</div>
+            <div class="fs-4 fw-semibold">312</div>
+        </div>
+    </div>
+</div>
+
+<div class="border rounded bg-body p-3 mb-3">
+    <div class="row g-2 align-items-end">
+        <div class="col-6 col-md-3">
+            <label class="form-label mb-1" style="font-size:.78rem">Statut</label>
+            <select class="form-select form-select-sm">
+                <option>Tous</option><option selected>en_stock</option>
+                <option>reserve</option><option>distribue</option><option>perime</option>
+            </select>
+        </div>
+        <div class="col-6 col-md-3">
+            <label class="form-label mb-1" style="font-size:.78rem">Entrepot</label>
+            <select class="form-select form-select-sm">
+                <option>Tous</option><option>Paris Nord</option><option>Nantes</option>
+            </select>
+        </div>
+        <div class="col-6 col-md-3">
+            <label class="form-label mb-1" style="font-size:.78rem">Categorie</label>
+            <select class="form-select form-select-sm">
+                <option>Toutes</option><option>epicerie</option><option>frais</option>
+            </select>
+        </div>
+        <div class="col-6 col-md-3">
+            <label class="form-label mb-1" style="font-size:.78rem">DLC</label>
+            <select class="form-select form-select-sm">
+                <option>Toutes</option><option>sous 3 jours</option><option>sous 7 jours</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="border rounded bg-body">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="border-bottom">
+                <tr>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Code-barre</span></th>
+                    <th><a href="#" class="text-decoration-none text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Produit</a></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Categorie</span></th>
+                    <th><a href="#" class="text-decoration-none text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">DLC <i class="bi bi-caret-up-fill text-primary"></i></a></th>
+                    <th class="text-center"><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Qte</span></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Emplacement</span></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Statut</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code class="text-body-secondary">3760049790702</code></td>
+                <td class="fw-semibold">Pates completes 500g</td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary">epicerie</span></td>
+                <td class="lh-sm" style="font-size:.84rem">31/12/2026</td>
+                <td class="text-center fw-semibold">10</td>
+                <td class="lh-sm" style="font-size:.84rem">Paris Nord<br>
+                    <small class="text-body-tertiary">A-3-2</small></td>
+                <td><span class="badge rounded-pill text-bg-success">en_stock</span></td>
+                <td class="text-end"><div class="dropdown">
+        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+        <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#"><i class="bi bi-arrows-move"></i> Deplacer</a></li><li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Modifier</a></li><li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Retirer du stock</a></li></ul>
+    </div></td>
+            </tr>
+            <tr>
+                <td><code class="text-body-secondary">3017620422003</code></td>
+                <td class="fw-semibold">Pate a tartiner 400g</td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary">epicerie</span></td>
+                <td class="lh-sm" style="font-size:.84rem">31/03/2027</td>
+                <td class="text-center fw-semibold">6</td>
+                <td class="lh-sm" style="font-size:.84rem">Paris Nord<br>
+                    <small class="text-body-tertiary">A-1-1</small></td>
+                <td><span class="badge rounded-pill text-bg-success">en_stock</span></td>
+                <td class="text-end"><div class="dropdown">
+        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+        <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#"><i class="bi bi-arrows-move"></i> Deplacer</a></li><li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Modifier</a></li><li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Retirer du stock</a></li></ul>
+    </div></td>
+            </tr>
+            <tr>
+                <td><code class="text-body-secondary">3245390102030</code></td>
+                <td class="fw-semibold">Yaourts nature x8</td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary">frais</span></td>
+                <td class="lh-sm" style="font-size:.84rem">12/08/2026<div><small class="text-warning-emphasis">dans 11 j</small></div></td>
+                <td class="text-center fw-semibold">4</td>
+                <td class="lh-sm" style="font-size:.84rem">Paris Nord<br>
+                    <small class="text-body-tertiary">F-1-1</small></td>
+                <td><span class="badge rounded-pill text-bg-warning">reserve</span></td>
+                <td class="text-end"><div class="dropdown">
+        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+        <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#"><i class="bi bi-arrows-move"></i> Deplacer</a></li><li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Modifier</a></li><li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Retirer du stock</a></li></ul>
+    </div></td>
+            </tr>
+            <tr>
+                <td><code class="text-body-secondary">3560070491234</code></td>
+                <td class="fw-semibold">Soupe legumes 1L</td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary">epicerie</span></td>
+                <td class="lh-sm" style="font-size:.84rem"><span class="text-danger-emphasis fw-semibold">05/08/2026</span><div><small class="text-danger-emphasis">dans 4 j</small></div></td>
+                <td class="text-center fw-semibold">2</td>
+                <td class="lh-sm" style="font-size:.84rem">Nantes<br>
+                    <small class="text-body-tertiary">B-2-1</small></td>
+                <td><span class="badge rounded-pill text-bg-secondary">distribue</span></td>
+                <td class="text-end"><div class="dropdown">
+        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+        <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#"><i class="bi bi-arrows-move"></i> Deplacer</a></li><li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Modifier</a></li><li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Retirer du stock</a></li></ul>
+    </div></td>
+            </tr>
+            <tr>
+                <td><code class="text-body-secondary">3168930010265</code></td>
+                <td class="fw-semibold">Biscuits sables 200g</td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary">epicerie</span></td>
+                <td class="lh-sm" style="font-size:.84rem"><span class="text-danger-emphasis fw-semibold">02/08/2026</span><div><small class="text-danger-emphasis">dans 1 j</small></div></td>
+                <td class="text-center fw-semibold">8</td>
+                <td class="lh-sm" style="font-size:.84rem">Paris Nord<br>
+                    <small class="text-body-tertiary">A-2-3</small></td>
+                <td><span class="badge rounded-pill text-bg-danger">en_stock</span></td>
+                <td class="text-end"><div class="dropdown">
+        <button class="btn btn-sm btn-light" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+        <ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="#"><i class="bi bi-arrows-move"></i> Deplacer</a></li><li><a class="dropdown-item" href="#"><i class="bi bi-pencil"></i> Modifier</a></li><li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash"></i> Retirer du stock</a></li></ul>
+    </div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-3 py-2 border-top">
+        <small class="text-body-secondary">5 produits sur 128</small>
+        <nav>
+            <ul class="pagination pagination-sm mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li><li class="page-item"><a class="page-link" href="#">2</a></li><li class="page-item"><a class="page-link" href="#">3</a></li><li class="page-item"><a class="page-link" href="#">4</a></li><li class="page-item"><a class="page-link" href="#">5</a></li><li class="page-item"><a class="page-link" href="#">6</a></li><li class="page-item"><a class="page-link" href="#">7</a></li><li class="page-item"><a class="page-link" href="#">8</a></li><li class="page-item"><a class="page-link" href="#">9</a></li><li class="page-item"><a class="page-link" href="#">10</a></li><li class="page-item"><a class="page-link" href="#">11</a></li><li class="page-item"><a class="page-link" href="#">12</a></li><li class="page-item"><a class="page-link" href="#">13</a></li><li class="page-item"><a class="page-link" href="#">14</a></li><li class="page-item"><a class="page-link" href="#">15</a></li><li class="page-item"><a class="page-link" href="#">16</a></li><li class="page-item"><a class="page-link" href="#">17</a></li><li class="page-item"><a class="page-link" href="#">18</a></li><li class="page-item"><a class="page-link" href="#">19</a></li><li class="page-item"><a class="page-link" href="#">20</a></li><li class="page-item"><a class="page-link" href="#">21</a></li><li class="page-item"><a class="page-link" href="#">22</a></li><li class="page-item"><a class="page-link" href="#">23</a></li><li class="page-item"><a class="page-link" href="#">24</a></li><li class="page-item"><a class="page-link" href="#">25</a></li><li class="page-item"><a class="page-link" href="#">26</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary" style="font-size:.78rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

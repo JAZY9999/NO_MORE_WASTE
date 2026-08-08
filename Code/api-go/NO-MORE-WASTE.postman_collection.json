@@ -1,0 +1,2499 @@
+{
+  "info": {
+    "name": "NO MORE WASTE - API Go (Mission 1)",
+    "description": "Collection complete de l'API Go du projet NO MORE WASTE.\n\nCOMMENT S'EN SERVIR\n1. Verifier la variable `base_url` (onglet Variables de la collection). Par defaut : http://localhost:8080/api\n2. Lancer `00 - Sante & Auth > Connexion` : le JWT retourne est place automatiquement dans la variable `token` (script de test attache a la requete).\n3. Toutes les autres requetes reutilisent `{{token}}`.\n\nPARTICULARITE DU PROJET : le token est envoye BRUT dans le header `Authorization`, sans le prefixe `Bearer `. C'est la version simplifiee enseignee dans le cours ESGI.\n\nLes identifiants d'exemple correspondent aux comptes de test crees pendant le developpement.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8080/api",
+      "description": "Point d'entree de l'API, via le reverse proxy nginx"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "description": "Rempli automatiquement par la requete de connexion"
+    }
+  ],
+  "item": [
+    {
+      "name": "00 - Sante & Auth",
+      "item": [
+        {
+          "name": "Health check (API + base)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "Inscription (role adherent par defaut)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/register/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "register",
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"adherent@test.fr\",\n  \"mot_de_passe\": \"motdepasse123\",\n  \"nom\": \"Dupont\",\n  \"prenom\": \"Marie\",\n  \"telephone\": \"0612345678\",\n  \"date_naissance\": \"1990-05-14\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Connexion (retourne le JWT)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/login/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login",
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"staff2@nomorewaste.fr\",\n  \"mot_de_passe\": \"motdepasse123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Recupere le token de la reponse et le stocke dans la variable de collection",
+                  "if (pm.response.code === 200) {",
+                  "    const donnees = pm.response.json();",
+                  "    pm.collectionVariables.set('token', donnees.token);",
+                  "    console.log('Token enregistre.');",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Profil de l'utilisateur connecte",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/me/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "me",
+                ""
+              ]
+            },
+            "description": "Acces : Connecte (n'importe quel role)"
+          },
+          "response": []
+        },
+        {
+          "name": "Test du garde de role admin",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/ping/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "ping",
+                ""
+              ]
+            },
+            "description": "Acces : admin_back uniquement"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "01 - Commercants & adhesions",
+      "item": [
+        {
+          "name": "Creer un commercant",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/commercants/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "commercants",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"raison_sociale\": \"Boulangerie Martin\",\n  \"siret\": \"12345678900011\",\n  \"adresse\": \"12 rue des Lilas\",\n  \"ville\": \"Paris\",\n  \"pays\": \"France\",\n  \"email\": \"contact@boulangerie-martin.fr\",\n  \"telephone\": \"0145678901\",\n  \"contact_nom\": \"Jean Martin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les commercants",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/commercants/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "commercants",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un commercant",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/commercants/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "commercants",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Creer une adhesion",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/commercants/1/adhesions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "commercants",
+                "1",
+                "adhesions"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date_debut\": \"2026-01-01\",\n  \"date_fin\": \"2026-12-31\",\n  \"montant_cotisation\": \"150.00\",\n  \"statut\": \"active\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Renouveler / modifier une adhesion",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/adhesions/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "adhesions",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date_debut\": \"2027-01-01\",\n  \"date_fin\": \"2027-12-31\",\n  \"montant_cotisation\": \"160.00\",\n  \"statut\": \"active\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister toutes les adhesions",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/adhesions/"
+            },
+            "description": "Route ajoutee en portant l'ecran des adhesions : le back-office n'avait aucun moyen de voir les adhesions qu'il gere."
+          }
+        },
+        {
+          "name": "Filtrer les adhesions par statut",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/adhesions/?statut=active"
+            }
+          }
+        },
+        {
+          "name": "Modifier un commercant (mise a jour partielle)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"ville\": \"Lyon\"}"
+            },
+            "url": {
+              "raw": "{{base_url}}/commercants/1"
+            },
+            "description": "Route ajoutee en portant la fiche commercant. Seuls les champs envoyes sont modifies : les autres survivent. C'est aussi elle qui permet de rattacher une boutique deja creee a un compte."
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 - Rappels automatiques",
+      "item": [
+        {
+          "name": "Adhesions arrivant a echeance (J-30 / J-7)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/adhesions/a-renouveler/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "adhesions",
+                "a-renouveler",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Relance manuelle (echoue en 502 tant que le SMTP n'est pas configure)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/adhesions/1/relancer",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "adhesions",
+                "1",
+                "relancer"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Historique des rappels envoyes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/adhesions/1/historique-rappels",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "adhesions",
+                "1",
+                "historique-rappels"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Declencher le job de rappel a la main",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/jobs/rappels-adhesions/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "jobs",
+                "rappels-adhesions",
+                ""
+              ]
+            },
+            "description": "Acces : admin_back uniquement"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "03 - Campagnes ciblees (BONUS)",
+      "item": [
+        {
+          "name": "Creer une campagne segmentee",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/campagnes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "campagnes",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Relance Paris 2026\",\n  \"sujet_email\": \"Renouvelez votre adhesion\",\n  \"corps_email\": \"Bonjour, votre adhesion arrive a echeance.\",\n  \"critere_ville\": \"Paris\",\n  \"critere_statut_adhesion\": \"expiree\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les campagnes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/campagnes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "campagnes",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Previsualiser les destinataires (sans envoyer)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/campagnes/1/destinataires",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "campagnes",
+                "1",
+                "destinataires"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Envoyer la campagne",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/campagnes/1/declencher",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "campagnes",
+                "1",
+                "declencher"
+              ]
+            },
+            "description": "Acces : admin_back uniquement"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "04 - Stocks : emplacements",
+      "item": [
+        {
+          "name": "Creer un emplacement de stock",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/emplacements/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "emplacements",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entrepot\": \"Entrepot Paris Nord\",\n  \"zone\": \"A\",\n  \"rayon\": \"3\",\n  \"etagere\": \"2\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les emplacements",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/emplacements/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "emplacements",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un emplacement",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/emplacements/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "emplacements",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "05 - Stocks : produits & code-barre",
+      "item": [
+        {
+          "name": "Enregistrer un produit (scan code-barre)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/produits/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "produits",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code_barre\": \"3760049790702\",\n  \"libelle\": \"Pates completes 500g\",\n  \"categorie\": \"epicerie\",\n  \"dlc\": \"2026-12-31\",\n  \"poids_kg\": 0.5,\n  \"quantite\": 10,\n  \"emplacement_id\": 1,\n  \"statut\": \"en_stock\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RECHERCHE RAPIDE PAR CODE-BARRE (exigence sujet)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/produits/?code_barre=3760049790702",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "produits",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "code_barre",
+                  "value": "3760049790702"
+                }
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les produits (filtre par statut)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/produits/?statut=en_stock",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "produits",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "statut",
+                  "value": "en_stock"
+                }
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un produit",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/produits/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "produits",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Deplacer / modifier un produit",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/produits/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "produits",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"emplacement_id\": 1,\n  \"statut\": \"reserve\",\n  \"quantite\": 8\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "06 - Benevoles",
+      "item": [
+        {
+          "name": "CANDIDATURE PUBLIQUE (sans authentification)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/candidature/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "candidature",
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Durand\",\n  \"prenom\": \"Paul\",\n  \"email\": \"paul.durand@test.fr\",\n  \"telephone\": \"0623456789\",\n  \"adresse\": \"5 avenue Victor Hugo, Paris\",\n  \"permis_conduire\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les benevoles (filtre par statut)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/?statut=candidat",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "statut",
+                  "value": "candidat"
+                }
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un benevole",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "1) Ajouter un document justificatif",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/documents",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "documents"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type_document\": \"piece_identite\",\n  \"chemin_fichier\": \"/documents/cni_durand.pdf\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2) Lister les documents d'un benevole",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/documents",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "documents"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "3) Valider le document",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/documents/1/validation",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "documents",
+                "1",
+                "validation"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "4) VALIDER le benevole (echoue si l'etape 3 est sautee)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/validation",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "validation"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"statut\": \"valide\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "07 - Competences",
+      "item": [
+        {
+          "name": "Catalogue des competences",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/competences/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "competences",
+                ""
+              ]
+            },
+            "description": "Acces : Connecte (n'importe quel role)"
+          },
+          "response": []
+        },
+        {
+          "name": "Competences d'un benevole",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/competences",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "competences"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Ajouter 'chauffeur' (necessaire pour les tournees)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/competences/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "competences",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Ajouter 'cuisinier' (necessaire pour le cours de cuisine)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/competences/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "competences",
+                "2"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Ajouter 'plombier' (erreur de saisie volontaire)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/competences/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "competences",
+                "3"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Retirer 'plombier' (correction de l'erreur)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/benevoles/1/competences/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "benevoles",
+                "1",
+                "competences",
+                "3"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "08 - Collectes",
+      "item": [
+        {
+          "name": "Creer une collecte (chez un commercant)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/collectes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "collectes",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"commercant_id\": 1,\n  \"benevole_id\": 1,\n  \"date_prevue\": \"2026-08-05\",\n  \"statut\": \"planifiee\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les collectes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/collectes/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "collectes",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir une collecte",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/collectes/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "collectes",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Changer le statut (remplit date_realisee auto)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/collectes/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "collectes",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"statut\": \"realisee\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Scanner un produit PENDANT la collecte (le cree et le rattache)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/collectes/1/produits",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "collectes",
+                "1",
+                "produits"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code_barre\": \"3017620422003\",\n  \"libelle\": \"Pate a tartiner 400g\",\n  \"categorie\": \"epicerie\",\n  \"dlc\": \"2027-03-31\",\n  \"poids_kg\": 0.4,\n  \"quantite\": 6,\n  \"emplacement_id\": 1,\n  \"statut\": \"en_stock\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les produits d'une collecte",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/collectes/1/produits",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "collectes",
+                "1",
+                "produits"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "09 - Services & creneaux",
+      "item": [
+        {
+          "name": "Creer un service propose",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/services/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "services",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Cours de cuisine anti-gaspi\",\n  \"description\": \"Apprendre a cuisiner les restes\",\n  \"type\": \"cours_cuisine\",\n  \"competence_requise_id\": 2,\n  \"actif\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les services",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/services/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "services",
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir un service",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/services/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "services",
+                "1"
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "Ouvrir un creneau",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/services/1/creneaux",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "services",
+                "1",
+                "creneaux"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date_creneau\": \"2026-08-10\",\n  \"heure_debut\": \"14:00\",\n  \"heure_fin\": \"16:00\",\n  \"lieu\": \"Local Paris 11\",\n  \"capacite_max\": 8\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les creneaux d'un service",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/services/1/creneaux",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "services",
+                "1",
+                "creneaux"
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "AFFECTER un benevole (2 regles : valide + competent)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/creneaux/1/affectation",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "creneaux",
+                "1",
+                "affectation"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"benevole_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "S'inscrire a un creneau (controle de capacite)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/creneaux/1/inscriptions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "creneaux",
+                "1",
+                "inscriptions"
+              ]
+            },
+            "description": "Acces : Connecte (n'importe quel role)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"utilisateur_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les inscrits d'un creneau",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/creneaux/1/inscriptions",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "creneaux",
+                "1",
+                "inscriptions"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "10 - Planning benevoles",
+      "item": [
+        {
+          "name": "Planning du jour (3 tables jointes)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/plannings/?date=2026-08-10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "plannings",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "date",
+                  "value": "2026-08-10"
+                }
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Envoyer les plannings CSV par email a la main",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/jobs/plannings/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "jobs",
+                "plannings",
+                ""
+              ]
+            },
+            "description": "Acces : admin_back uniquement"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "11 - Beneficiaires",
+      "item": [
+        {
+          "name": "Creer un beneficiaire",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/beneficiaires/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "beneficiaires",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"association_caritative\",\n  \"nom\": \"Restos du Coeur Paris 11\",\n  \"adresse\": \"20 rue de la Roquette\",\n  \"ville\": \"Paris\",\n  \"telephone\": \"0143567890\",\n  \"contact\": \"Sophie Bernard\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les beneficiaires",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/beneficiaires/?type=association_caritative",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "beneficiaires",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "association_caritative"
+                }
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "12 - Tournees de distribution",
+      "item": [
+        {
+          "name": "Creer une tournee (chauffeur doit etre valide)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournees/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournees",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date_tournee\": \"2026-08-12\",\n  \"benevole_id\": 1,\n  \"statut\": \"planifiee\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les tournees",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournees/?statut=planifiee",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournees",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "statut",
+                  "value": "planifiee"
+                }
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtenir une tournee",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournees/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournees",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Changer le statut d'une tournee",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournees/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournees",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"statut\": \"en_cours\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ajouter un arret chez un beneficiaire",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournees/1/etapes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournees",
+                "1",
+                "etapes"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"beneficiaire_id\": 1,\n  \"ordre\": 1,\n  \"heure_prevue\": \"10:30\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister les arrets (tries par ordre)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournees/1/etapes",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournees",
+                "1",
+                "etapes"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "13 - Livraisons & PDF",
+      "item": [
+        {
+          "name": "CLOTURER une livraison (passe les produits en 'distribue')",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/tournee-etapes/1/livraison",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "tournee-etapes",
+                "1",
+                "livraison"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"produits\": [\n    {\n      \"produit_id\": 1,\n      \"quantite\": 3\n    },\n    {\n      \"produit_id\": 2,\n      \"quantite\": 1\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Recapitulatif en JSON (bonus)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/livraisons/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "livraisons",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "TELECHARGER LE PDF (exigence sujet)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/livraisons/1/pdf",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "livraisons",
+                "1",
+                "pdf"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "14 - Traductions & langues",
+      "item": [
+        {
+          "name": "Lister les langues (PUBLIC)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/langues/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "langues",
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "Ajouter une langue",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/langues/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "langues",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"es\",\n  \"libelle\": \"Espanol\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Lister toutes les traductions (PUBLIC)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/traductions/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "traductions",
+                ""
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "Traductions d'une seule langue",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/traductions/?langue=fr",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "traductions",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "langue",
+                  "value": "fr"
+                }
+              ]
+            },
+            "description": "Acces : Public (aucun token)"
+          },
+          "response": []
+        },
+        {
+          "name": "Ajouter un libelle",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/traductions/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "traductions",
+                ""
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cle\": \"demo.bonjour\",\n  \"valeur\": \"Bonjour\",\n  \"code_langue\": \"fr\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "IMPORT EN MASSE (fichiers JSON vers base)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/traductions/import",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "traductions",
+                "import"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code_langue\": \"fr\",\n  \"traductions\": {\n    \"demo.merci\": \"Merci\",\n    \"demo.au_revoir\": \"Au revoir\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Modifier un libelle",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/traductions/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "traductions",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cle\": \"demo.bonjour\",\n  \"valeur\": \"Bonjour a tous\",\n  \"code_langue\": \"fr\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer un libelle",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/traductions/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "traductions",
+                "1"
+              ]
+            },
+            "description": "Acces : staff_back ou admin_back"
+          },
+          "response": []
+        },
+        {
+          "name": "Supprimer une langue (et ses libelles)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/langues/es",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "langues",
+                "es"
+              ]
+            },
+            "description": "Acces : admin_back uniquement"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "15 - Comptes utilisateurs",
+      "item": [
+        {
+          "name": "Lister les comptes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/utilisateurs/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "utilisateurs",
+                ""
+              ]
+            },
+            "description": "Acces : admin_back uniquement"
+          },
+          "response": []
+        },
+        {
+          "name": "CREER UN COMPTE avec choix du role (comble le dernier trou)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "description": "JWT brut, SANS prefixe 'Bearer ' (choix du cours)"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/utilisateurs/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "utilisateurs",
+                ""
+              ]
+            },
+            "description": "Acces : admin_back uniquement",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"nouveau.staff@nomorewaste.fr\",\n  \"mot_de_passe\": \"motdepasse123\",\n  \"role\": \"staff_back\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

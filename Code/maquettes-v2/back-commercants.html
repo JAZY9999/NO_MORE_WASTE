@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Commercants | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 active bg-body-secondary border-start border-4 border-success fw-semibold">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+            <nav class="mb-3" style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none">Back-office</a></li>
+                    <li class="breadcrumb-item active">Commercants</li>
+                </ol>
+            </nav>
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <code>GET /commercants/</code>. La colonne <em>Adhesion</em> demande d'enrichir la route de l'API.
+        </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+        <i class="bi bi-shop text-success"></i> Commercants
+    </h1>
+    <button class="btn btn-sm btn-success rounded-0"><i class="bi bi-plus-lg"></i> Ajouter</button>
+</div>
+
+<div class="border border-2 rounded-0 bg-body p-3 mb-3">
+    <div class="row g-2 align-items-end">
+        <div class="col-md-4">
+            <label class="form-label small text-body-secondary mb-1">Recherche</label>
+            <div class="input-group input-group-sm">
+                <span class="input-group-text bg-body"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Raison sociale, SIRET...">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label small text-body-secondary mb-1">Ville</label>
+            <select class="form-select form-select-sm">
+                <option>Toutes</option><option>Naples</option>
+                <option selected>Paris</option><option>Porto</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label small text-body-secondary mb-1">Adhesion</label>
+            <select class="form-select form-select-sm">
+                <option>Toutes</option><option>active</option>
+                <option>expire bientot</option><option>expiree</option>
+            </select>
+        </div>
+        <div class="col-md-2 text-md-end">
+            <span class="badge rounded-pill text-bg-secondary">4 resultats</span>
+        </div>
+    </div>
+</div>
+
+<div class="border border-2 rounded-0 bg-body">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead>
+                <tr class="border-bottom border-2">
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Commercant</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Localisation</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Email</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Contact</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Adhesion</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Boulangerie Martin</div>
+                    <small class="text-body-secondary">12 rue des Lilas</small>
+                </td>
+                <td>Paris<br><small class="text-body-secondary">France</small></td>
+                <td><a href="mailto:martin@test.fr" class="text-decoration-none small">martin@test.fr</a></td>
+                <td class="small">Jean Martin</td>
+                <td>
+                    <span class="badge rounded-pill text-bg-success">active</span>
+                    <div><small class="text-body-tertiary">jusqu'au 31/12/2026</small></div>
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-three-dots"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Epicerie Lilas</div>
+                    <small class="text-body-secondary">3 avenue Gambetta</small>
+                </td>
+                <td>Paris<br><small class="text-body-secondary">France</small></td>
+                <td><a href="mailto:lilas@test.fr" class="text-decoration-none small">lilas@test.fr</a></td>
+                <td class="small">Sophie Blanc</td>
+                <td>
+                    <span class="badge rounded-pill text-bg-success">active</span>
+                    <div><small class="text-body-tertiary">jusqu'au 15/11/2026</small></div>
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-three-dots"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Primeur Napoli</div>
+                    <small class="text-body-secondary">5 via Roma</small>
+                </td>
+                <td>Naples<br><small class="text-body-secondary">Italie</small></td>
+                <td><a href="mailto:napoli@test.it" class="text-decoration-none small">napoli@test.it</a></td>
+                <td class="small">Marco Rossi</td>
+                <td>
+                    <span class="badge rounded-pill text-bg-warning">expire bientot</span>
+                    <div><small class="text-body-tertiary">jusqu'au 18/08/2026</small></div>
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-three-dots"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="fw-semibold">Padaria do Porto</div>
+                    <small class="text-body-secondary">10 rua Santa Catarina</small>
+                </td>
+                <td>Porto<br><small class="text-body-secondary">Portugal</small></td>
+                <td><a href="mailto:porto@test.pt" class="text-decoration-none small">porto@test.pt</a></td>
+                <td class="small">Ana Silva</td>
+                <td>
+                    <span class="badge rounded-pill text-bg-danger">expiree</span>
+                    <div><small class="text-body-tertiary">jusqu'au 01/07/2026</small></div>
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-three-dots"></i></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

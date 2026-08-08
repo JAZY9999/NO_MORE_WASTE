@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tournees | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 active bg-body-secondary border-start border-4 border-success fw-semibold">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+            <nav class="mb-3" style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none">Back-office</a></li>
+                    <li class="breadcrumb-item active">Tournees &rsaquo; 12 aout 2026</li>
+                </ol>
+            </nav>
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <code>POST /tournee-etapes/{id}/livraison</code> puis <code>GET /livraisons/{id}/pdf</code>.
+        </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+        <i class="bi bi-truck text-success"></i> Tournee du 12 aout 2026
+    </h1>
+    
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="border border-2 rounded-0 bg-body p-3">
+            <div class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Chauffeur</div>
+            <div class="fw-semibold mt-1">Paul Durand</div>
+            <span class="badge rounded-pill text-bg-success mt-1">benevole valide</span>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border border-2 rounded-0 bg-body p-3">
+            <div class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Progression</div>
+            <div class="fw-semibold mt-1">2 / 3 arrets</div>
+            <div class="progress mt-2" style="height:5px">
+                <div class="progress-bar bg-success" style="width:66%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border border-2 rounded-0 bg-body p-3">
+            <div class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Distribue</div>
+            <div class="fw-semibold mt-1">8 articles</div>
+            <small class="text-body-secondary">passes au statut <code>distribue</code></small>
+        </div>
+    </div>
+</div>
+
+<h2 class="h6 text-uppercase text-body-secondary mb-2"
+    style="font-size:.7rem; letter-spacing:.08em">Arrets, dans l'ordre de passage</h2>
+
+
+    <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 mb-2">
+        <div class="d-flex gap-3 align-items-start flex-wrap">
+            <div class="badge rounded-circle text-bg-dark d-flex align-items-center justify-content-center"
+                 style="width:32px; height:32px">1</div>
+            <div class="flex-grow-1">
+                <div class="fw-semibold">Restos du Coeur Paris 11</div>
+                <div class="text-body-secondary" style="font-size:.8rem">association caritative &middot; 20 rue de la Roquette</div>
+                <div class="d-flex gap-3 mt-2 flex-wrap" style="font-size:.8rem">
+                    <span><i class="bi bi-clock text-body-tertiary"></i> prevu 10:30</span>
+                    <span><i class="bi bi-check2 text-body-tertiary"></i> reel 10:35</span>
+                    <span><i class="bi bi-box text-body-tertiary"></i> 5 articles</span>
+                    <span class="badge rounded-pill text-bg-success">livre</span>
+                </div>
+            </div>
+            <div><a href="#" class="btn btn-sm btn-outline-danger rounded-0"><i class="bi bi-file-earmark-pdf"></i> Recapitulatif PDF</a></div>
+        </div>
+    </div>
+    <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 mb-2">
+        <div class="d-flex gap-3 align-items-start flex-wrap">
+            <div class="badge rounded-circle text-bg-dark d-flex align-items-center justify-content-center"
+                 style="width:32px; height:32px">2</div>
+            <div class="flex-grow-1">
+                <div class="fw-semibold">Secours Populaire Paris 12</div>
+                <div class="text-body-secondary" style="font-size:.8rem">association caritative &middot; 8 avenue Daumesnil</div>
+                <div class="d-flex gap-3 mt-2 flex-wrap" style="font-size:.8rem">
+                    <span><i class="bi bi-clock text-body-tertiary"></i> prevu 11:15</span>
+                    <span><i class="bi bi-check2 text-body-tertiary"></i> reel 11:20</span>
+                    <span><i class="bi bi-box text-body-tertiary"></i> 3 articles</span>
+                    <span class="badge rounded-pill text-bg-success">livre</span>
+                </div>
+            </div>
+            <div><a href="#" class="btn btn-sm btn-outline-danger rounded-0"><i class="bi bi-file-earmark-pdf"></i> Recapitulatif PDF</a></div>
+        </div>
+    </div>
+    <div class="border border-2 rounded-0 border-start border-4 border-secondary bg-body p-3 mb-2">
+        <div class="d-flex gap-3 align-items-start flex-wrap">
+            <div class="badge rounded-circle text-bg-dark d-flex align-items-center justify-content-center"
+                 style="width:32px; height:32px">3</div>
+            <div class="flex-grow-1">
+                <div class="fw-semibold">Mme Rossi</div>
+                <div class="text-body-secondary" style="font-size:.8rem">particulier en detresse &middot; 14 rue de Charonne</div>
+                <div class="d-flex gap-3 mt-2 flex-wrap" style="font-size:.8rem">
+                    <span><i class="bi bi-clock text-body-tertiary"></i> prevu 12:00</span>
+                    <span><i class="bi bi-check2 text-body-tertiary"></i> reel &mdash;</span>
+                    <span><i class="bi bi-box text-body-tertiary"></i> 0 articles</span>
+                    <span class="badge rounded-pill text-bg-secondary">a_faire</span>
+                </div>
+            </div>
+            <div><button class="btn btn-sm btn-success rounded-0"><i class="bi bi-check2-square"></i> Cloturer la livraison</button></div>
+        </div>
+    </div>
+
+<div class="border-start border-4 border-secondary bg-body-secondary px-3 py-2 mt-3 small">
+    <i class="bi bi-info-circle"></i>
+    Cloturer une livraison enchaine cinq operations : refus du doublon, verification
+    des produits, creation de la livraison, passage des produits en <code>distribue</code>,
+    et marquage de l'arret avec l'heure reelle.
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

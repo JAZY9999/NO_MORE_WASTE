@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page introuvable | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="border-bottom bg-body sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                  style="width:36px; height:36px"><i class="bi bi-recycle fs-5"></i></span>
+            <span class="fw-semibold" style="letter-spacing:.04em">NO MORE WASTE</span>
+        </a>
+        <nav class="d-flex align-items-center gap-4 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Benevolat</a>
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-body-secondary text-decoration-none dropdown-toggle p-0"
+                        data-bs-toggle="dropdown" style="font-size:.92rem">FR</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+            <!-- Une fois connecte, ce bouton mene a l'espace correspondant au role.
+                 Sur les maquettes on montre l'entree commercant. -->
+            <a href="front-espace-commercant.html" class="text-decoration-none text-body-secondary"
+               style="font-size:.92rem">Mon espace</a>
+            <a href="front-connexion.html" class="btn btn-sm btn-dark rounded-pill px-3">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container flex-grow-1" style="padding-top:4rem; padding-bottom:4rem">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; remplace <code>Code/nginx/errors/404.html</code>, qui garde encore l'ancien
+habillage vert. Repond a <em>&laquo; prevoir reecriture d'URL, codes d'erreurs etc &raquo;</em>.
+Servie par nginx (<code>error_page 404</code>) et par le <code>notFound</code> de FlightPHP.</div>
+            </div>
+
+<div class="row justify-content-center text-center py-5">
+    <div class="col-lg-6">
+        <div class="display-1 fw-bold text-primary lh-1">404</div>
+        <h1 class="h3 fw-bold mt-3 mb-3">Cette page n'existe pas</h1>
+        <p class="fs-5 text-body-secondary mb-4">
+            Le lien est peut-etre errone, ou la page a ete deplacee.
+        </p>
+
+        <div class="d-flex gap-3 justify-content-center flex-wrap mb-5">
+            <a href="index.html" class="btn btn-primary rounded-pill px-4">Retour a l'accueil</a>
+            <a href="front-services.html" class="btn btn-link text-body text-decoration-none">
+                Voir nos services &rarr;
+            </a>
+        </div>
+
+        <div class="border-top pt-4 text-start">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Vous cherchiez peut-etre</div>
+            <div class="mt-2">
+                <a href="front-services.html" class="d-flex justify-content-between align-items-center
+                          py-2 border-bottom text-decoration-none text-body">
+                    <span style="font-size:.92rem">Nos services et leurs creneaux</span>
+                    <span class="text-primary">&rarr;</span>
+                </a>
+                <a href="front-candidature.html" class="d-flex justify-content-between align-items-center
+                          py-2 border-bottom text-decoration-none text-body">
+                    <span style="font-size:.92rem">Devenir benevole</span>
+                    <span class="text-primary">&rarr;</span>
+                </a>
+                <a href="front-connexion.html" class="d-flex justify-content-between align-items-center
+                          py-2 text-decoration-none text-body">
+                    <span style="font-size:.92rem">Acceder a mon espace</span>
+                    <span class="text-primary">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-5 mt-auto">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.84rem">
+        <span>NO MORE WASTE &mdash; 2026</span>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

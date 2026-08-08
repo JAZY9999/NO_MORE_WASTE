@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="bg-body border-bottom sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white"
+                  style="width:34px; height:34px">
+                <i class="bi bi-recycle fs-5"></i>
+            </span>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold" style="letter-spacing:.05em">NO MORE WASTE</span>
+                <small class="text-body-tertiary" style="font-size:.7rem">
+                    Ensemble contre le gaspillage alimentaire
+                </small>
+            </span>
+        </a>
+
+        <nav class="d-flex align-items-center gap-1 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-primary fw-semibold px-2 py-1" style="font-size:.9rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Nos services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Devenir benevole</a>
+
+            <span class="vr mx-2 d-none d-md-inline"></span>
+
+            <div class="dropdown">
+                <button class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-translate"></i> FR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+
+            <a href="front-connexion.html" class="btn btn-sm btn-primary ms-1">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container py-5 flex-grow-1">
+        <div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mb-4"
+             style="font-size:.82rem">
+            <i class="bi bi-easel2 text-body-secondary"></i>
+            <div><strong>Maquette</strong> &mdash; page d'accueil publique. Les chiffres pourraient venir de l'API ou rester en dur dans un premier temps.</div>
+        </div>
+
+<div class="row align-items-center g-4 mb-5">
+    <div class="col-lg-7">
+        <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
+            Association loi 1901
+        </span>
+        <h1 class="display-5 fw-bold mb-3">
+            Chaque annee, un tiers de la nourriture produite est jetee.
+        </h1>
+        <p class="lead text-body-secondary mb-4">
+            NO MORE WASTE collecte les invendus des commercants et les redistribue
+            aux associations caritatives et aux personnes en difficulte.
+        </p>
+        <div class="d-flex gap-2 flex-wrap">
+            <a href="front-candidature.html" class="btn btn-primary">Devenir benevole</a>
+            <a href="front-services.html" class="btn btn-outline-secondary">Decouvrir nos services</a>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="border rounded bg-body-tertiary p-4">
+            <div class="row g-4">
+        <div class="col-6 col-lg-3 text-center">
+            <div class="fs-2 fw-bold text-primary lh-1">1 240</div>
+            <div class="text-body-secondary" style="font-size:.84rem">repas distribues ce mois</div>
+        </div>
+        <div class="col-6 col-lg-3 text-center">
+            <div class="fs-2 fw-bold text-primary lh-1">12</div>
+            <div class="text-body-secondary" style="font-size:.84rem">commercants partenaires</div>
+        </div>
+        <div class="col-6 col-lg-3 text-center">
+            <div class="fs-2 fw-bold text-primary lh-1">8</div>
+            <div class="text-body-secondary" style="font-size:.84rem">benevoles actifs</div>
+        </div>
+        <div class="col-6 col-lg-3 text-center">
+            <div class="fs-2 fw-bold text-primary lh-1">7</div>
+            <div class="text-body-secondary" style="font-size:.84rem">villes en Europe</div>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-5">
+    <div class="col-md-4">
+        <div class="border rounded bg-body p-4 h-100 d-flex flex-column">
+            <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis mb-3"
+                  style="width:44px; height:44px"><i class="bi bi-calendar-event fs-5"></i></span>
+            <h2 class="h5 mb-2">Participer a un service</h2>
+            <p class="text-body-secondary flex-grow-1" style="font-size:.88rem">Cours de cuisine, conseils anti-gaspi, reparation... Gratuits et ouverts a tous.</p>
+            <a href="front-services.html" class="btn btn-outline-primary btn-sm align-self-start">Voir les services</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded bg-body p-4 h-100 d-flex flex-column">
+            <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis mb-3"
+                  style="width:44px; height:44px"><i class="bi bi-person-plus fs-5"></i></span>
+            <h2 class="h5 mb-2">Devenir benevole</h2>
+            <p class="text-body-secondary flex-grow-1" style="font-size:.88rem">Collectes, tournees de distribution, animation de services. Selon vos disponibilites.</p>
+            <a href="front-candidature.html" class="btn btn-outline-primary btn-sm align-self-start">Deposer ma candidature</a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded bg-body p-4 h-100 d-flex flex-column">
+            <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis mb-3"
+                  style="width:44px; height:44px"><i class="bi bi-shop fs-5"></i></span>
+            <h2 class="h5 mb-2">Devenir commercant partenaire</h2>
+            <p class="text-body-secondary flex-grow-1" style="font-size:.88rem">Donnez vos invendus plutot que de les jeter. Nous venons les collecter.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm align-self-start">Nous contacter</a>
+        </div>
+    </div>
+</div>
+
+<div class="border-top pt-4">
+    <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Comment ca marche</div>
+    <div class="row g-4 mt-1">
+        <div class="col-md-3">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-semibold flex-shrink-0"
+                      style="width:30px; height:30px; font-size:.82rem">1</span>
+                <div>
+                    <div class="fw-semibold" style="font-size:.92rem">Le commercant adhere</div>
+                    <small class="text-body-secondary">Il signale ses invendus.</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-semibold flex-shrink-0"
+                      style="width:30px; height:30px; font-size:.82rem">2</span>
+                <div>
+                    <div class="fw-semibold" style="font-size:.92rem">Un benevole collecte</div>
+                    <small class="text-body-secondary">Les produits sont scannes et stockes.</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-semibold flex-shrink-0"
+                      style="width:30px; height:30px; font-size:.82rem">3</span>
+                <div>
+                    <div class="fw-semibold" style="font-size:.92rem">Une tournee est organisee</div>
+                    <small class="text-body-secondary">Avec un circuit et des horaires.</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="d-flex gap-3">
+                <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-semibold flex-shrink-0"
+                      style="width:30px; height:30px; font-size:.82rem">4</span>
+                <div>
+                    <div class="fw-semibold" style="font-size:.92rem">Les produits sont remis</div>
+                    <small class="text-body-secondary">Avec un recapitulatif signe.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-4 mt-auto bg-body-tertiary">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.82rem">
+        <div>
+            <div class="fw-semibold text-body">NO MORE WASTE</div>
+            <div>Association loi 1901 &mdash; Paris, Nantes, Marseille, Limoges, Naples, Porto, Dublin</div>
+        </div>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cours de cuisine anti-gaspi | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="bg-body border-bottom border-3 border-success">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <i class="bi bi-recycle fs-3 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold" style="letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.72rem">
+                    Ensemble contre le gaspillage alimentaire
+                </small>
+            </span>
+        </a>
+
+        <nav class="d-flex align-items-center gap-1 flex-wrap">
+            <a href="index.html" class="btn btn-sm btn-link text-body text-decoration-none">Accueil</a>
+            <a href="front-services.html" class="btn btn-sm btn-link text-body text-decoration-none">Nos services</a>
+            <a href="front-candidature.html" class="btn btn-sm btn-link text-body text-decoration-none">Devenir benevole</a>
+
+            <span class="vr mx-2 d-none d-md-inline"></span>
+
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-translate"></i> FR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+
+            <a href="#" class="btn btn-sm btn-success ms-1">
+                <i class="bi bi-box-arrow-in-right"></i> Connexion
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="container py-5 flex-grow-1">
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <code>GET /services/{id}/creneaux</code> puis <code>POST /creneaux/{id}/inscriptions</code>.
+        </div>
+
+<a href="front-services.html" class="text-decoration-none small text-body-secondary">
+    <i class="bi bi-arrow-left"></i> Tous les services
+</a>
+
+<div class="my-4">
+    <h1 class="display-6 fw-bold mb-2">
+        <i class="bi bi-egg-fried text-success"></i> Cours de cuisine anti-gaspi
+    </h1>
+    <p class="lead text-body-secondary" style="max-width:620px">
+        Apprendre a cuisiner les restes et les invendus, avec un benevole cuisinier.
+        Gratuit, ouvert a tous, sur inscription.
+    </p>
+</div>
+
+<h2 class="h6 text-uppercase text-body-secondary mb-3"
+    style="font-size:.7rem; letter-spacing:.08em">Creneaux disponibles</h2>
+
+
+    <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 mb-2
+                d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+            <div class="fw-semibold">Lundi 10 aout</div>
+            <div class="text-body-secondary" style="font-size:.85rem">
+                <i class="bi bi-clock"></i> 14:00 &ndash; 16:00
+                &middot; <i class="bi bi-geo-alt"></i> Local Paris 11
+                &middot; <i class="bi bi-person"></i> Paul Durand
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end" style="font-size:.8rem">
+                <div>5 / 8 places</div>
+                <div class="progress mt-1" style="height:4px; width:90px">
+                    <div class="progress-bar bg-success" style="width:62%"></div>
+                </div>
+            </div>
+            <button class="btn btn-success rounded-0">S'inscrire</button>
+        </div>
+    </div>
+    <div class="border border-2 rounded-0 border-start border-4 border-secondary bg-body p-3 mb-2
+                d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+            <div class="fw-semibold">Mercredi 12 aout</div>
+            <div class="text-body-secondary" style="font-size:.85rem">
+                <i class="bi bi-clock"></i> 10:00 &ndash; 12:00
+                &middot; <i class="bi bi-geo-alt"></i> Local Paris 11
+                &middot; <i class="bi bi-person"></i> Paul Durand
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end" style="font-size:.8rem">
+                <div>8 / 8 places</div>
+                <div class="progress mt-1" style="height:4px; width:90px">
+                    <div class="progress-bar bg-success" style="width:100%"></div>
+                </div>
+            </div>
+            <button class="btn btn-outline-secondary rounded-0" disabled>Complet</button>
+        </div>
+    </div>
+    <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 mb-2
+                d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div>
+            <div class="fw-semibold">Samedi 15 aout</div>
+            <div class="text-body-secondary" style="font-size:.85rem">
+                <i class="bi bi-clock"></i> 09:30 &ndash; 11:30
+                &middot; <i class="bi bi-geo-alt"></i> Local Nantes centre
+                &middot; <i class="bi bi-person"></i> Sophie Bernard
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <div class="text-end" style="font-size:.8rem">
+                <div>2 / 6 places</div>
+                <div class="progress mt-1" style="height:4px; width:90px">
+                    <div class="progress-bar bg-success" style="width:33%"></div>
+                </div>
+            </div>
+            <button class="btn btn-success rounded-0">S'inscrire</button>
+        </div>
+    </div>
+
+</main>
+
+<footer class="border-top py-4 mt-auto">
+    <div class="container d-flex justify-content-between flex-wrap gap-2 text-body-secondary small">
+        <span>NO MORE WASTE &mdash; 2026</span>
+        <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

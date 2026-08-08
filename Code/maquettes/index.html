@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquettes | Maquette NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand d-flex flex-column lh-1" href="index.html">
+            <span class="fw-bold">NO MORE WASTE</span>
+            <small class="opacity-75" style="font-size:.7rem">Ensemble contre le gaspillage alimentaire</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-services.html"><i class="bi bi-calendar-event"></i> Nos services</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-candidature.html"><i class="bi bi-person-plus"></i> Devenir benevole</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right"></i> Connexion</a>
+                </li>
+                <li class="nav-item dropdown ms-lg-2">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-globe2"></i> FR
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">Francais</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Italiano</a></li>
+                        <li><a class="dropdown-item" href="#">Portugues</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4 flex-grow-1">
+
+<h1 class="h3 mb-1"><i class="bi bi-easel2"></i> Maquettes NO MORE WASTE</h1>
+<p class="text-body-secondary">
+    Ecrans du front FlightPHP, en HTML statique. Ouvrables directement dans un
+    navigateur, <strong>sans Docker ni PHP</strong>. Meme habillage Bootstrap que le site final.
+</p>
+
+<div class="alert alert-info d-flex align-items-start gap-2">
+    <i class="bi bi-info-circle-fill fs-5"></i>
+    <div>
+        <strong>A quoi ca sert.</strong> Valider la mise en page et le parcours
+        <em>avant</em> d'ecrire les vues PHP, et servir de reference pendant le codage.
+        Les donnees affichees sont fictives ; aucun bouton n'est actif.
+    </div>
+</div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header text-bg-success fw-semibold">Front-office (public)</div>
+        <div class="list-group list-group-flush">
+            <a href="front-services.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-calendar-event"></i> Catalogue des services</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="front-service-detail.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-list-check"></i> Creneaux d'un service + inscription</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="front-candidature.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-person-plus"></i> Candidature benevole</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a></div>
+    </div>
+    <div class="card shadow-sm mb-4">
+        <div class="card-header text-bg-dark fw-semibold">Back-office (interne)</div>
+        <div class="list-group list-group-flush">
+            <a href="back-tableau-de-bord.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-speedometer2"></i> Tableau de bord (version finale)</span>
+                <span class="badge text-bg-info">PARTIEL</span>
+            </a>
+            <a href="back-commercants.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-shop"></i> Liste des commercants</span>
+                <span class="badge text-bg-success">CODE</span>
+            </a>
+            <a href="back-benevoles.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-people"></i> Liste des benevoles</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="back-benevole-detail.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-person-check"></i> Detail benevole + validation documents</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="back-collectes.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-basket"></i> Collectes</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="back-stocks.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-box-seam"></i> Stocks + recherche code-barre</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="back-tournees.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-truck"></i> Tournee + cloture + PDF</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a>
+            <a href="back-services.html" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-calendar-event"></i> Services, creneaux, affectation</span>
+                <span class="badge text-bg-warning">A CODER</span>
+            </a></div>
+    </div>
+
+<div class="card card-body shadow-sm bg-body-secondary">
+    <h2 class="h6"><i class="bi bi-diagram-3"></i> Rappel : comment ces ecrans s'alimentent</h2>
+    <p class="small mb-0">
+        Chaque maquette indique en haut la ou les routes d'API qu'elle consomme.
+        <strong>Toutes ces routes existent deja et sont testees</strong> (66/66) :
+        il ne reste qu'a ecrire les controleurs et les vues qui les affichent.
+    </p>
+</div>
+
+</main>
+
+<footer class="border-top py-3 text-center text-body-secondary small">
+    NO MORE WASTE &mdash; 2026 &middot;
+    <a href="index.html" class="text-decoration-none">Retour au sommaire des maquettes</a>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

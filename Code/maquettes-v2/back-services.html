@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 active bg-body-secondary border-start border-4 border-success fw-semibold">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+            <nav class="mb-3" style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none">Back-office</a></li>
+                    <li class="breadcrumb-item active">Services</li>
+                </ol>
+            </nav>
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <code>PUT /creneaux/{id}/affectation</code> et <code>GET /plannings/?date=...</code>.
+        </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+        <i class="bi bi-calendar-event text-success"></i> Services et creneaux
+    </h1>
+    <button class="btn btn-sm btn-success rounded-0"><i class="bi bi-plus-lg"></i> Nouveau creneau</button>
+</div>
+
+<div class="d-flex gap-2 mb-3 flex-wrap">
+    <a href="#" class="btn btn-sm btn-outline-secondary rounded-0">
+        <i class="bi bi-filetype-csv"></i> Planning du jour
+    </a>
+    <a href="#" class="btn btn-sm btn-outline-secondary rounded-0">
+        <i class="bi bi-envelope-arrow-up"></i> Envoyer les plannings aux benevoles
+    </a>
+</div>
+
+<div class="border border-2 rounded-0 bg-body">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead>
+                <tr class="border-bottom border-2">
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Service</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Quand</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Lieu</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Benevole</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Places</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="fw-semibold">Cours de cuisine anti-gaspi</td>
+                <td class="small">10/08<br><small class="text-body-secondary">14:00-16:00</small></td>
+                <td class="small">Local Paris 11</td>
+                <td class="small">Paul Durand</td>
+                <td style="min-width:110px">
+                    <div style="font-size:.75rem">5 / 8</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:62%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            <tr>
+                <td class="fw-semibold">Cours de cuisine anti-gaspi</td>
+                <td class="small">12/08<br><small class="text-body-secondary">10:00-12:00</small></td>
+                <td class="small">Local Paris 11</td>
+                <td class="small">Paul Durand</td>
+                <td style="min-width:110px">
+                    <div style="font-size:.75rem">8 / 8</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-danger" style="width:100%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-danger">complet</span></td>
+            </tr>
+            <tr>
+                <td class="fw-semibold">Conseil anti-gaspillage</td>
+                <td class="small">11/08<br><small class="text-body-secondary">09:00-10:00</small></td>
+                <td class="small">Visio</td>
+                <td class="small"><button class="btn btn-sm btn-outline-primary py-0" style="font-size:.75rem"><i class="bi bi-person-plus"></i> affecter</button></td>
+                <td style="min-width:110px">
+                    <div style="font-size:.75rem">2 / 5</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:40%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            <tr>
+                <td class="fw-semibold">Partage de vehicule</td>
+                <td class="small">13/08<br><small class="text-body-secondary">08:00-18:00</small></td>
+                <td class="small">Nantes centre</td>
+                <td class="small">Sophie Bernard</td>
+                <td style="min-width:110px">
+                    <div style="font-size:.75rem">1 / 2</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:50%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="border-start border-4 border-secondary bg-body-secondary px-3 py-2 mt-3 small">
+    <i class="bi bi-info-circle"></i>
+    <strong>Deux conditions pour affecter un benevole :</strong> etre au statut
+    <code>valide</code>, et posseder la competence requise par le service.
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

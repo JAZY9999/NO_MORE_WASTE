@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devenir benevole | Maquette NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+        <a class="navbar-brand d-flex flex-column lh-1" href="index.html">
+            <span class="fw-bold">NO MORE WASTE</span>
+            <small class="opacity-75" style="font-size:.7rem">Ensemble contre le gaspillage alimentaire</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-services.html"><i class="bi bi-calendar-event"></i> Nos services</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-candidature.html"><i class="bi bi-person-plus"></i> Devenir benevole</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right"></i> Connexion</a>
+                </li>
+                <li class="nav-item dropdown ms-lg-2">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-globe2"></i> FR
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">Francais</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Italiano</a></li>
+                        <li><a class="dropdown-item" href="#">Portugues</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4 flex-grow-1">
+    <div class="alert alert-warning d-flex align-items-center gap-2 mb-4" role="alert">
+        <i class="bi bi-easel2 fs-5"></i>
+        <div><strong>Maquette</strong> &mdash; <code>POST /benevoles/candidature/</code> &mdash; la seule route d'ecriture accessible <strong>sans authentification</strong>.</div>
+    </div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+
+        <h1 class="h3 mb-1"><i class="bi bi-person-plus"></i> Devenir benevole</h1>
+        <p class="text-body-secondary">
+            Remplissez ce formulaire pour proposer votre aide. Un membre de l'association
+            vous recontactera pour valider votre candidature.
+        </p>
+
+        <form class="card card-body shadow-sm">
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label for="nom" class="form-label">Nom <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nom" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="prenom" class="form-label">Prenom <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="prenom" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="tel" class="form-label">Telephone</label>
+                    <input type="tel" class="form-control" id="tel">
+                </div>
+
+                <div class="col-12">
+                    <label for="adresse" class="form-label">Adresse</label>
+                    <input type="text" class="form-control" id="adresse">
+                </div>
+
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="permis">
+                        <label class="form-check-label" for="permis">
+                            Je possede le permis de conduire
+                            <small class="text-body-secondary d-block">
+                                Necessaire pour les collectes et les tournees de distribution.
+                            </small>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="alert alert-info mb-0 small">
+                        <i class="bi bi-info-circle"></i>
+                        Apres envoi, votre statut sera <strong>candidat</strong>. Vous devrez fournir
+                        vos justificatifs, qui seront verifies avant validation definitive.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-send"></i> Envoyer ma candidature
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-3 text-center text-body-secondary small">
+    NO MORE WASTE &mdash; 2026 &middot;
+    <a href="index.html" class="text-decoration-none">Retour au sommaire des maquettes</a>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paul Durand | Maquette NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex flex-column lh-1" href="index.html">
+            <span class="fw-bold">NO MORE WASTE</span>
+            <small class="opacity-75" style="font-size:.7rem">Ensemble contre le gaspillage alimentaire</small>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-label="Menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-services.html"><i class="bi bi-calendar-event"></i> Nos services</a></li>
+                <li class="nav-item"><a class="nav-link" href="front-candidature.html"><i class="bi bi-person-plus"></i> Devenir benevole</a></li>
+                <li class="nav-item">
+                    <a class="btn btn-sm btn-outline-light ms-lg-2" href="back-tableau-de-bord.html">
+                        <i class="bi bi-speedometer2"></i> Back-office
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link disabled text-white-50">
+                        <i class="bi bi-person-circle"></i> staff@nomorewaste.fr
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Deconnexion</a>
+                </li>
+                <li class="nav-item dropdown ms-lg-2">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-globe2"></i> FR
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active" href="#">Francais</a></li>
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Italiano</a></li>
+                        <li><a class="dropdown-item" href="#">Portugues</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4 flex-grow-1">
+    <div class="alert alert-warning d-flex align-items-center gap-2 mb-4" role="alert">
+        <i class="bi bi-easel2 fs-5"></i>
+        <div><strong>Maquette</strong> &mdash; <strong>l'ecran le plus important du back-office</strong> : la regle metier du sujet &mdash; on ne peut valider un benevole que si <em>tous</em> ses documents sont valides (<code>TousLesDocumentsSontValides</code>).</div>
+    </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <h1 class="h3 mb-0"><i class="bi bi-person"></i> Paul Durand
+        <span class="badge text-bg-secondary align-middle">candidat</span>
+    </h1>
+    <a href="back-benevoles.html" class="btn btn-sm btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Retour
+    </a>
+</div>
+
+<div class="row g-3">
+
+    <div class="col-lg-5">
+        <div class="card shadow-sm h-100">
+            <div class="card-header bg-transparent fw-semibold">
+                <i class="bi bi-card-text"></i> Informations
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="text-body-secondary">Email</span>
+                    <a href="mailto:paul.durand@test.fr">paul.durand@test.fr</a>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="text-body-secondary">Telephone</span><span>06 23 45 67 89</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="text-body-secondary">Adresse</span><span>5 avenue Victor Hugo, Paris</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="text-body-secondary">Permis de conduire</span>
+                    <span><i class="bi bi-check-circle-fill text-success"></i> Oui</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="text-body-secondary">Candidature</span><span>28/07/2026</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-7">
+        <div class="card shadow-sm mb-3">
+            <div class="card-header bg-transparent fw-semibold d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-file-earmark-check"></i> Documents justificatifs</span>
+                <span class="badge text-bg-warning">2/3 valides</span>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-file-earmark-pdf text-danger"></i> Piece d'identite</span>
+                    <span class="badge text-bg-success"><i class="bi bi-check"></i> Valide</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-file-earmark-pdf text-danger"></i> Justificatif de domicile</span>
+                    <span class="badge text-bg-success"><i class="bi bi-check"></i> Valide</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-file-earmark-pdf text-danger"></i> Permis de conduire</span>
+                    <button class="btn btn-sm btn-outline-success">
+                        <i class="bi bi-check-lg"></i> Valider ce document
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card shadow-sm mb-3">
+            <div class="card-header bg-transparent fw-semibold">
+                <i class="bi bi-award"></i> Competences
+            </div>
+            <div class="card-body d-flex flex-wrap gap-2">
+                <span class="badge text-bg-primary d-flex align-items-center gap-1">
+                    chauffeur <i class="bi bi-x-circle"></i>
+                </span>
+                <span class="badge text-bg-primary d-flex align-items-center gap-1">
+                    cuisinier <i class="bi bi-x-circle"></i>
+                </span>
+                <button class="btn btn-sm btn-outline-secondary py-0">
+                    <i class="bi bi-plus"></i> Ajouter
+                </button>
+            </div>
+        </div>
+
+        <div class="alert alert-warning d-flex align-items-start gap-2">
+            <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+            <div>
+                <strong>Validation impossible pour l'instant.</strong>
+                <div class="small">
+                    Tous les documents doivent etre valides avant de pouvoir valider ce benevole.
+                    Il reste 1 document a verifier.
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2">
+            <button class="btn btn-success" disabled>
+                <i class="bi bi-check-circle"></i> Valider le benevole
+            </button>
+            <button class="btn btn-outline-danger">
+                <i class="bi bi-x-circle"></i> Refuser
+            </button>
+        </div>
+    </div>
+
+</div>
+
+</main>
+
+<footer class="border-top py-3 text-center text-body-secondary small">
+    NO MORE WASTE &mdash; 2026 &middot;
+    <a href="index.html" class="text-decoration-none">Retour au sommaire des maquettes</a>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

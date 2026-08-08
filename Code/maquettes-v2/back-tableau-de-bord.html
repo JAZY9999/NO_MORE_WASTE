@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tableau de bord | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 active bg-body-secondary border-start border-4 border-success fw-semibold">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; tableau de bord avec indicateurs. Les chiffres viendraient de plusieurs routes d'API deja existantes.
+        </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+        <i class="bi bi-grid-1x2 text-success"></i> Tableau de bord
+    </h1>
+    
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-sm-6 col-xl-3">
+        <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 h-100">
+            <div class="d-flex justify-content-between align-items-start">
+                <span class="text-body-secondary text-uppercase" style="font-size:.68rem; letter-spacing:.08em">Commercants adherents</span>
+                <i class="bi bi-shop text-body-tertiary"></i>
+            </div>
+            <div class="fs-2 fw-semibold lh-1 my-2">12</div>
+            <div class="text-body-secondary" style="font-size:.75rem">2 adhesions expirent sous 30j</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 h-100">
+            <div class="d-flex justify-content-between align-items-start">
+                <span class="text-body-secondary text-uppercase" style="font-size:.68rem; letter-spacing:.08em">Benevoles valides</span>
+                <i class="bi bi-people text-body-tertiary"></i>
+            </div>
+            <div class="fs-2 fw-semibold lh-1 my-2">8</div>
+            <div class="text-body-secondary" style="font-size:.75rem">3 candidatures en attente</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="border border-2 rounded-0 border-start border-4 border-success bg-body p-3 h-100">
+            <div class="d-flex justify-content-between align-items-start">
+                <span class="text-body-secondary text-uppercase" style="font-size:.68rem; letter-spacing:.08em">Produits en stock</span>
+                <i class="bi bi-box-seam text-body-tertiary"></i>
+            </div>
+            <div class="fs-2 fw-semibold lh-1 my-2">128</div>
+            <div class="text-body-secondary" style="font-size:.75rem">6 perimes cette semaine</div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="border border-2 rounded-0 border-start border-4 border-warning bg-body p-3 h-100">
+            <div class="d-flex justify-content-between align-items-start">
+                <span class="text-body-secondary text-uppercase" style="font-size:.68rem; letter-spacing:.08em">Tournees aujourd'hui</span>
+                <i class="bi bi-truck text-body-tertiary"></i>
+            </div>
+            <div class="fs-2 fw-semibold lh-1 my-2">2</div>
+            <div class="text-body-secondary" style="font-size:.75rem">1 en cours, 1 planifiee</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-7">
+        <div class="border border-2 rounded-0 bg-body p-3 h-100">
+            <h2 class="h6 text-uppercase text-body-secondary mb-3"
+                style="font-size:.7rem; letter-spacing:.08em">Activite recente</h2>
+            <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex gap-3 align-items-start px-0 border-0 border-bottom rounded-0">
+            <i class="bi bi-check-circle text-success fs-5"></i>
+            <div class="flex-grow-1">
+                <div class="fw-semibold" style="font-size:.88rem">Livraison cloturee</div>
+                <div class="text-body-secondary" style="font-size:.8rem">Restos du Coeur Paris 11 &mdash; 5 articles</div>
+            </div>
+            <small class="text-body-tertiary text-nowrap">il y a 12 min</small>
+        </li>
+        <li class="list-group-item d-flex gap-3 align-items-start px-0 border-0 border-bottom rounded-0">
+            <i class="bi bi-person-plus text-primary fs-5"></i>
+            <div class="flex-grow-1">
+                <div class="fw-semibold" style="font-size:.88rem">Nouvelle candidature</div>
+                <div class="text-body-secondary" style="font-size:.8rem">Marta Lopez</div>
+            </div>
+            <small class="text-body-tertiary text-nowrap">il y a 1 h</small>
+        </li>
+        <li class="list-group-item d-flex gap-3 align-items-start px-0 border-0 border-bottom rounded-0">
+            <i class="bi bi-envelope text-secondary fs-5"></i>
+            <div class="flex-grow-1">
+                <div class="fw-semibold" style="font-size:.88rem">Rappels envoyes</div>
+                <div class="text-body-secondary" style="font-size:.8rem">2 commercants relances (J-30)</div>
+            </div>
+            <small class="text-body-tertiary text-nowrap">ce matin</small>
+        </li>
+        <li class="list-group-item d-flex gap-3 align-items-start px-0 border-0 border-bottom rounded-0">
+            <i class="bi bi-basket text-success fs-5"></i>
+            <div class="flex-grow-1">
+                <div class="fw-semibold" style="font-size:.88rem">Collecte realisee</div>
+                <div class="text-body-secondary" style="font-size:.8rem">Primeur Napoli &mdash; 12 produits</div>
+            </div>
+            <small class="text-body-tertiary text-nowrap">hier</small>
+        </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="border border-2 rounded-0 bg-body p-3 h-100">
+            <h2 class="h6 text-uppercase text-body-secondary mb-3"
+                style="font-size:.7rem; letter-spacing:.08em">A traiter</h2>
+
+            <a href="back-benevoles.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom py-2">
+                <span><i class="bi bi-person-exclamation text-warning"></i> Candidatures a valider</span>
+                <span class="badge rounded-pill text-bg-warning">3</span>
+            </a>
+            <a href="back-commercants.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom py-2">
+                <span><i class="bi bi-clock-history text-danger"></i> Adhesions expirees</span>
+                <span class="badge rounded-pill text-bg-danger">1</span>
+            </a>
+            <a href="back-stocks.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom py-2">
+                <span><i class="bi bi-calendar-x text-danger"></i> Produits perimes</span>
+                <span class="badge rounded-pill text-bg-danger">6</span>
+            </a>
+            <a href="back-tournees.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body py-2">
+                <span><i class="bi bi-truck text-info"></i> Tournee en cours</span>
+                <span class="badge rounded-pill text-bg-info">1</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

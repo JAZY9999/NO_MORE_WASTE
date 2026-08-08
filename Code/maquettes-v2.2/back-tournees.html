@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tournees | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end bg-body"
+       style="width:238px" id="barreLaterale">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+        <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white flex-shrink-0"
+              style="width:32px; height:32px">
+            <i class="bi bi-recycle"></i>
+        </span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-bold text-body" style="font-size:.8rem; letter-spacing:.05em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.64rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-columns-gap"></i> Tableau de bord
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-shop"></i> Commercants<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">12</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-people"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.62rem">3</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-basket"></i> Collectes<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">4</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-box-seam"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.62rem">6</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none bg-primary bg-opacity-10 text-primary fw-semibold border-start border-3 border-primary" style="font-size:.85rem">
+            <i class="bi bi-truck"></i> Tournees<span class="badge rounded-pill text-bg-primary ms-auto" style="font-size:.62rem">1</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-calendar-week"></i> Services<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">7</span>
+        </a>
+    </nav>
+
+    <div class="border-top p-3">
+        <div class="d-flex align-items-center gap-2">
+            <!-- Pastille d'initiales : evite d'avoir a stocker une photo. -->
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0"
+                  style="width:32px; height:32px; font-size:.72rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.74rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.64rem">admin_back</small>
+            </div>
+            <a href="#" class="text-body-tertiary" title="Deconnexion"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body-tertiary" style="min-width:0">
+<header class="bg-body border-bottom">
+        <div class="d-flex align-items-center gap-3 px-4 py-2 border-bottom">
+            <nav style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0" style="font-size:.78rem">
+                    <li class="breadcrumb-item">
+                        <a href="back-tableau-de-bord.html" class="text-decoration-none text-body-secondary">Back-office</a>
+                    </li>
+                    <li class="breadcrumb-item active">Tournees / 12 aout 2026</li>
+                </ol>
+            </nav>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <div class="input-group input-group-sm" style="width:230px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher..." style="font-size:.8rem">
+                </div>
+                <button class="btn btn-sm btn-light position-relative" title="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                          style="font-size:.55rem">3</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-4 py-3">
+            <h1 class="h4 mb-0">Tournee du 12 aout 2026
+    <span class="badge rounded-pill text-bg-primary align-middle ms-1">en cours</span></h1>
+            <div class="d-flex gap-2"><button class="btn btn-sm btn-light"><i class="bi bi-printer"></i> Feuille de route</button></div>
+        </div>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4">
+        <div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mb-4"
+             style="font-size:.82rem">
+            <i class="bi bi-easel2 text-body-secondary"></i>
+            <div><strong>Maquette</strong> &mdash; <code>POST /tournee-etapes/{id}/livraison</code> puis <code>GET /livraisons/{id}/pdf</code> &mdash; le <strong>recapitulatif PDF exige par le sujet</strong>, genere sans aucune librairie.</div>
+        </div>
+
+<div class="row g-3 mb-3">
+    <div class="col-md-4">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Chauffeur</div>
+            <div class="d-flex align-items-center gap-2 mt-2">
+                <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold"
+                      style="width:34px; height:34px; font-size:.72rem">PD</span>
+                <div class="lh-sm">
+                    <div class="fw-semibold">Paul Durand</div>
+                    <span class="badge rounded-pill text-bg-success" style="font-size:.62rem">benevole valide</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Progression</div>
+            <div class="fs-4 fw-semibold mt-1">2 / 3 arrets</div>
+            <div class="progress mt-2" style="height:6px">
+                <div class="progress-bar bg-success" style="width:66%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Articles distribues</div>
+            <div class="fs-4 fw-semibold mt-1">8</div>
+            <small class="text-body-tertiary">passes au statut <code>distribue</code></small>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mb-2">
+    <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Arrets, dans l'ordre de passage</span>
+    <button class="btn btn-sm btn-light"><i class="bi bi-plus-lg"></i> Ajouter un arret</button>
+</div>
+
+
+    <div class="border rounded bg-body mb-2">
+        <div class="d-flex gap-3 align-items-start p-3 flex-wrap">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-success text-white fw-semibold flex-shrink-0"
+                  style="width:30px; height:30px; font-size:.82rem">1</span>
+            <div class="flex-grow-1" style="min-width:200px">
+                <div class="fw-semibold">Restos du Coeur Paris 11</div>
+                <div class="text-body-tertiary" style="font-size:.8rem">association caritative &middot; 20 rue de la Roquette</div>
+                <div class="d-flex gap-3 mt-2 flex-wrap align-items-center" style="font-size:.8rem">
+                    <span class="text-body-secondary"><i class="bi bi-clock"></i> prevu 10:30</span>
+                    <span class="text-body-secondary"><i class="bi bi-check2"></i> reel 10:35</span>
+                    <span class="text-body-secondary"><i class="bi bi-box"></i> 5 articles</span>
+                    <span class="badge rounded-pill text-bg-success">livre</span>
+                </div>
+            </div>
+            <div><a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> Recapitulatif PDF</a></div>
+        </div>
+            <div class="border-top px-3 py-2 bg-body-tertiary">
+                <ul class="mb-0 ps-3" style="font-size:.8rem"><li class="text-body-secondary">Pates completes 500g x3</li><li class="text-body-secondary">Soupe legumes 1L x2</li></ul>
+            </div>
+    </div>
+    <div class="border rounded bg-body mb-2">
+        <div class="d-flex gap-3 align-items-start p-3 flex-wrap">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-success text-white fw-semibold flex-shrink-0"
+                  style="width:30px; height:30px; font-size:.82rem">2</span>
+            <div class="flex-grow-1" style="min-width:200px">
+                <div class="fw-semibold">Secours Populaire Paris 12</div>
+                <div class="text-body-tertiary" style="font-size:.8rem">association caritative &middot; 8 avenue Daumesnil</div>
+                <div class="d-flex gap-3 mt-2 flex-wrap align-items-center" style="font-size:.8rem">
+                    <span class="text-body-secondary"><i class="bi bi-clock"></i> prevu 11:15</span>
+                    <span class="text-body-secondary"><i class="bi bi-check2"></i> reel 11:20</span>
+                    <span class="text-body-secondary"><i class="bi bi-box"></i> 3 articles</span>
+                    <span class="badge rounded-pill text-bg-success">livre</span>
+                </div>
+            </div>
+            <div><a href="#" class="btn btn-sm btn-outline-danger"><i class="bi bi-file-earmark-pdf"></i> Recapitulatif PDF</a></div>
+        </div>
+            <div class="border-top px-3 py-2 bg-body-tertiary">
+                <ul class="mb-0 ps-3" style="font-size:.8rem"><li class="text-body-secondary">Biscuits sables 200g x3</li></ul>
+            </div>
+    </div>
+    <div class="border rounded bg-body mb-2">
+        <div class="d-flex gap-3 align-items-start p-3 flex-wrap">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white fw-semibold flex-shrink-0"
+                  style="width:30px; height:30px; font-size:.82rem">3</span>
+            <div class="flex-grow-1" style="min-width:200px">
+                <div class="fw-semibold">Mme Rossi</div>
+                <div class="text-body-tertiary" style="font-size:.8rem">particulier en detresse &middot; 14 rue de Charonne</div>
+                <div class="d-flex gap-3 mt-2 flex-wrap align-items-center" style="font-size:.8rem">
+                    <span class="text-body-secondary"><i class="bi bi-clock"></i> prevu 12:00</span>
+                    <span class="text-body-secondary"><i class="bi bi-check2"></i> reel &mdash;</span>
+                    <span class="text-body-secondary"><i class="bi bi-box"></i> 0 articles</span>
+                    <span class="badge rounded-pill text-bg-secondary">a_faire</span>
+                </div>
+            </div>
+            <div><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modaleLivraison"><i class="bi bi-check2-square"></i> Cloturer la livraison</button></div>
+        </div>
+    </div>
+
+<div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mt-3"
+     style="font-size:.82rem">
+    <i class="bi bi-info-circle text-body-secondary"></i>
+    <div>Cloturer une livraison enchaine cinq operations : refus du doublon (409),
+    verification que tous les produits existent, creation de la livraison, passage
+    des produits en <code>distribue</code>, marquage de l'arret avec l'heure reelle.</div>
+</div>
+
+<div class="modal fade" id="modaleLivraison" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cloturer la livraison &mdash; Mme Rossi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label" style="font-size:.82rem">
+                    Scanner les articles remis
+                </label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-upc-scan"></i></span>
+                    <input type="text" class="form-control" placeholder="Code-barre...">
+                    <button class="btn btn-outline-secondary">Ajouter</button>
+                </div>
+
+                <table class="table table-sm align-middle">
+                    <thead>
+                        <tr>
+                            <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Article</span></th>
+                            <th style="width:110px"><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Quantite</span></th>
+                            <th style="width:40px"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pates completes 500g</td>
+                            <td><input type="number" class="form-control form-control-sm" value="2"></td>
+                            <td><button class="btn btn-sm btn-light"><i class="bi bi-x"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>Biscuits sables 200g</td>
+                            <td><input type="number" class="form-control form-control-sm" value="1"></td>
+                            <td><button class="btn btn-sm btn-light"><i class="bi bi-x"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="border rounded bg-body-secondary px-3 py-2" style="font-size:.8rem">
+                    <i class="bi bi-info-circle"></i>
+                    Ces articles passeront au statut <code>distribue</code> et sortiront du stock disponible.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-light" data-bs-dismiss="modal">Annuler</button>
+                <button class="btn btn-primary">
+                    <i class="bi bi-check2-square"></i> Cloturer et generer le PDF
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary" style="font-size:.78rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

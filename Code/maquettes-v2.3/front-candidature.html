@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Devenir benevole | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="border-bottom bg-body sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                  style="width:36px; height:36px"><i class="bi bi-recycle fs-5"></i></span>
+            <span class="fw-semibold" style="letter-spacing:.04em">NO MORE WASTE</span>
+        </a>
+
+        <nav class="d-flex align-items-center gap-4 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body fw-semibold" style="font-size:.92rem">Benevolat</a>
+
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-body-secondary text-decoration-none dropdown-toggle p-0"
+                        data-bs-toggle="dropdown" style="font-size:.92rem">FR</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+
+            <a href="front-connexion.html" class="btn btn-sm btn-dark rounded-pill px-3">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container flex-grow-1" style="padding-top:4rem; padding-bottom:4rem">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; <code>POST /benevoles/candidature/</code> &mdash; la seule route d'ecriture accessible <strong>sans authentification</strong>.</div>
+            </div>
+
+<div class="row g-5">
+    <div class="col-lg-7">
+
+        <h1 class="display-6 fw-bold mb-3">Devenir benevole</h1>
+        <p class="fs-5 text-body-secondary mb-5" style="max-width:520px">
+            Rejoignez l'association selon vos disponibilites.
+        </p>
+
+        <form>
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Vos coordonnees</div>
+            <div class="row g-3 mt-1 mb-4">
+                <div class="col-sm-6">
+                    <label for="nom" class="form-label" style="font-size:.88rem">Nom *</label>
+                    <input type="text" class="form-control" id="nom" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="prenom" class="form-label" style="font-size:.88rem">Prenom *</label>
+                    <input type="text" class="form-control" id="prenom" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="email" class="form-label" style="font-size:.88rem">Email *</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="tel" class="form-label" style="font-size:.88rem">Telephone</label>
+                    <input type="tel" class="form-control" id="tel">
+                </div>
+                <div class="col-12">
+                    <label for="adresse" class="form-label" style="font-size:.88rem">Adresse</label>
+                    <input type="text" class="form-control" id="adresse">
+                </div>
+            </div>
+
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Ce que vous pouvez proposer</div>
+            <div class="mt-3 mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="permis">
+                    <label class="form-check-label" for="permis" style="font-size:.9rem">
+                        Je possede le permis de conduire
+                        <span class="d-block text-body-tertiary" style="font-size:.82rem">
+                            Necessaire pour les collectes et les tournees.
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <input type="checkbox" class="btn-check" id="c1">
+                <label class="btn btn-sm btn-outline-secondary rounded-pill px-3" for="c1">chauffeur</label>
+                <input type="checkbox" class="btn-check" id="c2">
+                <label class="btn btn-sm btn-outline-secondary rounded-pill px-3" for="c2">cuisinier</label>
+                <input type="checkbox" class="btn-check" id="c3">
+                <label class="btn btn-sm btn-outline-secondary rounded-pill px-3" for="c3">bricoleur</label>
+                <input type="checkbox" class="btn-check" id="c4">
+                <label class="btn btn-sm btn-outline-secondary rounded-pill px-3" for="c4">electricien</label>
+                <input type="checkbox" class="btn-check" id="c5">
+                <label class="btn btn-sm btn-outline-secondary rounded-pill px-3" for="c5">plombier</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary rounded-pill px-4">Envoyer ma candidature</button>
+        </form>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="border-start border-3 border-primary ps-4">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Et ensuite ?</div>
+
+            <div class="mt-4 mb-4">
+                <div class="fw-medium mb-1">1. Candidature enregistree</div>
+                <p class="text-body-secondary mb-0" style="font-size:.88rem">
+                    Vous passez au statut <em>candidat</em> et recevez un email de confirmation.
+                </p>
+            </div>
+
+            <div class="mb-4">
+                <div class="fw-medium mb-1">2. Justificatifs a fournir</div>
+                <p class="text-body-secondary mb-0" style="font-size:.88rem">
+                    Piece d'identite, justificatif de domicile, et permis si vous conduisez.
+                </p>
+            </div>
+
+            <div>
+                <div class="fw-medium mb-1">3. Validation par l'association</div>
+                <p class="text-body-secondary mb-0" style="font-size:.88rem">
+                    Une fois <strong class="text-body">tous</strong> vos documents verifies, vous
+                    pouvez etre affecte a des collectes, des tournees ou des services.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-5 mt-auto">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                          style="width:28px; height:28px"><i class="bi bi-recycle" style="font-size:.85rem"></i></span>
+                    <span class="fw-semibold" style="font-size:.9rem">NO MORE WASTE</span>
+                </div>
+                <p class="text-body-secondary mb-0" style="font-size:.84rem">
+                    Association loi 1901 luttant contre le gaspillage alimentaire.
+                </p>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Villes</div>
+                <div class="text-body-secondary mt-2" style="font-size:.84rem">
+                    Paris &middot; Nantes &middot; Marseille &middot; Limoges<br>
+                    Naples &middot; Porto &middot; Dublin
+                </div>
+            </div>
+            <div class="col-6 col-md-4 text-md-end">
+                <a href="sommaire.html" class="text-decoration-none" style="font-size:.84rem">
+                    Sommaire des maquettes
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

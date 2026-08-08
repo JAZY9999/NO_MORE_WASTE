@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquettes V2.2 | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="bg-body border-bottom sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white"
+                  style="width:34px; height:34px">
+                <i class="bi bi-recycle fs-5"></i>
+            </span>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold" style="letter-spacing:.05em">NO MORE WASTE</span>
+                <small class="text-body-tertiary" style="font-size:.7rem">
+                    Ensemble contre le gaspillage alimentaire
+                </small>
+            </span>
+        </a>
+
+        <nav class="d-flex align-items-center gap-1 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Nos services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body px-2 py-1" style="font-size:.9rem">Devenir benevole</a>
+
+            <span class="vr mx-2 d-none d-md-inline"></span>
+
+            <div class="dropdown">
+                <button class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-translate"></i> FR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+
+            <a href="front-connexion.html" class="btn btn-sm btn-primary ms-1">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container py-5 flex-grow-1">
+
+<div class="mb-4">
+    <span class="badge rounded-pill text-bg-primary mb-2">Version 2.2</span>
+    <h1 class="display-6 fw-bold mb-2">Maquettes NO MORE WASTE</h1>
+    <p class="lead text-body-secondary mb-0" style="max-width:660px">
+        13 ecrans. Barre laterale structuree en sections, palette recentree sur le bleu,
+        et des details d'application reelle : tri des colonnes, pagination, modales de
+        confirmation, indicateurs chiffres.
+    </p>
+</div>
+
+<div class="border rounded bg-body p-3 mb-4" style="font-size:.88rem">
+    <div class="fw-semibold mb-2">Ce qui change par rapport a la V2</div>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="fw-semibold text-primary" style="font-size:.82rem">Moins de vert</div>
+            <p class="text-body-secondary mb-0" style="font-size:.84rem">
+                En V2, le vert servait a la fois d'accent de marque <em>et</em> de signal
+                &laquo; valide &raquo; : il ne voulait donc plus rien dire. Ici chaque couleur
+                a un sens unique &mdash; bleu pour la marque et la navigation, vert
+                <strong>uniquement</strong> pour un etat positif, orange pour ce qui attend,
+                rouge pour ce qui bloque.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div class="fw-semibold text-primary" style="font-size:.82rem">Plus poussee</div>
+            <ul class="text-body-secondary mb-0 ps-3" style="font-size:.84rem">
+                <li>Barre laterale en <strong>sections</strong> avec compteurs</li>
+                <li>Barre superieure : fil d'Ariane, recherche, notifications</li>
+                <li>Tableaux : <strong>tri</strong>, <strong>pagination</strong>, menus d'actions</li>
+                <li><strong>Modales</strong> de confirmation (refus, cloture de livraison)</li>
+                <li>Graphique en barres <strong>sans librairie</strong></li>
+                <li>2 ecrans en plus : accueil public et connexion</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="border rounded bg-body h-100">
+            <div class="px-3 py-2 border-bottom d-flex align-items-center gap-2">
+                <i class="bi bi-globe text-primary"></i>
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Front-office</span>
+                <span class="badge rounded-pill text-bg-light border text-body-secondary ms-auto">5</span>
+            </div>
+            
+        <a href="index.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-house-door text-body-tertiary"></i> Accueil<span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-2" style="font-size:.62rem">nouveau</span></span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="front-services.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-calendar-event text-body-tertiary"></i> Catalogue des services</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="front-service-detail.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-list-check text-body-tertiary"></i> Creneaux d'un service</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="front-candidature.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-person-plus text-body-tertiary"></i> Candidature benevole</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="front-connexion.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-box-arrow-in-right text-body-tertiary"></i> Connexion<span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-2" style="font-size:.62rem">nouveau</span></span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="border rounded bg-body h-100">
+            <div class="px-3 py-2 border-bottom d-flex align-items-center gap-2">
+                <i class="bi bi-columns-gap text-primary"></i>
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Back-office</span>
+                <span class="badge rounded-pill text-bg-light border text-body-secondary ms-auto">8</span>
+            </div>
+            
+        <a href="back-tableau-de-bord.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-columns-gap text-body-tertiary"></i> Tableau de bord</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-commercants.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-shop text-body-tertiary"></i> Commercants</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-benevoles.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-people text-body-tertiary"></i> Benevoles</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-benevole-detail.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-person-check text-body-tertiary"></i> Detail benevole</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-collectes.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-basket text-body-tertiary"></i> Collectes</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-stocks.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-box-seam text-body-tertiary"></i> Stocks</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-tournees.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-truck text-body-tertiary"></i> Tournees</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        <a href="back-services.html" class="d-flex justify-content-between align-items-center text-decoration-none text-body border-bottom px-3 py-2">
+            <span style="font-size:.9rem"><i class="bi bi-calendar-week text-body-tertiary"></i> Services et creneaux</span>
+            <i class="bi bi-chevron-right text-body-tertiary"></i>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="border rounded bg-body-tertiary p-3 mt-4" style="font-size:.86rem">
+    <strong><i class="bi bi-diagram-3 text-primary"></i> Rappel</strong> &mdash;
+    chaque maquette indique en haut les routes d'API qu'elle consomme. Toutes existent
+    deja et sont testees (66/66) : il ne reste qu'a ecrire les controleurs et les vues.
+    Les seuls ajouts qui demanderaient d'enrichir l'API sont le <em>tri</em> et la
+    <em>pagination</em> des listes.
+</div>
+
+</main>
+
+<footer class="border-top py-4 mt-auto bg-body-tertiary">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.82rem">
+        <div>
+            <div class="fw-semibold text-body">NO MORE WASTE</div>
+            <div>Association loi 1901 &mdash; Paris, Nantes, Marseille, Limoges, Naples, Porto, Dublin</div>
+        </div>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paul Durand | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+            <nav class="mb-3" style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none">Back-office</a></li>
+                    <li class="breadcrumb-item active">Benevoles &rsaquo; Paul Durand</li>
+                </ol>
+            </nav>
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <strong>l'ecran cle du back-office</strong> : la regle du sujet &mdash; validation impossible tant qu'un document n'est pas verifie (<code>TousLesDocumentsSontValides</code>).
+        </div>
+
+<div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <div>
+        <h1 class="h4 mb-1">Paul Durand
+            <span class="badge rounded-pill text-bg-secondary align-middle">candidat</span>
+        </h1>
+        <div class="text-body-secondary small">Candidature deposee le 28/07/2026</div>
+    </div>
+    <a href="back-benevoles.html" class="btn btn-sm btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Retour a la liste
+    </a>
+</div>
+
+<!-- L'etat de la validation, mis en avant tout en haut : c'est l'information
+     qui determine ce que l'utilisateur peut faire sur cette page. -->
+<div class="border-start border-4 border-warning bg-warning-subtle px-3 py-3 mb-4">
+    <div class="d-flex align-items-start gap-3">
+        <i class="bi bi-hourglass-split fs-4"></i>
+        <div class="flex-grow-1">
+            <div class="fw-semibold">Validation impossible pour l'instant</div>
+            <div class="small">
+                Un benevole ne peut etre valide que si <strong>tous</strong> ses documents
+                justificatifs le sont. Il en reste <strong>1 a verifier</strong>.
+            </div>
+            <div class="progress mt-2" style="height:5px; max-width:280px">
+                <div class="progress-bar bg-warning" style="width:66%"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+
+    <div class="col-lg-4">
+        <div class="border border-2 rounded-0 bg-body h-100">
+            <div class="border-bottom border-2 px-3 py-2 text-uppercase text-body-secondary"
+                 style="font-size:.68rem; letter-spacing:.08em">Coordonnees</div>
+            <div class="p-3 d-flex flex-column gap-2" style="font-size:.88rem">
+                <div class="d-flex gap-2">
+                    <i class="bi bi-envelope text-body-tertiary"></i>
+                    <a href="mailto:paul.durand@test.fr" class="text-decoration-none">paul.durand@test.fr</a>
+                </div>
+                <div class="d-flex gap-2"><i class="bi bi-telephone text-body-tertiary"></i> 06 23 45 67 89</div>
+                <div class="d-flex gap-2"><i class="bi bi-geo-alt text-body-tertiary"></i> 5 avenue Victor Hugo, Paris</div>
+                <div class="d-flex gap-2"><i class="bi bi-car-front text-success"></i> Permis de conduire</div>
+            </div>
+
+            <div class="border-top border-2 px-3 py-2 text-uppercase text-body-secondary"
+                 style="font-size:.68rem; letter-spacing:.08em">Competences</div>
+            <div class="p-3 d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill text-bg-light border d-flex align-items-center gap-1">
+                    chauffeur <a href="#" class="text-body-tertiary"><i class="bi bi-x"></i></a>
+                </span>
+                <span class="badge rounded-pill text-bg-light border d-flex align-items-center gap-1">
+                    cuisinier <a href="#" class="text-body-tertiary"><i class="bi bi-x"></i></a>
+                </span>
+                <button class="btn btn-sm btn-link p-0 text-decoration-none" style="font-size:.78rem">
+                    <i class="bi bi-plus-circle"></i> ajouter
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="border border-2 rounded-0 bg-body mb-3">
+            <div class="border-bottom border-2 px-3 py-2 d-flex justify-content-between align-items-center">
+                <span class="text-uppercase text-body-secondary"
+                      style="font-size:.68rem; letter-spacing:.08em">Documents justificatifs</span>
+                <span class="badge rounded-pill text-bg-warning">2 / 3 valides</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center px-3 py-3 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-file-earmark-text fs-5 text-body-tertiary"></i>
+                    <div>
+                        <div style="font-size:.88rem">Piece d'identite</div>
+                        <small class="text-body-secondary">cni_durand.pdf</small>
+                    </div>
+                </div>
+                <span class="badge rounded-pill text-bg-success"><i class="bi bi-check"></i> valide</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center px-3 py-3 border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-file-earmark-text fs-5 text-body-tertiary"></i>
+                    <div>
+                        <div style="font-size:.88rem">Justificatif de domicile</div>
+                        <small class="text-body-secondary">edf_juillet.pdf</small>
+                    </div>
+                </div>
+                <span class="badge rounded-pill text-bg-success"><i class="bi bi-check"></i> valide</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center px-3 py-3 bg-warning-subtle">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-file-earmark-text fs-5 text-warning"></i>
+                    <div>
+                        <div style="font-size:.88rem">Permis de conduire</div>
+                        <small class="text-body-secondary">permis_durand.pdf</small>
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-eye"></i></button>
+                    <button class="btn btn-sm btn-success rounded-0">
+                        <i class="bi bi-check-lg"></i> Valider
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2 justify-content-end">
+            <button class="btn btn-outline-danger rounded-0">
+                <i class="bi bi-x-circle"></i> Refuser la candidature
+            </button>
+            <button class="btn btn-success rounded-0" disabled>
+                <i class="bi bi-check-circle"></i> Valider le benevole
+            </button>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tableau de bord | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 bg-body" data-bs-theme="dark"
+       style="width:225px">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none">
+        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white flex-shrink-0"
+              style="width:30px; height:30px"><i class="bi bi-recycle" style="font-size:.9rem"></i></span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-semibold text-body" style="font-size:.76rem; letter-spacing:.04em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.62rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none bg-primary text-white fw-medium" style="font-size:.84rem">
+            <i class="bi bi-speedometer2" style="width:16px"></i> Tableau de bord
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-shop" style="width:16px"></i> Commercants
+        </a>
+        <a href="back-adhesions.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-card-checklist" style="width:16px"></i> Adhesions<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.6rem">2</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-people" style="width:16px"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.6rem">3</span>
+        </a>
+        <a href="back-beneficiaires.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-heart" style="width:16px"></i> Beneficiaires
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-basket3" style="width:16px"></i> Collectes
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-boxes" style="width:16px"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.6rem">6</span>
+        </a>
+        <a href="back-emplacements.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-geo-alt" style="width:16px"></i> Emplacements
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-truck" style="width:16px"></i> Tournees<span class="badge rounded-pill text-bg-info ms-auto" style="font-size:.6rem">1</span>
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-calendar3" style="width:16px"></i> Creneaux
+        </a>
+        <a href="back-catalogue.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-list-stars" style="width:16px"></i> Catalogue
+        </a>
+        <a href="back-campagnes.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-megaphone" style="width:16px"></i> Campagnes
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Administration</div>
+        <a href="back-utilisateurs.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-person-gear" style="width:16px"></i> Utilisateurs
+        </a>
+        <a href="back-traductions.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-translate" style="width:16px"></i> Traductions
+        </a>
+    </nav>
+
+    <div class="p-3 border-top border-secondary-subtle">
+        <a href="back-profil.html" class="d-flex align-items-center gap-2 text-decoration-none">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white fw-semibold flex-shrink-0"
+                  style="width:28px; height:28px; font-size:.66rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.72rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.62rem">admin_back</small>
+            </div>
+        </a>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body" style="min-width:0">
+<header class="bg-body border-bottom px-4 pt-3 sticky-top">
+
+        <nav style="--bs-breadcrumb-divider:'/'" class="mb-1">
+            <ol class="breadcrumb mb-0" style="font-size:.74rem"><li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none text-body-tertiary">Back-office</a></li><li class="breadcrumb-item active">Tableau de bord</li></ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+            <div>
+                <h1 class="h5 mb-0">Tableau de bord</h1>
+                <div class="text-body-secondary" style="font-size:.82rem">Vue d'ensemble de l'activite de l'association</div>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+                <div class="input-group input-group-sm" style="width:200px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary" style="font-size:.8rem"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher" style="font-size:.8rem">
+                </div>
+                <button class="btn btn-sm btn-primary">Nouvelle collecte</button>
+            </div>
+        </div>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4 bg-body-tertiary">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; chaque bloc « a traiter » renvoie vers l'ecran concerne : le tableau de bord sert a savoir quoi faire, pas seulement a regarder des chiffres.</div>
+            </div>
+
+<div class="row g-3 mb-3">
+    <div class="col-6 col-xl-3">
+        <div class="bg-body border rounded-3 p-3 h-100">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Commercants</div>
+            <div class="d-flex align-items-baseline gap-2 mt-1">
+                <span class="fs-3 fw-semibold lh-1">12</span>
+                <small class="text-success-emphasis">+2 ce mois</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="bg-body border rounded-3 p-3 h-100">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Benevoles valides</div>
+            <div class="d-flex align-items-baseline gap-2 mt-1">
+                <span class="fs-3 fw-semibold lh-1">8</span>
+                <small class="text-warning-emphasis">3 en attente</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="bg-body border rounded-3 p-3 h-100">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Produits en stock</div>
+            <div class="d-flex align-items-baseline gap-2 mt-1">
+                <span class="fs-3 fw-semibold lh-1">128</span>
+                <small class="text-danger-emphasis">6 perimes</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-xl-3">
+        <div class="bg-body border rounded-3 p-3 h-100">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Repas distribues</div>
+            <div class="d-flex align-items-baseline gap-2 mt-1">
+                <span class="fs-3 fw-semibold lh-1">1 240</span>
+                <small class="text-success-emphasis">+18 %</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-xl-4"><div class="bg-body border rounded-3">
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">A traiter</span>
+            
+        </div>
+        
+        <a href="back-adhesions.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="rounded-circle bg-warning flex-shrink-0" style="width:7px; height:7px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Adhesions a renouveler</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">Echeance sous 30 jours</small>
+            </div>
+            <span class="fw-semibold text-warning-emphasis">2</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="rounded-circle bg-warning flex-shrink-0" style="width:7px; height:7px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Candidatures a valider</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">Paul Durand, Marta Lopez, +1</small>
+            </div>
+            <span class="fw-semibold text-warning-emphasis">3</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="rounded-circle bg-danger flex-shrink-0" style="width:7px; height:7px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Produits perimes</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">A retirer du stock</small>
+            </div>
+            <span class="fw-semibold text-danger-emphasis">6</span>
+        </a>
+        <a href="back-tournee-detail.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="rounded-circle bg-info flex-shrink-0" style="width:7px; height:7px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Tournee en cours</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">2 arrets sur 3 livres</small>
+            </div>
+            <span class="fw-semibold text-info-emphasis">1</span>
+        </a>
+    </div></div>
+    <div class="col-xl-4"><div class="bg-body border rounded-3">
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Activite recente</span>
+            
+        </div>
+        
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <span class="rounded-circle bg-success flex-shrink-0 mt-2" style="width:6px; height:6px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Livraison cloturee</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">Restos du Coeur Paris 11 &mdash; 5 articles</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap" style="font-size:.72rem">12 min</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <span class="rounded-circle bg-info flex-shrink-0 mt-2" style="width:6px; height:6px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Nouvelle candidature</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">Marta Lopez a postule</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap" style="font-size:.72rem">1 h</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <span class="rounded-circle bg-secondary flex-shrink-0 mt-2" style="width:6px; height:6px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Rappels envoyes</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">2 commercants relances (J-30)</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap" style="font-size:.72rem">ce matin</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <span class="rounded-circle bg-success flex-shrink-0 mt-2" style="width:6px; height:6px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Collecte realisee</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">Primeur Napoli &mdash; 12 produits</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap" style="font-size:.72rem">hier</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <span class="rounded-circle bg-secondary flex-shrink-0 mt-2" style="width:6px; height:6px"></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.84rem">Traductions publiees</div>
+                <small class="text-body-tertiary" style="font-size:.74rem">4 fichiers regeneres</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap" style="font-size:.72rem">hier</small>
+        </div>
+    </div></div>
+    <div class="col-xl-4">
+        <div class="bg-body border rounded-3">
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Articles collectes cette semaine</span>
+            
+        </div>
+        
+        <div class="p-3">
+            <div class="d-flex gap-2 align-items-end">
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:62%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">L</small>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:78%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">M</small>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:45%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">M</small>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:90%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">J</small>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:100%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">V</small>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:55%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">S</small>
+            </div>
+            <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+                <div class="w-100 d-flex align-items-end" style="height:80px">
+                    <div class="w-100 bg-primary rounded-1" style="height:20%; opacity:.85"></div>
+                </div>
+                <small class="text-body-tertiary" style="font-size:.66rem">D</small>
+            </div></div>
+            <div class="border-top pt-2 mt-3 d-flex justify-content-between" style="font-size:.8rem">
+                <span class="text-body-secondary">Total</span>
+                <span class="fw-semibold">450 articles</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary bg-body" style="font-size:.76rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

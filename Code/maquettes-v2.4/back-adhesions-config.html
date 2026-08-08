@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configuration des rappels | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 bg-body" data-bs-theme="dark"
+       style="width:225px">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none">
+        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white flex-shrink-0"
+              style="width:30px; height:30px"><i class="bi bi-recycle" style="font-size:.9rem"></i></span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-semibold text-body" style="font-size:.76rem; letter-spacing:.04em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.62rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-speedometer2" style="width:16px"></i> Tableau de bord
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-shop" style="width:16px"></i> Commercants
+        </a>
+        <a href="back-adhesions.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none bg-primary text-white fw-medium" style="font-size:.84rem">
+            <i class="bi bi-card-checklist" style="width:16px"></i> Adhesions<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.6rem">2</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-people" style="width:16px"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.6rem">3</span>
+        </a>
+        <a href="back-beneficiaires.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-heart" style="width:16px"></i> Beneficiaires
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-basket3" style="width:16px"></i> Collectes
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-boxes" style="width:16px"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.6rem">6</span>
+        </a>
+        <a href="back-emplacements.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-geo-alt" style="width:16px"></i> Emplacements
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-truck" style="width:16px"></i> Tournees<span class="badge rounded-pill text-bg-info ms-auto" style="font-size:.6rem">1</span>
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-calendar3" style="width:16px"></i> Creneaux
+        </a>
+        <a href="back-catalogue.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-list-stars" style="width:16px"></i> Catalogue
+        </a>
+        <a href="back-campagnes.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-megaphone" style="width:16px"></i> Campagnes
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Administration</div>
+        <a href="back-utilisateurs.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-person-gear" style="width:16px"></i> Utilisateurs
+        </a>
+        <a href="back-traductions.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-translate" style="width:16px"></i> Traductions
+        </a>
+    </nav>
+
+    <div class="p-3 border-top border-secondary-subtle">
+        <a href="back-profil.html" class="d-flex align-items-center gap-2 text-decoration-none">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white fw-semibold flex-shrink-0"
+                  style="width:28px; height:28px; font-size:.66rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.72rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.62rem">admin_back</small>
+            </div>
+        </a>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body" style="min-width:0">
+<header class="bg-body border-bottom px-4 pt-3 sticky-top">
+
+        <nav style="--bs-breadcrumb-divider:'/'" class="mb-1">
+            <ol class="breadcrumb mb-0" style="font-size:.74rem"><li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none text-body-tertiary">Back-office</a></li><li class="breadcrumb-item"><a href="back-adhesions.html" class="text-decoration-none text-body-tertiary">Adhesions</a></li><li class="breadcrumb-item active">Configuration</li></ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+            <div>
+                <h1 class="h5 mb-0">Configuration des rappels</h1>
+                <div class="text-body-secondary" style="font-size:.82rem">Delais, modeles d'email et regles d'envoi</div>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+                <div class="input-group input-group-sm" style="width:200px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary" style="font-size:.8rem"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher" style="font-size:.8rem">
+                </div>
+                <a href="back-adhesions.html" class="btn btn-sm btn-light">Retour</a>
+            </div>
+        </div>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4 bg-body-tertiary">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; <strong>ecran ajoute en V2.4</strong>. ⚠️ <strong>Aucune de ces valeurs n'est configurable
+aujourd'hui</strong> : elles sont ecrites en dur dans <code>utils/scheduler.go</code>
+(<code>envoyerRappelsRenouvellement(30, "j30")</code>, <code>time.Sleep(24 * time.Hour)</code>,
+les objets d'email...). Cet ecran suppose une table <code>parametres_rappels</code> et des
+routes <code>GET/PUT /parametres/rappels</code>. C'est la meme demarche que pour les
+traductions : sortir du code ce qui doit etre administrable.</div>
+            </div>
+
+<div class="row g-3">
+
+    <div class="col-xl-8">
+
+        <!-- Reglages generaux du job -->
+        <div class="bg-body border rounded-3 mb-3">
+            <div class="px-3 py-2 border-bottom">
+                <span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Execution automatique</span>
+            </div>
+            <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center pb-3 border-bottom">
+                    <div class="lh-sm">
+                        <div class="fw-medium" style="font-size:.88rem">Rappels automatiques</div>
+                        <small class="text-body-tertiary">
+                            Quand c'est desactive, plus aucun email n'est envoye automatiquement.
+                            Le declenchement manuel reste possible.
+                        </small>
+                    </div>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" id="actif" checked
+                               style="width:2.4em; height:1.2em">
+                    </div>
+                </div>
+
+                <div class="row g-3 pt-3">
+                    <div class="col-md-4">
+                        <label class="form-label" style="font-size:.84rem">Frequence</label>
+                        <select class="form-select form-select-sm">
+                            <option selected>Une fois par jour</option>
+                            <option>Deux fois par jour</option>
+                            <option>Une fois par semaine</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" style="font-size:.84rem">Heure d'execution</label>
+                        <input type="time" class="form-control form-control-sm" value="08:00">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" style="font-size:.84rem">Jours d'envoi</label>
+                        <select class="form-select form-select-sm">
+                            <option selected>Jours ouvres uniquement</option>
+                            <option>Tous les jours</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="border-start border-3 border-secondary-subtle ps-3 mt-3 text-body-secondary"
+                     style="font-size:.78rem">
+                    Envoyer a 8 h un jour ouvre plutot qu'a 3 h du matin un dimanche
+                    augmente les chances que le message soit lu. C'est aussi plus
+                    facile a verifier : on voit passer les envois pendant les heures
+                    de bureau.
+                </div>
+            </div>
+        </div>
+
+        <!-- Les echeances -->
+        <div class="bg-body border rounded-3">
+        <div class="d-flex justify-content-between align-items-center px-3 py-2 border-bottom">
+            <span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Echeances de rappel</span>
+            
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-sm table-hover align-middle mb-0">
+                <thead class="border-bottom">
+                    <tr>
+                        <th style="width:52px"><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Actif</span></th>
+                        <th><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Rappel</span></th>
+                        <th><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Delai</span></th>
+                        <th><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Sens</span></th>
+                        <th><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Objet de l'email</span></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" checked>
+                    </div>
+                </td>
+                <td class="lh-sm">
+                    <div class="fw-medium" style="font-size:.86rem">Premier rappel</div>
+                    <code class="text-body-tertiary" style="font-size:.72rem">j30</code>
+                </td>
+                <td style="width:110px">
+                    <div class="input-group input-group-sm">
+                        <input type="number" class="form-control" value="30">
+                        <span class="input-group-text" style="font-size:.74rem">j</span>
+                    </div>
+                </td>
+                <td><span class="text-body-secondary" style="font-size:.8rem">avant l'echeance</span></td>
+                <td>
+                    <input type="text" class="form-control form-control-sm" value="Votre adhesion NO MORE WASTE arrive a echeance">
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-light" data-bs-toggle="modal"
+                            data-bs-target="#mModelej30">Modele</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" checked>
+                    </div>
+                </td>
+                <td class="lh-sm">
+                    <div class="fw-medium" style="font-size:.86rem">Rappel final</div>
+                    <code class="text-body-tertiary" style="font-size:.72rem">j7</code>
+                </td>
+                <td style="width:110px">
+                    <div class="input-group input-group-sm">
+                        <input type="number" class="form-control" value="7">
+                        <span class="input-group-text" style="font-size:.74rem">j</span>
+                    </div>
+                </td>
+                <td><span class="text-body-secondary" style="font-size:.8rem">avant l'echeance</span></td>
+                <td>
+                    <input type="text" class="form-control form-control-sm" value="Derniers jours : votre adhesion expire bientot">
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-light" data-bs-toggle="modal"
+                            data-bs-target="#mModelej7">Modele</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" checked>
+                    </div>
+                </td>
+                <td class="lh-sm">
+                    <div class="fw-medium" style="font-size:.86rem">Relance ex-adherent</div>
+                    <code class="text-body-tertiary" style="font-size:.72rem">ex_abonne</code>
+                </td>
+                <td style="width:110px">
+                    <div class="input-group input-group-sm">
+                        <input type="number" class="form-control" value="180">
+                        <span class="input-group-text" style="font-size:.74rem">j</span>
+                    </div>
+                </td>
+                <td><span class="text-body-secondary" style="font-size:.8rem">apres l'expiration</span></td>
+                <td>
+                    <input type="text" class="form-control form-control-sm" value="Ca fait longtemps ! NO MORE WASTE vous manque ?">
+                </td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-light" data-bs-toggle="modal"
+                            data-bs-target="#mModeleex_abonne">Modele</button>
+                </td>
+            </tr></tbody>
+            </table>
+        </div>
+        <div class="p-3 border-top d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <button class="btn btn-sm btn-light">
+                <i class="bi bi-plus-lg"></i> Ajouter une echeance
+            </button>
+            <small class="text-body-tertiary">
+                Exemple d'ajout : un rappel a J-90 pour les grosses cotisations.
+            </small>
+        </div>
+        <div class="px-3 py-2 border-top bg-body-tertiary d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <small class="text-body-secondary">
+                Ces echeances s'appliquent a <strong>tous</strong> les commercants.
+                Pour adapter le rythme au cas par cas :
+            </small>
+            <a href="back-adhesions-profils.html" class="btn btn-sm btn-light">
+                <i class="bi bi-people"></i> Profils de rappel
+            </a>
+        </div>
+    </div>
+
+        <!-- Regles anti-spam -->
+        <div class="bg-body border rounded-3 mt-3">
+            <div class="px-3 py-2 border-bottom">
+                <span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Regles d'envoi</span>
+            </div>
+            <div class="p-3">
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="r1" checked disabled>
+                    <label class="form-check-label" for="r1" style="font-size:.86rem">
+                        Ne jamais envoyer deux fois le meme rappel pour une adhesion
+                        <span class="d-block text-body-tertiary" style="font-size:.78rem">
+                            Regle non desactivable : sans elle, le commercant recevrait
+                            le meme email tous les jours pendant un mois.
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="r2" checked>
+                    <label class="form-check-label" for="r2" style="font-size:.86rem">
+                        Ne pas relancer un commercant dont l'adhesion a ete resiliee volontairement
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="r3">
+                    <label class="form-check-label" for="r3" style="font-size:.86rem">
+                        M'envoyer une copie de chaque rappel envoye
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Colonne de droite : etat et test -->
+    <div class="col-xl-4">
+
+        <div class="bg-body border rounded-3 mb-3">
+            <div class="px-3 py-2 border-bottom"><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Etat du job</span></div>
+            <div class="p-3 d-flex flex-column gap-2" style="font-size:.84rem">
+                <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Statut</span>
+                    <span class="badge rounded-pill text-bg-success">actif</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Derniere execution</span>
+                    <span>aujourd'hui 08:00</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Rappels envoyes</span>
+                    <span>2</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="text-body-secondary">Prochaine execution</span>
+                    <span>demain 08:00</span>
+                </div>
+            </div>
+            <div class="border-top p-3 d-grid">
+                <button class="btn btn-sm btn-primary">Declencher maintenant</button>
+            </div>
+        </div>
+
+        <!-- Envoi de test : indispensable avant de toucher a un modele qui
+             partira a de vrais commercants. -->
+        <div class="bg-body border rounded-3 mb-3">
+            <div class="px-3 py-2 border-bottom"><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Tester un modele</span></div>
+            <div class="p-3">
+                <label class="form-label" style="font-size:.82rem">Echeance</label>
+                <select class="form-select form-select-sm mb-2">
+                    <option>Premier rappel (J-30)</option>
+                    <option>Rappel final (J-7)</option>
+                    <option>Relance ex-adherent</option>
+                </select>
+                <label class="form-label" style="font-size:.82rem">Envoyer a</label>
+                <input type="email" class="form-control form-control-sm mb-2"
+                       value="staff2@nomorewaste.fr">
+                <button class="btn btn-sm btn-light w-100">Envoyer un email de test</button>
+                <small class="text-body-tertiary d-block mt-2" style="font-size:.76rem">
+                    Les variables sont remplacees par des valeurs d'exemple. Aucun
+                    commercant n'est contacte.
+                </small>
+            </div>
+        </div>
+
+        <div class="border-start border-3 border-warning ps-3 py-1 text-body-secondary"
+             style="font-size:.8rem">
+            <strong class="text-body">Attention</strong> &mdash; ces reglages pilotent
+            de <em>vrais</em> envois d'emails a de <em>vrais</em> commercants.
+            Testez toujours un modele avant de l'enregistrer.
+        </div>
+    </div>
+</div>
+
+<div class="d-flex gap-2 justify-content-end mt-3">
+    <a href="back-adhesions.html" class="btn btn-light">Annuler</a>
+    <button class="btn btn-primary">Enregistrer la configuration</button>
+</div>
+
+
+<div class="modal fade" id="mModelej30" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h6">Modele d'email &mdash; Premier rappel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label" style="font-size:.82rem">Objet</label>
+                <input type="text" class="form-control form-control-sm mb-3" value="Votre adhesion NO MORE WASTE arrive a echeance">
+
+                <label class="form-label" style="font-size:.82rem">Corps du message</label>
+                <textarea class="form-control form-control-sm" rows="9">Bonjour {{contact}},
+
+L'adhesion de {{commercant}} arrive a echeance le {{date_fin}}, dans {{jours_restants}} jours.
+
+Pour la renouveler, contactez-nous ou connectez-vous a votre espace.
+
+L'equipe NO MORE WASTE</textarea>
+
+                <div class="border-start border-3 border-secondary-subtle ps-3 mt-3 text-body-secondary"
+                     style="font-size:.78rem">
+                    <strong>Variables disponibles</strong> &mdash; remplacees a l'envoi :
+                    <code>{{commercant}}</code>, <code>{{contact}}</code>,
+                    <code>{{date_fin}}</code>, <code>{{jours_restants}}</code>,
+                    <code>{{jours_ecoules}}</code>, <code>{{ville}}</code>.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-light" data-bs-dismiss="modal">Annuler</button>
+                <button class="btn btn-sm btn-primary">Enregistrer le modele</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mModelej7" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h6">Modele d'email &mdash; Rappel final</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label" style="font-size:.82rem">Objet</label>
+                <input type="text" class="form-control form-control-sm mb-3" value="Derniers jours : votre adhesion expire bientot">
+
+                <label class="form-label" style="font-size:.82rem">Corps du message</label>
+                <textarea class="form-control form-control-sm" rows="9">Bonjour {{contact}},
+
+Il reste {{jours_restants}} jours avant l'expiration de l'adhesion de {{commercant}} ({{date_fin}}).
+
+L'equipe NO MORE WASTE</textarea>
+
+                <div class="border-start border-3 border-secondary-subtle ps-3 mt-3 text-body-secondary"
+                     style="font-size:.78rem">
+                    <strong>Variables disponibles</strong> &mdash; remplacees a l'envoi :
+                    <code>{{commercant}}</code>, <code>{{contact}}</code>,
+                    <code>{{date_fin}}</code>, <code>{{jours_restants}}</code>,
+                    <code>{{jours_ecoules}}</code>, <code>{{ville}}</code>.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-light" data-bs-dismiss="modal">Annuler</button>
+                <button class="btn btn-sm btn-primary">Enregistrer le modele</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="mModeleex_abonne" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h6">Modele d'email &mdash; Relance ex-adherent</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <label class="form-label" style="font-size:.82rem">Objet</label>
+                <input type="text" class="form-control form-control-sm mb-3" value="Ca fait longtemps ! NO MORE WASTE vous manque ?">
+
+                <label class="form-label" style="font-size:.82rem">Corps du message</label>
+                <textarea class="form-control form-control-sm" rows="9">Bonjour {{contact}},
+
+Cela fait {{jours_ecoules}} jours que l'adhesion de {{commercant}} a expire. Vos invendus peuvent encore servir.
+
+L'equipe NO MORE WASTE</textarea>
+
+                <div class="border-start border-3 border-secondary-subtle ps-3 mt-3 text-body-secondary"
+                     style="font-size:.78rem">
+                    <strong>Variables disponibles</strong> &mdash; remplacees a l'envoi :
+                    <code>{{commercant}}</code>, <code>{{contact}}</code>,
+                    <code>{{date_fin}}</code>, <code>{{jours_restants}}</code>,
+                    <code>{{jours_ecoules}}</code>, <code>{{ville}}</code>.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-light" data-bs-dismiss="modal">Annuler</button>
+                <button class="btn btn-sm btn-primary">Enregistrer le modele</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary bg-body" style="font-size:.76rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

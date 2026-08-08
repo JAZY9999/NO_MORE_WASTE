@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mon espace benevole | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="border-bottom bg-body sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                  style="width:36px; height:36px"><i class="bi bi-recycle fs-5"></i></span>
+            <span class="fw-semibold" style="letter-spacing:.04em">NO MORE WASTE</span>
+        </a>
+        <nav class="d-flex align-items-center gap-4 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Benevolat</a>
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-body-secondary text-decoration-none dropdown-toggle p-0"
+                        data-bs-toggle="dropdown" style="font-size:.92rem">FR</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+            <!-- Une fois connecte, ce bouton mene a l'espace correspondant au role.
+                 Sur les maquettes on montre l'entree commercant. -->
+            <a href="front-espace-commercant.html" class="text-decoration-none text-body-secondary"
+               style="font-size:.92rem">Mon espace</a>
+            <a href="front-connexion.html" class="btn btn-sm btn-dark rounded-pill px-3">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container flex-grow-1" style="padding-top:4rem; padding-bottom:4rem">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; <strong>ecran ajoute en V2.4</strong>. Demande
+<code>GET /mon-espace/benevole</code> et <code>GET /mon-espace/planning</code> (qui reutilise
+<code>ListPlanningDuJour</code> en filtrant sur le benevole du jeton). Le blocage de validation
+reprend la meme regle que <code>back-benevole-detail</code>, vue du cote du benevole.</div>
+            </div>
+
+<div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-5">
+    <div>
+        <h1 class="display-6 fw-bold mb-2">Bonjour, Paul</h1>
+        <p class="fs-5 text-body-secondary mb-0">Votre espace benevole.</p>
+    </div>
+    <a href="#" class="btn btn-link text-body-secondary text-decoration-none" style="font-size:.9rem">
+        Mes informations
+    </a>
+</div>
+
+<!-- Le blocage de validation en tete : sans ca, le benevole ne comprend pas
+     pourquoi il n'est affecte a aucune mission. C'est la meme regle que
+     l'ecran back-benevole-detail, vue de l'autre cote. -->
+<div class="border-start border-3 border-warning ps-4 mb-5">
+    <div class="d-flex align-items-baseline gap-3 flex-wrap">
+        <span class="fs-4 fw-bold">Candidature en cours</span>
+        <span class="badge rounded-pill text-bg-warning">1 document manquant</span>
+    </div>
+    <p class="text-body-secondary mt-2 mb-3" style="max-width:620px">
+        Vous pourrez etre affecte a des collectes, des tournees et des services
+        une fois que <strong>tous</strong> vos justificatifs auront ete verifies
+        par l'association.
+    </p>
+
+    <div class="row g-2" style="max-width:620px">
+        <div class="col-md-4">
+            <div class="border rounded-3 bg-body p-2 d-flex justify-content-between align-items-center">
+                <span style="font-size:.84rem">Piece d'identite</span>
+                <i class="bi bi-check-circle-fill text-success"></i>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="border rounded-3 bg-body p-2 d-flex justify-content-between align-items-center">
+                <span style="font-size:.84rem">Justificatif de domicile</span>
+                <i class="bi bi-check-circle-fill text-success"></i>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="border border-warning rounded-3 bg-warning-subtle p-2
+                        d-flex justify-content-between align-items-center">
+                <span style="font-size:.84rem">Permis de conduire</span>
+                <i class="bi bi-hourglass-split text-warning-emphasis"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-body-secondary mt-2" style="font-size:.84rem">
+        Le permis a bien ete recu le 30/07/2026, il est en cours de verification.
+    </div>
+</div>
+
+<div class="row g-5">
+    <div class="col-lg-7">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Mes prochains creneaux</div>
+            <a href="#" class="text-decoration-none" style="font-size:.84rem">
+                Telecharger mon planning
+            </a>
+        </div>
+        <div class="table-responsive mt-2">
+            <table class="table table-sm align-middle">
+                <thead class="border-bottom">
+                    <tr><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Service</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Quand</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Lieu</span></th>
+                        <th class="text-end"><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Participants</span></th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td class="fw-medium" style="font-size:.86rem">Cours de cuisine anti-gaspi</td>
+                <td class="lh-sm" style="font-size:.84rem">10/08/2026<br>
+                    <small class="text-body-tertiary">14:00-16:00</small></td>
+                <td style="font-size:.84rem">Local Paris 11</td>
+                <td class="text-end" style="font-size:.84rem">5/8 inscrits</td>
+            </tr>
+            <tr>
+                <td class="fw-medium" style="font-size:.86rem">Cours de cuisine anti-gaspi</td>
+                <td class="lh-sm" style="font-size:.84rem">12/08/2026<br>
+                    <small class="text-body-tertiary">10:00-12:00</small></td>
+                <td style="font-size:.84rem">Local Paris 11</td>
+                <td class="text-end" style="font-size:.84rem">8/8 inscrits</td>
+            </tr></tbody>
+            </table>
+        </div>
+        <small class="text-body-tertiary">
+            Vous recevez aussi ce planning par email chaque jour.
+        </small>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Mes competences</div>
+        <div class="d-flex flex-wrap gap-2 mt-2 mb-4">
+            <span class="badge rounded-pill text-bg-light border text-body" style="font-size:.78rem">chauffeur</span>
+            <span class="badge rounded-pill text-bg-light border text-body" style="font-size:.78rem">cuisinier</span>
+        </div>
+        <p class="text-body-secondary" style="font-size:.86rem">
+            Elles determinent les missions auxquelles vous pouvez etre affecte.
+            Pour en ajouter, contactez l'association.
+        </p>
+
+        <div class="border-top pt-4 mt-4">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Mes tournees</div>
+            <div class="text-body-secondary mt-2" style="font-size:.88rem">
+                Aucune tournee prevue pour l'instant. Les tournees sont reservees
+                aux benevoles valides possedant la competence <em>chauffeur</em>.
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-5 mt-auto">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.84rem">
+        <span>NO MORE WASTE &mdash; 2026</span>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

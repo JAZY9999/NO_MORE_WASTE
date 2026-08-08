@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end bg-body"
+       style="width:238px" id="barreLaterale">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+        <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white flex-shrink-0"
+              style="width:32px; height:32px">
+            <i class="bi bi-recycle"></i>
+        </span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-bold text-body" style="font-size:.8rem; letter-spacing:.05em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.64rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-columns-gap"></i> Tableau de bord
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-shop"></i> Commercants<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">12</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-people"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.62rem">3</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-basket"></i> Collectes<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">4</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-box-seam"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.62rem">6</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-truck"></i> Tournees<span class="badge rounded-pill text-bg-primary ms-auto" style="font-size:.62rem">1</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none bg-primary bg-opacity-10 text-primary fw-semibold border-start border-3 border-primary" style="font-size:.85rem">
+            <i class="bi bi-calendar-week"></i> Services<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">7</span>
+        </a>
+    </nav>
+
+    <div class="border-top p-3">
+        <div class="d-flex align-items-center gap-2">
+            <!-- Pastille d'initiales : evite d'avoir a stocker une photo. -->
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0"
+                  style="width:32px; height:32px; font-size:.72rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.74rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.64rem">admin_back</small>
+            </div>
+            <a href="#" class="text-body-tertiary" title="Deconnexion"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body-tertiary" style="min-width:0">
+<header class="bg-body border-bottom">
+        <div class="d-flex align-items-center gap-3 px-4 py-2 border-bottom">
+            <nav style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0" style="font-size:.78rem">
+                    <li class="breadcrumb-item">
+                        <a href="back-tableau-de-bord.html" class="text-decoration-none text-body-secondary">Back-office</a>
+                    </li>
+                    <li class="breadcrumb-item active">Services</li>
+                </ol>
+            </nav>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <div class="input-group input-group-sm" style="width:230px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher..." style="font-size:.8rem">
+                </div>
+                <button class="btn btn-sm btn-light position-relative" title="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                          style="font-size:.55rem">3</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-4 py-3">
+            <h1 class="h4 mb-0">Services et creneaux</h1>
+            <div class="d-flex gap-2"><button class="btn btn-sm btn-light"><i class="bi bi-gear"></i> Gerer les services</button>
+              <button class="btn btn-sm btn-primary"><i class="bi bi-plus-lg"></i> Nouveau creneau</button></div>
+        </div>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4">
+        <div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mb-4"
+             style="font-size:.82rem">
+            <i class="bi bi-easel2 text-body-secondary"></i>
+            <div><strong>Maquette</strong> &mdash; <code>PUT /creneaux/{id}/affectation</code> et <code>GET /plannings/?date=...</code> (planning CSV envoye par email).</div>
+        </div>
+
+<div class="border rounded bg-body p-3 mb-3">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+            <div class="fw-semibold" style="font-size:.9rem">
+                <i class="bi bi-envelope-arrow-up text-primary"></i> Planning quotidien des benevoles
+            </div>
+            <small class="text-body-tertiary">
+                Envoye automatiquement chaque jour par une goroutine. Peut aussi etre declenche a la main.
+            </small>
+        </div>
+        <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-light"><i class="bi bi-filetype-csv"></i> Telecharger le CSV</button>
+            <button class="btn btn-sm btn-primary"><i class="bi bi-send"></i> Envoyer maintenant</button>
+        </div>
+    </div>
+</div>
+
+<div class="border rounded bg-body">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="border-bottom">
+                <tr>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Service</span></th>
+                    <th><a href="#" class="text-decoration-none text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Quand <i class="bi bi-caret-up-fill text-primary"></i></a></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Lieu</span></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Benevole affecte</span></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Inscrits</span></th>
+                    <th><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Statut</span></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-egg-fried text-body-tertiary"></i>
+                        <span class="fw-semibold">Cours de cuisine anti-gaspi</span>
+                    </div>
+                </td>
+                <td class="lh-sm" style="font-size:.84rem">10/08<br>
+                    <small class="text-body-tertiary">14:00-16:00</small></td>
+                <td style="font-size:.84rem">Local Paris 11</td>
+                <td><div class="lh-sm">
+            <div style="font-size:.84rem">Paul Durand</div>
+            <small class="text-body-tertiary">cuisinier</small>
+        </div></td>
+                <td style="min-width:110px">
+                    <div style="font-size:.76rem">5 / 8</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:62%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-egg-fried text-body-tertiary"></i>
+                        <span class="fw-semibold">Cours de cuisine anti-gaspi</span>
+                    </div>
+                </td>
+                <td class="lh-sm" style="font-size:.84rem">12/08<br>
+                    <small class="text-body-tertiary">10:00-12:00</small></td>
+                <td style="font-size:.84rem">Local Paris 11</td>
+                <td><div class="lh-sm">
+            <div style="font-size:.84rem">Paul Durand</div>
+            <small class="text-body-tertiary">cuisinier</small>
+        </div></td>
+                <td style="min-width:110px">
+                    <div style="font-size:.76rem">8 / 8</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-danger" style="width:100%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-danger">complet</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-lightbulb text-body-tertiary"></i>
+                        <span class="fw-semibold">Conseil anti-gaspillage</span>
+                    </div>
+                </td>
+                <td class="lh-sm" style="font-size:.84rem">11/08<br>
+                    <small class="text-body-tertiary">09:00-10:00</small></td>
+                <td style="font-size:.84rem">Visio</td>
+                <td><button class="btn btn-sm btn-outline-primary py-0" style="font-size:.76rem">
+            <i class="bi bi-person-plus"></i> affecter</button></td>
+                <td style="min-width:110px">
+                    <div style="font-size:.76rem">2 / 5</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:40%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-car-front text-body-tertiary"></i>
+                        <span class="fw-semibold">Partage de vehicule</span>
+                    </div>
+                </td>
+                <td class="lh-sm" style="font-size:.84rem">13/08<br>
+                    <small class="text-body-tertiary">08:00-18:00</small></td>
+                <td style="font-size:.84rem">Nantes centre</td>
+                <td><div class="lh-sm">
+            <div style="font-size:.84rem">Sophie Bernard</div>
+            <small class="text-body-tertiary">chauffeur</small>
+        </div></td>
+                <td style="min-width:110px">
+                    <div style="font-size:.76rem">1 / 2</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:50%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-tools text-body-tertiary"></i>
+                        <span class="fw-semibold">Petite reparation</span>
+                    </div>
+                </td>
+                <td class="lh-sm" style="font-size:.84rem">14/08<br>
+                    <small class="text-body-tertiary">14:00-17:00</small></td>
+                <td style="font-size:.84rem">Local Paris 11</td>
+                <td><button class="btn btn-sm btn-outline-primary py-0" style="font-size:.76rem">
+            <i class="bi bi-person-plus"></i> affecter</button><div><small class="text-body-tertiary">requiert : bricoleur</small></div></td>
+                <td style="min-width:110px">
+                    <div style="font-size:.76rem">0 / 4</div>
+                    <div class="progress mt-1" style="height:4px">
+                        <div class="progress-bar bg-success" style="width:0%"></div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success">ouvert</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-3 py-2 border-top">
+        <small class="text-body-secondary">5 creneaux sur 7</small>
+        <nav>
+            <ul class="pagination pagination-sm mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li><li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mt-3"
+     style="font-size:.82rem">
+    <i class="bi bi-info-circle text-body-secondary"></i>
+    <div><strong>Deux conditions pour affecter un benevole a un creneau :</strong>
+    etre au statut <code>valide</code> (tous ses documents verifies), et posseder
+    la competence requise par le service.</div>
+</div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary" style="font-size:.78rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maquettes V2.4 | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="border-bottom bg-body sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                  style="width:36px; height:36px"><i class="bi bi-recycle fs-5"></i></span>
+            <span class="fw-semibold" style="letter-spacing:.04em">NO MORE WASTE</span>
+        </a>
+        <nav class="d-flex align-items-center gap-4 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Benevolat</a>
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-body-secondary text-decoration-none dropdown-toggle p-0"
+                        data-bs-toggle="dropdown" style="font-size:.92rem">FR</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+            <!-- Une fois connecte, ce bouton mene a l'espace correspondant au role.
+                 Sur les maquettes on montre l'entree commercant. -->
+            <a href="front-espace-commercant.html" class="text-decoration-none text-body-secondary"
+               style="font-size:.92rem">Mon espace</a>
+            <a href="front-connexion.html" class="btn btn-sm btn-dark rounded-pill px-3">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container flex-grow-1" style="padding-top:4rem; padding-bottom:4rem">
+
+<div class="mb-5">
+    <span class="badge rounded-pill text-bg-dark mb-3">Version 2.4</span>
+    <h1 class="display-6 fw-bold mb-3">Maquettes NO MORE WASTE</h1>
+    <p class="fs-5 text-body-secondary mb-0" style="max-width:660px">
+        32 ecrans. La V2.4 reprend le parti pris visuel de la V2.3 et complete
+        la couverture : <strong>tout ce qui est administrable a desormais son ecran</strong>.
+    </p>
+</div>
+
+<div class="border-start border-3 border-primary ps-4 mb-5">
+    <div class="fw-semibold mb-2">Ce qui a ete ajoute</div>
+    <div class="row g-4" style="font-size:.88rem">
+        <div class="col-md-6">
+            <div class="fw-medium mb-1">7 domaines n'avaient aucun ecran</div>
+            <p class="text-body-secondary mb-0">
+                Adhesions et rappels (le point le plus cite du sujet), beneficiaires,
+                emplacements, liste des tournees, catalogue des services, campagnes,
+                utilisateurs. Ils existaient dans l'API mais restaient invisibles.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div class="fw-medium mb-1">Des ecrans de detail et un formulaire</div>
+            <p class="text-body-secondary mb-0">
+                Une liste sans fiche est une impasse : on voyait des lignes sans
+                pouvoir rien ouvrir. Les boutons &laquo; Ajouter &raquo; ne menaient
+                nulle part non plus.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-5">
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Front-office</div>
+            <small class="text-body-tertiary">aere &mdash; vitrine publique</small>
+        </div>
+        <div class="border-top">
+        <a href="index.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Accueil</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-services.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Catalogue des services</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-service-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Creneaux d'un service</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-candidature.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Candidature benevole</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-connexion.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Connexion</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-espace-commercant.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Espace commercant <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="front-espace-benevole.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Espace benevole <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Back-office &mdash; Pilotage</div>
+            
+        </div>
+        <div class="border-top">
+        <a href="back-tableau-de-bord.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Tableau de bord</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Back-office &mdash; Reseau</div>
+            
+        </div>
+        <div class="border-top">
+        <a href="back-commercants.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Commercants</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-commercant-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Fiche commercant <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-commercant-nouveau.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Creer un commercant <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-adhesions.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Adhesions et rappels <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-adhesions-config.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Configuration des rappels <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-adhesions-profils.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Profils de rappel <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Benevoles</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-benevole-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Fiche benevole</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-beneficiaires.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Beneficiaires <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Back-office &mdash; Logistique</div>
+            
+        </div>
+        <div class="border-top">
+        <a href="back-collectes.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Collectes</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-collecte-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Detail d'une collecte <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Stocks</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-emplacements.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Emplacements <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Tournees (liste) <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-tournee-detail.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Detail d'une tournee</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Back-office &mdash; Activites</div>
+            
+        </div>
+        <div class="border-top">
+        <a href="back-services.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Creneaux de service</span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-catalogue.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Catalogue services et competences <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-campagnes.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Campagnes ciblees <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Back-office &mdash; Administration</div>
+            
+        </div>
+        <div class="border-top">
+        <a href="back-utilisateurs.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Utilisateurs et roles <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-traductions.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Traductions <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="back-profil.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">Mon compte <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mb-2">
+            <div class="fw-semibold">Pages d'erreur</div>
+            <small class="text-body-tertiary">servies par nginx, habillage du site</small>
+        </div>
+        <div class="border-top">
+        <a href="erreur-404.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">404 &mdash; page introuvable <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="erreur-500.html" class="d-flex justify-content-between align-items-center py-2 border-bottom text-decoration-none text-body">
+            <span style="font-size:.92rem">500 &mdash; erreur serveur <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis ms-1" style="font-size:.6rem">nouveau</span></span>
+            <span class="text-primary">&rarr;</span>
+        </a>
+        </div>
+    </div>
+</div>
+
+<div class="border-top mt-5 pt-4 text-body-secondary" style="font-size:.88rem">
+    Chaque maquette indique les routes d'API qu'elle consomme. Toutes existent et sont
+    testees (75/75), sauf : le <em>tri</em> et la <em>pagination</em> des listes, la
+    creation d'un compte staff, et la modification de son propre profil &mdash; qui
+    demanderaient d'enrichir l'API.
+</div>
+
+</main>
+
+<footer class="border-top py-5 mt-auto">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.84rem">
+        <span>NO MORE WASTE &mdash; 2026</span>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

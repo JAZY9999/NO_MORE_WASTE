@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Benevoles | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 bg-body" data-bs-theme="dark"
+       style="width:225px">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none">
+        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white flex-shrink-0"
+              style="width:30px; height:30px"><i class="bi bi-recycle" style="font-size:.9rem"></i></span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-semibold text-body" style="font-size:.76rem; letter-spacing:.04em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.62rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-speedometer2" style="width:16px"></i> Tableau de bord
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-shop" style="width:16px"></i> Commercants
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none bg-primary text-white fw-medium" style="font-size:.84rem">
+            <i class="bi bi-people" style="width:16px"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.6rem">3</span>
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-basket3" style="width:16px"></i> Collectes
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-boxes" style="width:16px"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.6rem">6</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-truck" style="width:16px"></i> Tournees<span class="badge rounded-pill text-bg-info ms-auto" style="font-size:.6rem">1</span>
+        </a>
+        <div class="px-4 pt-3 pb-1 text-uppercase text-body-tertiary"
+             style="font-size:.6rem; letter-spacing:.12em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 mx-2 rounded text-decoration-none text-body-secondary" style="font-size:.84rem">
+            <i class="bi bi-calendar3" style="width:16px"></i> Services
+        </a>
+    </nav>
+
+    <div class="p-3 border-top border-secondary-subtle">
+        <div class="d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white fw-semibold flex-shrink-0"
+                  style="width:28px; height:28px; font-size:.66rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.72rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.62rem">admin_back</small>
+            </div>
+            <a href="#" class="text-body-tertiary" title="Deconnexion"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body" style="min-width:0">
+<header class="bg-body border-bottom px-4 pt-3 sticky-top">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+            <div>
+                <h1 class="h5 mb-0">Benevoles</h1>
+                <div class="text-body-secondary" style="font-size:.82rem">3 candidatures attendent une validation</div>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+                <div class="input-group input-group-sm" style="width:200px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary" style="font-size:.8rem"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher" style="font-size:.8rem">
+                </div>
+                
+            </div>
+        </div>
+        <ul class="nav mt-3 mb-0" style="margin-bottom:-1px"><li class="nav-item"><a class="nav-link px-0 me-4 border-0 border-bottom border-2 rounded-0 active border-primary text-primary fw-medium" href="#" style="font-size:.85rem">Tous<span class="badge rounded-pill text-bg-light border text-body-secondary ms-1" style="font-size:.6rem">5</span></a></li><li class="nav-item"><a class="nav-link px-0 me-4 border-0 border-bottom border-2 rounded-0 border-transparent text-body-secondary" href="#" style="font-size:.85rem">Candidats<span class="badge rounded-pill text-bg-light border text-body-secondary ms-1" style="font-size:.6rem">1</span></a></li><li class="nav-item"><a class="nav-link px-0 me-4 border-0 border-bottom border-2 rounded-0 border-transparent text-body-secondary" href="#" style="font-size:.85rem">En validation<span class="badge rounded-pill text-bg-light border text-body-secondary ms-1" style="font-size:.6rem">1</span></a></li><li class="nav-item"><a class="nav-link px-0 me-4 border-0 border-bottom border-2 rounded-0 border-transparent text-body-secondary" href="#" style="font-size:.85rem">Valides<span class="badge rounded-pill text-bg-light border text-body-secondary ms-1" style="font-size:.6rem">2</span></a></li><li class="nav-item"><a class="nav-link px-0 me-4 border-0 border-bottom border-2 rounded-0 border-transparent text-body-secondary" href="#" style="font-size:.85rem">Refuses<span class="badge rounded-pill text-bg-light border text-body-secondary ms-1" style="font-size:.6rem">1</span></a></li></ul>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4 bg-body-tertiary">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; <code>GET /benevoles/?statut=...</code> &mdash; les onglets reprennent le filtre par statut de l'API.</div>
+            </div>
+
+<div class="bg-body border rounded-3">
+        
+    <div class="table-responsive">
+        <table class="table table-sm table-hover align-middle mb-0">
+            <thead class="border-bottom">
+                <tr>
+                    <th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Benevole <i class="bi bi-caret-up-fill text-primary" style="font-size:.6rem"></i></span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Statut</span></th><th class="text-center"><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Permis</span></th>
+                    <th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Documents</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Competences</span></th><th></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0" style="width:30px; height:30px; font-size:.68rem">PD</span>
+                        <div class="lh-sm">
+                            <div class="fw-medium" style="font-size:.86rem">Durand Paul</div>
+                            <a href="mailto:paul.durand@test.fr" class="text-decoration-none text-body-tertiary"
+                               style="font-size:.74rem">paul.durand@test.fr</a>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-secondary" style="font-size:.66rem">candidat</span></td>
+                <td class="text-center"><i class="bi bi-check-lg text-success"></i></td>
+                <td style="min-width:110px">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="progress flex-grow-1" style="height:4px">
+                            <div class="progress-bar bg-warning" style="width:66%"></div>
+                        </div>
+                        <small class="text-body-tertiary" style="font-size:.72rem">2/3</small>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary" style="font-size:.66rem">chauffeur</span> <span class="badge rounded-pill text-bg-light border text-body-secondary" style="font-size:.66rem">cuisinier</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-light">Ouvrir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0" style="width:30px; height:30px; font-size:.68rem">SB</span>
+                        <div class="lh-sm">
+                            <div class="fw-medium" style="font-size:.86rem">Bernard Sophie</div>
+                            <a href="mailto:s.bernard@test.fr" class="text-decoration-none text-body-tertiary"
+                               style="font-size:.74rem">s.bernard@test.fr</a>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success" style="font-size:.66rem">valide</span></td>
+                <td class="text-center"><i class="bi bi-check-lg text-success"></i></td>
+                <td style="min-width:110px">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="progress flex-grow-1" style="height:4px">
+                            <div class="progress-bar bg-success" style="width:100%"></div>
+                        </div>
+                        <small class="text-body-tertiary" style="font-size:.72rem">3/3</small>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary" style="font-size:.66rem">chauffeur</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-light">Ouvrir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0" style="width:30px; height:30px; font-size:.68rem">ML</span>
+                        <div class="lh-sm">
+                            <div class="fw-medium" style="font-size:.86rem">Lopez Marta</div>
+                            <a href="mailto:m.lopez@test.fr" class="text-decoration-none text-body-tertiary"
+                               style="font-size:.74rem">m.lopez@test.fr</a>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-warning" style="font-size:.66rem">en validation</span></td>
+                <td class="text-center"><span class="text-body-tertiary">&mdash;</span></td>
+                <td style="min-width:110px">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="progress flex-grow-1" style="height:4px">
+                            <div class="progress-bar bg-warning" style="width:50%"></div>
+                        </div>
+                        <small class="text-body-tertiary" style="font-size:.72rem">1/2</small>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary" style="font-size:.66rem">cuisinier</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-light">Ouvrir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0" style="width:30px; height:30px; font-size:.68rem">KN</span>
+                        <div class="lh-sm">
+                            <div class="fw-medium" style="font-size:.86rem">Nguyen Kim</div>
+                            <a href="mailto:k.nguyen@test.fr" class="text-decoration-none text-body-tertiary"
+                               style="font-size:.74rem">k.nguyen@test.fr</a>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-success" style="font-size:.66rem">valide</span></td>
+                <td class="text-center"><span class="text-body-tertiary">&mdash;</span></td>
+                <td style="min-width:110px">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="progress flex-grow-1" style="height:4px">
+                            <div class="progress-bar bg-success" style="width:100%"></div>
+                        </div>
+                        <small class="text-body-tertiary" style="font-size:.72rem">2/2</small>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-light border text-body-secondary" style="font-size:.66rem">bricoleur</span> <span class="badge rounded-pill text-bg-light border text-body-secondary" style="font-size:.66rem">electricien</span></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-light">Ouvrir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0" style="width:30px; height:30px; font-size:.68rem">MR</span>
+                        <div class="lh-sm">
+                            <div class="fw-medium" style="font-size:.86rem">Rossi Marco</div>
+                            <a href="mailto:m.rossi@test.it" class="text-decoration-none text-body-tertiary"
+                               style="font-size:.74rem">m.rossi@test.it</a>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge rounded-pill text-bg-danger" style="font-size:.66rem">refuse</span></td>
+                <td class="text-center"><span class="text-body-tertiary">&mdash;</span></td>
+                <td style="min-width:110px">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="progress flex-grow-1" style="height:4px">
+                            <div class="progress-bar bg-danger" style="width:0%"></div>
+                        </div>
+                        <small class="text-body-tertiary" style="font-size:.72rem">0/2</small>
+                    </div>
+                </td>
+                <td><small class="text-body-tertiary">&mdash;</small></td>
+                <td class="text-end">
+                    <a href="back-benevole-detail.html" class="btn btn-sm btn-light">Ouvrir</a>
+                </td>
+            </tr></tbody>
+        </table>
+    </div>
+    
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-3 py-2 border-top">
+            <small class="text-body-tertiary">5 benevoles</small>
+            <nav><ul class="pagination pagination-sm mb-0">
+                <li class="page-item disabled"><a class="page-link" href="#">&lsaquo;</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">&rsaquo;</a></li>
+            </ul></nav>
+        </div>
+    </div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary bg-body" style="font-size:.76rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

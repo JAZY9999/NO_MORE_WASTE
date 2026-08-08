@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mon espace | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-body">
+
+<header class="border-bottom bg-body sticky-top">
+    <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
+        <a href="index.html" class="text-decoration-none text-body d-flex align-items-center gap-2">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                  style="width:36px; height:36px"><i class="bi bi-recycle fs-5"></i></span>
+            <span class="fw-semibold" style="letter-spacing:.04em">NO MORE WASTE</span>
+        </a>
+        <nav class="d-flex align-items-center gap-4 flex-wrap">
+            <a href="index.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Accueil</a>
+            <a href="front-services.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Services</a>
+            <a href="front-candidature.html" class="text-decoration-none text-body-secondary" style="font-size:.92rem">Benevolat</a>
+            <div class="dropdown">
+                <button class="btn btn-sm btn-link text-body-secondary text-decoration-none dropdown-toggle p-0"
+                        data-bs-toggle="dropdown" style="font-size:.92rem">FR</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item active" href="#">Francais</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Italiano</a></li>
+                    <li><a class="dropdown-item" href="#">Portugues</a></li>
+                </ul>
+            </div>
+            <!-- Une fois connecte, ce bouton mene a l'espace correspondant au role.
+                 Sur les maquettes on montre l'entree commercant. -->
+            <a href="front-espace-commercant.html" class="text-decoration-none text-body-secondary"
+               style="font-size:.92rem">Mon espace</a>
+            <a href="front-connexion.html" class="btn btn-sm btn-dark rounded-pill px-3">Connexion</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container flex-grow-1" style="padding-top:4rem; padding-bottom:4rem">
+            <div class="d-flex gap-2 align-items-start border-start border-3 border-secondary-subtle ps-3 py-1 mb-4"
+                 style="font-size:.8rem">
+                <div class="text-body-secondary"><strong>Maquette</strong> &mdash; <strong>ecran ajoute en V2.4</strong> &mdash; le sujet parle du
+<em>&laquo; front office utilise par les <strong>clients</strong> &raquo;</em>, or un
+adherent connecte ne voyait rien de plus qu'un visiteur. Demande
+<code>GET /mon-espace/commercant</code>, <code>GET /mon-espace/collectes</code> et
+<code>POST /mon-espace/collectes</code> : des routes qui filtrent sur l'utilisateur du
+jeton, jamais sur un identifiant fourni par le client.</div>
+            </div>
+
+<div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-5">
+    <div>
+        <h1 class="display-6 fw-bold mb-2">Bonjour, Boulangerie Martin</h1>
+        <p class="fs-5 text-body-secondary mb-0">
+            Votre espace adherent NO MORE WASTE.
+        </p>
+    </div>
+    <a href="#" class="btn btn-link text-body-secondary text-decoration-none" style="font-size:.9rem">
+        Mes informations
+    </a>
+</div>
+
+<!-- L'adhesion en premier : c'est l'information qui conditionne tout le reste.
+     Un adherent dont l'adhesion expire ne peut plus etre collecte. -->
+<div class="row g-4 mb-5">
+    <div class="col-lg-7">
+        <div class="border-start border-3 border-success ps-4">
+            <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Mon adhesion</div>
+            <div class="d-flex align-items-baseline gap-3 mt-2 flex-wrap">
+                <span class="fs-3 fw-bold">Active</span>
+                <span class="text-body-secondary">jusqu'au 31 decembre 2026</span>
+            </div>
+            <div class="progress mt-3" style="height:6px; max-width:340px">
+                <div class="progress-bar bg-success" style="width:62%"></div>
+            </div>
+            <div class="text-body-secondary mt-2" style="font-size:.88rem">
+                Il reste <strong>150 jours</strong>. Vous recevrez un rappel par email
+                30 jours puis 7 jours avant l'echeance.
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3 mt-3">
+                Renouveler des maintenant
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="row g-3 text-center">
+            <div class="col-4">
+                <div class="fs-3 fw-bold text-primary lh-1">23</div>
+                <div class="text-body-secondary" style="font-size:.82rem">collectes</div>
+            </div>
+            <div class="col-4">
+                <div class="fs-3 fw-bold text-primary lh-1">312</div>
+                <div class="text-body-secondary" style="font-size:.82rem">articles donnes</div>
+            </div>
+            <div class="col-4">
+                <div class="fs-3 fw-bold text-primary lh-1">3</div>
+                <div class="text-body-secondary" style="font-size:.82rem">ans d'adhesion</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Demander une collecte : l'action principale d'un commercant -->
+<div class="border rounded-3 bg-body-tertiary p-4 mb-5 d-flex justify-content-between
+            align-items-center flex-wrap gap-3">
+    <div>
+        <div class="fw-semibold mb-1">Vous avez des invendus ?</div>
+        <div class="text-body-secondary" style="font-size:.9rem">
+            Demandez une collecte : un benevole passera les recuperer.
+        </div>
+    </div>
+    <button class="btn btn-primary rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#mCollecte">
+        Demander une collecte
+    </button>
+</div>
+
+<div class="row g-5">
+    <div class="col-lg-7">
+        <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Mes collectes</div>
+        <div class="table-responsive mt-2">
+            <table class="table table-sm align-middle">
+                <thead class="border-bottom">
+                    <tr><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Date</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Statut</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Benevole</span></th>
+                        <th class="text-end"><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Articles</span></th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td style="font-size:.86rem">05/08/2026</td>
+                <td><span class="badge rounded-pill text-bg-info" style="font-size:.66rem">planifiee</span></td>
+                <td style="font-size:.84rem">Paul Durand</td>
+                <td class="text-end" style="font-size:.86rem">&mdash;</td>
+            </tr>
+            <tr>
+                <td style="font-size:.86rem">22/07/2026</td>
+                <td><span class="badge rounded-pill text-bg-success" style="font-size:.66rem">realisee</span></td>
+                <td style="font-size:.84rem">Sophie Bernard</td>
+                <td class="text-end" style="font-size:.86rem">14</td>
+            </tr>
+            <tr>
+                <td style="font-size:.86rem">08/07/2026</td>
+                <td><span class="badge rounded-pill text-bg-success" style="font-size:.66rem">realisee</span></td>
+                <td style="font-size:.84rem">Paul Durand</td>
+                <td class="text-end" style="font-size:.86rem">9</td>
+            </tr></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Mes inscriptions aux services</div>
+        <div class="table-responsive mt-2">
+            <table class="table table-sm align-middle">
+                <thead class="border-bottom">
+                    <tr><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Service</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Quand</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Lieu</span></th><th class=""><span class="text-uppercase text-body-tertiary fw-semibold" style="font-size:.64rem; letter-spacing:.1em">Statut</span></th><th></th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td class="fw-medium" style="font-size:.86rem">Cours de cuisine anti-gaspi</td>
+                <td class="lh-sm" style="font-size:.84rem">10/08/2026<br>
+                    <small class="text-body-tertiary">14:00-16:00</small></td>
+                <td style="font-size:.84rem">Local Paris 11</td>
+                <td><span class="badge rounded-pill text-bg-success" style="font-size:.66rem">inscrit</span></td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-link text-danger p-0" style="font-size:.8rem">Annuler</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="fw-medium" style="font-size:.86rem">Conseil anti-gaspillage</td>
+                <td class="lh-sm" style="font-size:.84rem">11/08/2026<br>
+                    <small class="text-body-tertiary">09:00-10:00</small></td>
+                <td style="font-size:.84rem">Visio</td>
+                <td><span class="badge rounded-pill text-bg-success" style="font-size:.66rem">inscrit</span></td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-link text-danger p-0" style="font-size:.8rem">Annuler</button>
+                </td>
+            </tr></tbody>
+            </table>
+        </div>
+        <a href="front-services.html" class="text-decoration-none" style="font-size:.88rem">
+            Voir tous les services &rarr;
+        </a>
+    </div>
+</div>
+
+<div class="modal fade" id="mCollecte" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title h6">Demander une collecte</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" style="font-size:.86rem">Date souhaitee</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" style="font-size:.86rem">
+                        Nature des invendus <span class="text-body-tertiary">(facultatif)</span>
+                    </label>
+                    <textarea class="form-control" rows="3"
+                              placeholder="Pain, viennoiseries, environ 5 kg..."></textarea>
+                </div>
+                <div class="border-start border-3 border-secondary-subtle ps-3 text-body-secondary"
+                     style="font-size:.82rem">
+                    Votre demande sera examinee par l'association, qui vous confirmera
+                    la date et le benevole affecte.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-light" data-bs-dismiss="modal">Annuler</button>
+                <button class="btn btn-primary">Envoyer la demande</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="border-top py-5 mt-auto">
+    <div class="container d-flex justify-content-between flex-wrap gap-3 text-body-secondary"
+         style="font-size:.84rem">
+        <span>NO MORE WASTE &mdash; 2026</span>
+        <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+    </div>
+</footer>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

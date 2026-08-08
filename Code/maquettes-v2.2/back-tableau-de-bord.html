@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tableau de bord | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body>
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end bg-body"
+       style="width:238px" id="barreLaterale">
+
+    <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+        <span class="d-flex align-items-center justify-content-center rounded bg-primary text-white flex-shrink-0"
+              style="width:32px; height:32px">
+            <i class="bi bi-recycle"></i>
+        </span>
+        <span class="d-flex flex-column lh-1">
+            <span class="fw-bold text-body" style="font-size:.8rem; letter-spacing:.05em">NO MORE WASTE</span>
+            <small class="text-body-tertiary" style="font-size:.64rem">Back-office</small>
+        </span>
+    </a>
+
+    <nav class="flex-grow-1 overflow-auto pb-3">
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Pilotage</div>
+        <a href="back-tableau-de-bord.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none bg-primary bg-opacity-10 text-primary fw-semibold border-start border-3 border-primary" style="font-size:.85rem">
+            <i class="bi bi-columns-gap"></i> Tableau de bord
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Reseau</div>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-shop"></i> Commercants<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">12</span>
+        </a>
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-people"></i> Benevoles<span class="badge rounded-pill text-bg-warning ms-auto" style="font-size:.62rem">3</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Logistique</div>
+        <a href="back-collectes.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-basket"></i> Collectes<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">4</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-box-seam"></i> Stocks<span class="badge rounded-pill text-bg-danger ms-auto" style="font-size:.62rem">6</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-truck"></i> Tournees<span class="badge rounded-pill text-bg-primary ms-auto" style="font-size:.62rem">1</span>
+        </a>
+    <div class="px-3 pt-3 pb-1 text-uppercase text-body-tertiary"
+         style="font-size:.62rem; letter-spacing:.1em">Activites</div>
+        <a href="back-services.html" class="d-flex align-items-center gap-2 px-3 py-2 text-decoration-none text-body-secondary border-start border-3 border-transparent" style="font-size:.85rem">
+            <i class="bi bi-calendar-week"></i> Services<span class="badge rounded-pill text-bg-secondary ms-auto" style="font-size:.62rem">7</span>
+        </a>
+    </nav>
+
+    <div class="border-top p-3">
+        <div class="d-flex align-items-center gap-2">
+            <!-- Pastille d'initiales : evite d'avoir a stocker une photo. -->
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis fw-semibold flex-shrink-0"
+                  style="width:32px; height:32px; font-size:.72rem">ST</span>
+            <div class="lh-1 flex-grow-1 overflow-hidden">
+                <div class="text-body text-truncate" style="font-size:.74rem">staff@nomorewaste.fr</div>
+                <small class="text-body-tertiary" style="font-size:.64rem">admin_back</small>
+            </div>
+            <a href="#" class="text-body-tertiary" title="Deconnexion"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </div>
+</aside>
+
+    <div class="flex-grow-1 d-flex flex-column bg-body-tertiary" style="min-width:0">
+<header class="bg-body border-bottom">
+        <div class="d-flex align-items-center gap-3 px-4 py-2 border-bottom">
+            <nav style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0" style="font-size:.78rem">
+                    <li class="breadcrumb-item">
+                        <a href="back-tableau-de-bord.html" class="text-decoration-none text-body-secondary">Back-office</a>
+                    </li>
+                    <li class="breadcrumb-item active">Tableau de bord</li>
+                </ol>
+            </nav>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <div class="input-group input-group-sm" style="width:230px">
+                    <span class="input-group-text bg-body border-end-0">
+                        <i class="bi bi-search text-body-tertiary"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 ps-0"
+                           placeholder="Rechercher..." style="font-size:.8rem">
+                </div>
+                <button class="btn btn-sm btn-light position-relative" title="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                          style="font-size:.55rem">3</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 px-4 py-3">
+            <h1 class="h4 mb-0">Tableau de bord</h1>
+            <div class="d-flex gap-2"><button class="btn btn-sm btn-light"><i class="bi bi-download"></i> Exporter</button>
+              <button class="btn btn-sm btn-primary"><i class="bi bi-plus-lg"></i> Nouvelle collecte</button></div>
+        </div>
+    </header>
+
+        <main class="flex-grow-1 px-4 py-4">
+        <div class="d-flex gap-2 align-items-start border rounded bg-body-secondary px-3 py-2 mb-4"
+             style="font-size:.82rem">
+            <i class="bi bi-easel2 text-body-secondary"></i>
+            <div><strong>Maquette</strong> &mdash; les chiffres viendraient de plusieurs routes d'API existantes. Le graphique est fait avec de simples <code>div</code> Bootstrap, sans librairie.</div>
+        </div>
+
+<div class="row g-3 mb-3">
+    <div class="col-sm-6 col-xl-3">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis"
+                      style="width:30px; height:30px"><i class="bi bi-shop"></i></span>
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Commercants adherents</span>
+            </div>
+            <div class="fs-2 fw-semibold lh-1">12</div>
+            <div class="text-success-emphasis mt-2" style="font-size:.75rem">
+                <i class="bi bi-arrow-up"></i> +2 ce mois
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis"
+                      style="width:30px; height:30px"><i class="bi bi-people"></i></span>
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Benevoles valides</span>
+            </div>
+            <div class="fs-2 fw-semibold lh-1">8</div>
+            <div class="text-warning-emphasis mt-2" style="font-size:.75rem">
+                <i class="bi bi-hourglass"></i> 3 candidatures
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis"
+                      style="width:30px; height:30px"><i class="bi bi-box-seam"></i></span>
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Produits en stock</span>
+            </div>
+            <div class="fs-2 fw-semibold lh-1">128</div>
+            <div class="text-danger-emphasis mt-2" style="font-size:.75rem">
+                <i class="bi bi-exclamation-triangle"></i> 6 perimes
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+        <div class="border rounded bg-body p-3 h-100">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="d-flex align-items-center justify-content-center rounded bg-primary-subtle text-primary-emphasis"
+                      style="width:30px; height:30px"><i class="bi bi-basket3"></i></span>
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Repas distribues (mois)</span>
+            </div>
+            <div class="fs-2 fw-semibold lh-1">1 240</div>
+            <div class="text-success-emphasis mt-2" style="font-size:.75rem">
+                <i class="bi bi-arrow-up"></i> +18 %
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+
+    <div class="col-xl-4">
+        <div class="border rounded bg-body h-100">
+            <div class="px-3 py-2 border-bottom d-flex justify-content-between align-items-center">
+                <span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">A traiter</span>
+                <span class="badge rounded-pill text-bg-warning">12</span>
+            </div>
+            
+        <a href="back-benevoles.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-warning-subtle text-warning-emphasis flex-shrink-0"
+                  style="width:32px; height:32px"><i class="bi bi-person-exclamation"></i></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Candidatures a valider</div>
+                <small class="text-body-tertiary">Paul Durand, Marta Lopez...</small>
+            </div>
+            <span class="badge rounded-pill text-bg-warning">3</span>
+        </a>
+        <a href="back-stocks.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-danger-subtle text-danger-emphasis flex-shrink-0"
+                  style="width:32px; height:32px"><i class="bi bi-calendar-x"></i></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Produits perimes</div>
+                <small class="text-body-tertiary">A retirer du stock</small>
+            </div>
+            <span class="badge rounded-pill text-bg-danger">6</span>
+        </a>
+        <a href="back-commercants.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-warning-subtle text-warning-emphasis flex-shrink-0"
+                  style="width:32px; height:32px"><i class="bi bi-clock-history"></i></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Adhesions a renouveler</div>
+                <small class="text-body-tertiary">Echeance sous 30 jours</small>
+            </div>
+            <span class="badge rounded-pill text-bg-warning">2</span>
+        </a>
+        <a href="back-tournees.html" class="d-flex align-items-center gap-3 px-3 py-2 text-decoration-none text-body border-bottom">
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary-emphasis flex-shrink-0"
+                  style="width:32px; height:32px"><i class="bi bi-truck"></i></span>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Tournee en cours</div>
+                <small class="text-body-tertiary">2 arrets sur 3 livres</small>
+            </div>
+            <span class="badge rounded-pill text-bg-primary">1</span>
+        </a>
+        </div>
+    </div>
+
+    <div class="col-xl-4">
+        <div class="border rounded bg-body h-100">
+            <div class="px-3 py-2 border-bottom"><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Activite recente</span></div>
+            
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <i class="bi bi-check2-circle text-success mt-1"></i>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Livraison cloturee</div>
+                <small class="text-body-tertiary">Restos du Coeur Paris 11 &mdash; 5 articles</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap">12 min</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <i class="bi bi-person-plus text-primary mt-1"></i>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Nouvelle candidature</div>
+                <small class="text-body-tertiary">Marta Lopez a postule</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap">1 h</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <i class="bi bi-envelope-check text-secondary mt-1"></i>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Rappels envoyes</div>
+                <small class="text-body-tertiary">2 commercants relances (J-30)</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap">ce matin</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <i class="bi bi-basket text-success mt-1"></i>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Collecte realisee</div>
+                <small class="text-body-tertiary">Primeur Napoli &mdash; 12 produits</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap">hier</small>
+        </div>
+        <div class="d-flex gap-3 px-3 py-2 border-bottom">
+            <i class="bi bi-upc-scan text-secondary mt-1"></i>
+            <div class="flex-grow-1 lh-sm">
+                <div style="font-size:.86rem">Produits scannes</div>
+                <small class="text-body-tertiary">18 articles ajoutes au stock</small>
+            </div>
+            <small class="text-body-tertiary text-nowrap">hier</small>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4">
+        <div class="border rounded bg-body h-100 d-flex flex-column">
+            <div class="px-3 py-2 border-bottom"><span class="text-uppercase text-body-secondary fw-semibold" style="font-size:.66rem; letter-spacing:.09em">Articles collectes cette semaine</span></div>
+            <div class="p-3 flex-grow-1 d-flex flex-column">
+                <div class="d-flex gap-2 align-items-end flex-grow-1">
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:62%"
+                     title="Lun : 62 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Lun</small>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:78%"
+                     title="Mar : 78 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Mar</small>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:45%"
+                     title="Mer : 45 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Mer</small>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:90%"
+                     title="Jeu : 90 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Jeu</small>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:100%"
+                     title="Ven : 100 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Ven</small>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:55%"
+                     title="Sam : 55 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Sam</small>
+        </div>
+        <div class="d-flex flex-column align-items-center gap-1 flex-fill">
+            <div class="w-100 d-flex align-items-end" style="height:90px">
+                <div class="w-100 bg-primary rounded-top" style="height:20%"
+                     title="Dim : 20 articles"></div>
+            </div>
+            <small class="text-body-tertiary" style="font-size:.68rem">Dim</small>
+        </div>
+                </div>
+                <div class="border-top pt-2 mt-2 d-flex justify-content-between" style="font-size:.78rem">
+                    <span class="text-body-secondary">Total</span>
+                    <span class="fw-semibold">450 articles</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        </main>
+
+        <footer class="border-top px-4 py-3 text-body-tertiary" style="font-size:.78rem">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="sommaire.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

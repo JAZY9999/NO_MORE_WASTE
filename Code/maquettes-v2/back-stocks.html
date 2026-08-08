@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stocks | NO MORE WASTE</title>
+    <link rel="stylesheet" href="../front-php/public/assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../front-php/public/assets/icons/bootstrap-icons.css">
+</head>
+<body class="">
+
+<div class="d-flex min-vh-100">
+<aside class="d-flex flex-column flex-shrink-0 border-end"
+       style="width:230px" data-bs-theme="dark">
+    <div class="bg-body h-100 d-flex flex-column">
+
+        <a href="index.html" class="d-flex align-items-center gap-2 px-3 py-3 text-decoration-none border-bottom">
+            <i class="bi bi-recycle fs-4 text-success"></i>
+            <span class="d-flex flex-column lh-1">
+                <span class="fw-bold text-body" style="font-size:.82rem; letter-spacing:.06em">NO MORE WASTE</span>
+                <small class="text-body-secondary" style="font-size:.66rem">Back-office</small>
+            </span>
+        </a>
+
+        <ul class="nav nav-pills flex-column mt-2 mb-auto">
+            <li class="nav-item">
+                <a href="back-tableau-de-bord.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-grid-1x2"></i> Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-commercants.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-shop"></i> Commercants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-benevoles.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-people"></i> Benevoles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-collectes.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-basket"></i> Collectes
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-stocks.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 active bg-body-secondary border-start border-4 border-success fw-semibold">
+                    <i class="bi bi-box-seam"></i> Stocks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-tournees.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-truck"></i> Tournees
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="back-services.html" class="nav-link d-flex align-items-center gap-2 rounded-0 px-3 py-2 text-body-secondary border-start border-4 border-transparent">
+                    <i class="bi bi-calendar-event"></i> Services
+                </a>
+            </li>
+        </ul>
+
+        <div class="border-top px-3 py-3">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-person-circle fs-5 text-body-secondary"></i>
+                <div class="lh-1">
+                    <div class="text-body" style="font-size:.76rem">staff@nomorewaste.fr</div>
+                    <small class="text-body-secondary" style="font-size:.66rem">admin_back</small>
+                </div>
+            </div>
+            <a href="#" class="btn btn-sm btn-outline-secondary w-100">
+                <i class="bi bi-box-arrow-right"></i> Deconnexion
+            </a>
+        </div>
+
+    </div>
+</aside>
+    <div class="flex-grow-1 bg-body-tertiary">
+        <div class="container-fluid px-4 py-4">
+            <nav class="mb-3" style="--bs-breadcrumb-divider:'/'">
+                <ol class="breadcrumb mb-0 small">
+                    <li class="breadcrumb-item"><a href="back-tableau-de-bord.html" class="text-decoration-none">Back-office</a></li>
+                    <li class="breadcrumb-item active">Stocks</li>
+                </ol>
+            </nav>
+        <div class="border-start border-4 border-warning bg-warning-subtle px-3 py-2 mb-4 small">
+            <i class="bi bi-easel2"></i> <strong>Maquette</strong> &mdash; <code>GET /produits/?code_barre=...</code> &mdash; la recherche rapide exigee par le sujet.
+        </div>
+
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-2 border-bottom">
+    <h1 class="h4 mb-0 d-flex align-items-center gap-2">
+        <i class="bi bi-box-seam text-success"></i> Stocks
+    </h1>
+    
+</div>
+
+<!-- La recherche par code-barre est l'action principale de cet ecran :
+     elle occupe toute la largeur, en haut, avec le focus automatique. -->
+<div class="border-start border-4 border-success bg-body border border-2 p-3 mb-3">
+    <label for="cb" class="form-label fw-semibold mb-2">
+        <i class="bi bi-upc-scan"></i> Rechercher un produit par code-barre
+    </label>
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control rounded-0" id="cb"
+               placeholder="Scannez ou saisissez un code-barre" autofocus>
+        <button class="btn btn-success rounded-0 px-4"><i class="bi bi-search"></i></button>
+    </div>
+    <div class="form-text">
+        La douchette se comporte comme un clavier : le champ se remplit seul et
+        le formulaire part a la validation.
+    </div>
+</div>
+
+<div class="border border-2 rounded-0 bg-body p-3 mb-3">
+    <div class="row g-2 align-items-end">
+        <div class="col-md-3">
+            <label class="form-label small text-body-secondary mb-1">Statut</label>
+            <select class="form-select form-select-sm">
+                <option>Tous</option><option selected>en_stock</option>
+                <option>reserve</option><option>distribue</option><option>perime</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label small text-body-secondary mb-1">Entrepot</label>
+            <select class="form-select form-select-sm">
+                <option>Tous</option><option>Paris Nord</option><option>Nantes</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label small text-body-secondary mb-1">Categorie</label>
+            <select class="form-select form-select-sm">
+                <option>Toutes</option><option>epicerie</option><option>frais</option>
+            </select>
+        </div>
+        <div class="col-md-3 text-md-end">
+            <span class="badge rounded-pill text-bg-secondary">128 produits</span>
+        </div>
+    </div>
+</div>
+
+<div class="border border-2 rounded-0 bg-body">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead>
+                <tr class="border-bottom border-2">
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Code-barre</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Produit</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Categorie</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">DLC</th>
+                    <th class="text-uppercase text-body-secondary text-center" style="font-size:.68rem; letter-spacing:.08em">Qte</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Emplacement</th>
+                    <th class="text-uppercase text-body-secondary" style="font-size:.68rem; letter-spacing:.08em">Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><code class="text-body">3760049790702</code></td>
+                <td class="fw-semibold">Pates completes 500g</td>
+                <td><span class="badge rounded-pill text-bg-light border">epicerie</span></td>
+                <td class="small">31/12/2026</td>
+                <td class="text-center">10</td>
+                <td class="small">Paris Nord<br><small class="text-body-secondary">A-3-2</small></td>
+                <td><span class="badge rounded-pill text-bg-success">en_stock</span></td>
+            </tr>
+            <tr>
+                <td><code class="text-body">3017620422003</code></td>
+                <td class="fw-semibold">Pate a tartiner 400g</td>
+                <td><span class="badge rounded-pill text-bg-light border">epicerie</span></td>
+                <td class="small">31/03/2027</td>
+                <td class="text-center">6</td>
+                <td class="small">Paris Nord<br><small class="text-body-secondary">A-1-1</small></td>
+                <td><span class="badge rounded-pill text-bg-success">en_stock</span></td>
+            </tr>
+            <tr>
+                <td><code class="text-body">3245390102030</code></td>
+                <td class="fw-semibold">Yaourts nature x8</td>
+                <td><span class="badge rounded-pill text-bg-light border">frais</span></td>
+                <td class="small"><span class="text-danger fw-semibold">12/08/2026 <i class="bi bi-exclamation-triangle"></i></span></td>
+                <td class="text-center">4</td>
+                <td class="small">Paris Nord<br><small class="text-body-secondary">F-1-1</small></td>
+                <td><span class="badge rounded-pill text-bg-warning">reserve</span></td>
+            </tr>
+            <tr>
+                <td><code class="text-body">3560070491234</code></td>
+                <td class="fw-semibold">Soupe legumes 1L</td>
+                <td><span class="badge rounded-pill text-bg-light border">epicerie</span></td>
+                <td class="small"><span class="text-danger fw-semibold">05/08/2026 <i class="bi bi-exclamation-triangle"></i></span></td>
+                <td class="text-center">2</td>
+                <td class="small">Nantes<br><small class="text-body-secondary">B-2-1</small></td>
+                <td><span class="badge rounded-pill text-bg-secondary">distribue</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+        </div>
+        <footer class="border-top px-4 py-3 text-body-secondary small">
+            NO MORE WASTE &mdash; 2026 &middot;
+            <a href="index.html" class="text-decoration-none">Sommaire des maquettes</a>
+        </footer>
+    </div>
+</div>
+
+<script src="../front-php/public/assets/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
