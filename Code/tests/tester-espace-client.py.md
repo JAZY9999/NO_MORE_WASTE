@@ -19,6 +19,12 @@ python tests/tester-espace-client.py
 
 Contrairement à l'autre script, celui-ci **ne vide pas** la base : il réutilise ou complète ce qui existe déjà (voir plus bas), pour rester rejouable sans perturber les données de démonstration.
 
+Si l'API ne tourne pas sur le port `8080` (voir [`tester-tous-les-endpoints.py.md`](tester-tous-les-endpoints.py.md) pour le cas rencontré en production) :
+
+```bash
+NMW_BASE_URL=http://localhost:8000 python tests/tester-espace-client.py
+```
+
 ## Rejouable sans créer de doublons
 
 C'est le point le plus délicat du script, et il revient trois fois sous des formes légèrement différentes.

@@ -19,7 +19,9 @@ Usage :
 import json, io, os, subprocess, sys, urllib.request, urllib.error
 
 DOSSIER_ICI = os.path.dirname(os.path.abspath(__file__))
-BASE = "http://localhost:8080/api"
+# Voir tester-tous-les-endpoints.py : NMW_BASE_URL permet de pointer le
+# script vers un autre port que celui du .env de developpement.
+BASE = os.environ.get("NMW_BASE_URL", "http://localhost:8080") + "/api"
 
 ADMIN = ("staff2@nomorewaste.fr", "motdepasse123")
 COMMERCANT = ("client.test@nomorewaste.fr", "motdepasse123")

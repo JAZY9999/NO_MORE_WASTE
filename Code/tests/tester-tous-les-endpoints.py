@@ -9,7 +9,13 @@ import json, io, os, subprocess, urllib.request, urllib.error, sys
 DOSSIER_ICI = os.path.dirname(os.path.abspath(__file__))
 COLLECTION = os.path.join(DOSSIER_ICI, "..", "api-go", "NO-MORE-WASTE.postman_collection.json")
 
-BASE = "http://localhost:8080/api"
+# Le port par defaut (8080) est celui du .env de developpement. Sur une
+# machine ou ce port est deja pris par autre chose (rencontre sur la VM de
+# production a cause de code-server), NGINX_PORT est change dans .env --
+# cette variable permet alors de pointer le script au bon endroit sans
+# modifier le fichier :
+#   NMW_BASE_URL=http://localhost:8000 python tests/tester-tous-les-endpoints.py
+BASE = os.environ.get("NMW_BASE_URL", "http://localhost:8080") + "/api"
 
 # La relance manuelle envoie un vrai email : elle echoue tant que les
 # identifiants SMTP du fichier .env sont les valeurs par defaut.

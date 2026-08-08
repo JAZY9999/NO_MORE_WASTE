@@ -43,6 +43,16 @@ TOTAL : 80 requetes | 80 OK | 0 en echec
 > ```bash
 > python tests/tester-tous-les-endpoints.py --garder-donnees
 > ```
+
+### Si l'API ne tourne pas sur le port 8080
+
+Trouvé en déployant sur un serveur où le port `8080` était déjà pris par un autre outil (code-server) : `NGINX_PORT` avait été changé à `8000` dans `.env`, mais le script continuait d'appeler `localhost:8080` — codé en dur — et tombait donc sur l'**autre programme**, pas sur l'API. Symptôme observé : des erreurs `401` et `JSONDecodeError` incompréhensibles, puisque ce n'était même pas l'API qui répondait.
+
+```bash
+NMW_BASE_URL=http://localhost:8000 python tests/tester-tous-les-endpoints.py
+```
+
+`NMW_BASE_URL` est facultative : sans elle, le script se comporte exactement comme avant (`http://localhost:8080`).
 > Dans ce cas, attends-toi à des échecs 409 « existe déjà » si des données du run précédent sont encore là — c'est normal, pas une régression.
 
 ## Comment ça marche, morceau par morceau
