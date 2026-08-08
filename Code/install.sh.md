@@ -66,6 +66,35 @@ sed -i "s|JWT_SECRET=change_me_a_generer|JWT_SECRET=${secret_genere}|" .env
 
 Aucune dépendance externe (pas d'`openssl`) : `/dev/urandom`, `base64`, `tr` et `head` sont présents sur toute machine Linux, exactement l'esprit « bibliothèque standard uniquement » déjà suivi côté Go.
 
+## Le dossier des traductions doit être modifiable par le conteneur
+
+Trouvé en déployant pour de vrai, sur le tout premier essai de synchronisation des traductions : l'écran `/back/traductions` répondait *« Écriture impossible dans `.../locales/` (vérifiez les droits du dossier) »* dès qu'on cliquait sur « Base vers fichiers ».
+
+```bash
+chmod -R o+w front-php/app/locales
+```
+
+### La cause, précisément
+
+PHP-FPM tourne en `www-data` **à l'intérieur** du conteneur. Mais `docker-compose.yml` monte `./front-php` **depuis le disque de l'hôte** :
+
+```yaml
+volumes:
+  - ./front-php:/var/www/app
+```
+
+Les permissions qui comptent sont donc celles du **système de fichiers réel** de la machine — jamais celles fixées dans le `Dockerfile`, puisque le montage les recouvre à chaque démarrage du conteneur. `chmod` dans une image Docker ne sert donc à rien ici : le dossier qu'on voit au final vient de l'hôte, pas de l'image.
+
+Quand le dépôt est cloné en `root` (le cas courant sur un serveur neuf), seul `root` peut écrire dans `app/locales/` par défaut. `www-data`, à l'intérieur du conteneur, n'est ni `root` ni dans son groupe : écriture refusée.
+
+### Pourquoi `o+w` et pas un `chown` précis
+
+```bash
+chmod -R o+w front-php/app/locales   # et non : chown www-data ...
+```
+
+La correspondance exacte entre l'UID de `www-data` côté conteneur et les UID côté hôte varie d'une machine à l'autre (et peut même changer d'une version d'image à l'autre). Ouvrir l'écriture à « tout le monde » (`o+w`) fonctionne quel que soit cet UID, sans avoir à le connaître à l'avance — un compromis simple, adapté à un dossier qui ne contient que des caches de traduction, pas des secrets.
+
 ## Ne jamais mourir en silence sur `docker compose up`
 
 Trouvé en déployant pour de vrai sur un serveur qui faisait déjà tourner autre chose sur le port `8080` (un outil de développement à distance) : `nginx` a échoué à démarrer, et le script s'est arrêté **sans un mot**.

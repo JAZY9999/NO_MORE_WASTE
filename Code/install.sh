@@ -94,6 +94,35 @@ source .env
 set +a
 
 # -----------------------------------------------------------------------
+# 2 bis. Rendre le dossier des traductions modifiable par le conteneur
+# -----------------------------------------------------------------------
+# Trouve en deployant pour de vrai : l'ecran /back/traductions repond
+# "Ecriture impossible dans .../locales/ (verifiez les droits du dossier)"
+# des qu'on clique sur "Base vers fichiers" ou "Fichiers vers base".
+#
+# LA CAUSE, PRECISEMENT
+#
+# PHP-FPM tourne en "www-data" A L'INTERIEUR du conteneur. Mais
+# docker-compose.yml monte "./front-php" DEPUIS LE DISQUE DE L'HOTE
+# ("volumes: - ./front-php:/var/www/app") : les permissions qui comptent
+# sont donc celles du systeme de fichiers REEL de la machine, pas celles
+# fixees dans le Dockerfile -- ce dernier ne les voit jamais, le montage
+# les recouvre a chaque demarrage.
+#
+# Quand le depot est clone en root (le cas courant sur un serveur neuf, y
+# compris celui utilise pour ce projet), seul root peut ecrire dans
+# app/locales/ par defaut. "www-data", a l'interieur du conteneur, n'est
+# ni root ni dans son groupe : ecriture refusee.
+#
+# "o+w" (write pour "others") plutot qu'un chown vers un utilisateur
+# precis : la correspondance exacte entre l'UID de www-data cote conteneur
+# et les UID cote hote varie d'une machine a l'autre, alors que "others"
+# fonctionne quel que soit cet UID.
+chmod -R o+w front-php/app/locales
+echo "[locales] rendu modifiable par le conteneur (o+w)."
+echo
+
+# -----------------------------------------------------------------------
 # 3. Demarrer les conteneurs
 # -----------------------------------------------------------------------
 # POURQUOI UN "if ! ... ; then" ET NON UN APPEL DIRECT
