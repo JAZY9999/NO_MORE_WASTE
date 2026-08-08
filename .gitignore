@@ -1,0 +1,16 @@
+# Dependances installees localement (Docker les gere via des volumes nommes)
+Code/front-php/vendor/
+node_modules/
+
+# Sauvegarde de l'ancien depot (Code/.git), a ne jamais suivre
+Code-git-ancien-backup/
+
+# Systeme et editeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
