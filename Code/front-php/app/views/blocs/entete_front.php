@@ -38,7 +38,11 @@ $lien = function (string $vue, string $url, string $cleLibelle) use ($chemin): s
     <div class="container d-flex align-items-center justify-content-between py-3 flex-wrap gap-3">
 
         <a href="/" class="text-decoration-none text-body d-flex align-items-center gap-2">
-            <span class="d-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+            <!-- bg-success : le meme vert que les icones du reste de la page
+                 (bi-recycle du bandeau, bi-basket3/bi-boxes/bi-truck des trois
+                 etapes) -- avant, ce rond etait bg-primary (bleu), la seule
+                 touche de couleur qui ne suivait pas la charte du site. -->
+            <span class="d-flex align-items-center justify-content-center rounded-circle bg-success text-white"
                   style="width:36px; height:36px">
                 <i class="bi bi-recycle fs-5"></i>
             </span>
