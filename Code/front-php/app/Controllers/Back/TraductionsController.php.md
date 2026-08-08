@@ -123,6 +123,6 @@ Autant les connaître avant qu'on te les fasse remarquer.
 ## Fichiers liés
 
 - [../../locales/LISEZ-MOI.md](../../locales/LISEZ-MOI.md) — pourquoi base **et** fichiers JSON
-- [../../services/Traductions.php.md](../../services/Traductions.php.md) — le code des deux synchronisations
+- [../../services/Traductions.php.md](../../Services/Traductions.php.md) — le code des deux synchronisations
 - [../../views/back/traductions.php](../../views/back/traductions.php) — la vue
 - [../../../../api-go/app/traductions.go](../../../../api-go/app/traductions.go) — les 8 routes de l'API

@@ -123,9 +123,9 @@ curl -X POST http://localhost:8080/back/campagnes/1 -b cookies.txt
 
 ## Fichiers liés
 
-- [../../Code/front-php/app/controllers/back/AdhesionsController.php.md](../../Code/front-php/app/controllers/back/AdhesionsController.php.md)
-- [../../Code/front-php/app/controllers/back/CommercantsController.php.md](../../Code/front-php/app/controllers/back/CommercantsController.php.md)
-- [../../Code/front-php/app/controllers/back/UtilisateursController.php.md](../../Code/front-php/app/controllers/back/UtilisateursController.php.md)
-- [../../Code/front-php/app/controllers/back/CampagnesController.php.md](../../Code/front-php/app/controllers/back/CampagnesController.php.md)
+- [../../Code/front-php/app/Controllers/Back/AdhesionsController.php.md](../../Code/front-php/app/Controllers/Back/AdhesionsController.php.md)
+- [../../Code/front-php/app/Controllers/Back/CommercantsController.php.md](../../Code/front-php/app/Controllers/Back/CommercantsController.php.md)
+- [../../Code/front-php/app/Controllers/Back/UtilisateursController.php.md](../../Code/front-php/app/Controllers/Back/UtilisateursController.php.md)
+- [../../Code/front-php/app/Controllers/Back/CampagnesController.php.md](../../Code/front-php/app/Controllers/Back/CampagnesController.php.md)
 - [../../Code/api-go/app/traductions.go.md](../../Code/api-go/app/traductions.go.md) — la documentation manquante, comblée
 - [Phase 11b - Portage de l'espace client (vague 3).md](Phase%2011b%20-%20Portage%20de%20l'espace%20client%20(vague%203).md) — la phase précédente

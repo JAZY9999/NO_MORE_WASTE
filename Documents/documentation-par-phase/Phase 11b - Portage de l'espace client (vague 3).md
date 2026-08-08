@@ -161,8 +161,8 @@ curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/services
 
 ## Fichiers liés
 
-- [../../Code/front-php/app/controllers/front/EspaceCommercantController.php.md](../../Code/front-php/app/controllers/front/EspaceCommercantController.php.md)
-- [../../Code/front-php/app/controllers/front/EspaceBenevoleController.php.md](../../Code/front-php/app/controllers/front/EspaceBenevoleController.php.md)
-- [../../Code/front-php/app/controllers/front/ServicesPublicsController.php.md](../../Code/front-php/app/controllers/front/ServicesPublicsController.php.md)
-- [../../Code/front-php/app/controllers/front/CandidatureController.php.md](../../Code/front-php/app/controllers/front/CandidatureController.php.md)
+- [../../Code/front-php/app/Controllers/Front/EspaceCommercantController.php.md](../../Code/front-php/app/Controllers/Front/EspaceCommercantController.php.md)
+- [../../Code/front-php/app/Controllers/Front/EspaceBenevoleController.php.md](../../Code/front-php/app/Controllers/Front/EspaceBenevoleController.php.md)
+- [../../Code/front-php/app/Controllers/Front/ServicesPublicsController.php.md](../../Code/front-php/app/Controllers/Front/ServicesPublicsController.php.md)
+- [../../Code/front-php/app/Controllers/Front/CandidatureController.php.md](../../Code/front-php/app/Controllers/Front/CandidatureController.php.md)
 - [Phase 11 - Portage du back-office (vagues 1 et 2).md](Phase%2011%20-%20Portage%20du%20back-office%20(vagues%201%20et%202).md) — la phase précédente

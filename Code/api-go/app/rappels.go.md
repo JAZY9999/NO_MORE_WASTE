@@ -4,7 +4,7 @@
 
 ## C'est quoi ce fichier ?
 
-Quatre routes qui permettent au staff, depuis le back-office PHP (l'écran des adhésions, voir `front-php/app/controllers/back/AdhesionsController.php.md`), de consulter et de piloter le système de rappels automatiques, sans devoir attendre que le job planifié (`utils/scheduler.go`) se déclenche tout seul.
+Quatre routes qui permettent au staff, depuis le back-office PHP (l'écran des adhésions, voir `front-php/app/Controllers/Back/AdhesionsController.php.md`), de consulter et de piloter le système de rappels automatiques, sans devoir attendre que le job planifié (`utils/scheduler.go`) se déclenche tout seul.
 
 C'est le point le plus cité du sujet : un rappel qui tourne sans qu'on puisse le montrer en démonstration ne vaut pas mieux que s'il n'existait pas. Ces quatre routes existent pour ça.
 

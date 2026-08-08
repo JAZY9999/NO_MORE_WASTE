@@ -42,4 +42,4 @@ Le pays, lui, reste un champ libre : la liste des pays présents serait souvent 
 
 C'est la seule variable que l'API sait substituer. Le dire sous le champ évite deux erreurs : ignorer qu'elle existe, ou en inventer d'autres qui resteraient telles quelles dans l'email envoyé.
 
-➡️ **Explication complète : [../../controllers/back/CampagnesController.php.md](../../controllers/back/CampagnesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/CampagnesController.php.md](../../Controllers/Back/CampagnesController.php.md)**

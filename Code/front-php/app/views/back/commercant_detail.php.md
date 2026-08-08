@@ -53,4 +53,4 @@ La fonction anonyme échappe **et** gère l'absence, en un seul endroit. Le mêm
 
 En créer des doublons (`commercants.adresse`) multiplierait les traductions à maintenir — quatre langues par clé — sans rien apporter. **Un libellé identique mérite une clé unique**, quel que soit l'écran qui l'affiche.
 
-➡️ **Explication complète : [../../controllers/back/CommercantsController.php.md](../../controllers/back/CommercantsController.php.md)**
+➡️ **Explication complète : [../../controllers/back/CommercantsController.php.md](../../Controllers/Back/CommercantsController.php.md)**

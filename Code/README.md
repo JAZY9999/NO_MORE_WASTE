@@ -121,13 +121,13 @@ Deuxième moitié du projet. À lire une fois l'API comprise, car le front ne fa
 **Le socle — dans cet ordre :**
 49. [front-php/public/index.php.md](front-php/public/index.php.md) — **à lire en premier** : le point d'entrée unique, la réécriture d'URL, et **le schéma complet du chemin d'une requête** (navigateur → nginx → PHP → API → base)  *(⏱ ~10 min)*
 50. [front-php/app/config/config.php.md](front-php/app/config/config.php.md) — les réglages centralisés  *(⏱ ~5 min)*
-51. [front-php/app/services/ApiClient.php.md](front-php/app/services/ApiClient.php.md) — **le seul fichier qui parle à l'API** : cURL, le piège `localhost` vs `api-go`, le jeton sans `Bearer`  *(⏱ ~10 min)*
+51. [front-php/app/Services/ApiClient.php.md](front-php/app/Services/ApiClient.php.md) — **le seul fichier qui parle à l'API** : cURL, le piège `localhost` vs `api-go`, le jeton sans `Bearer`  *(⏱ ~10 min)*
 52. [front-php/app/Vue.php.md](front-php/app/Vue.php.md) — le rendu des pages, la temporisation de sortie, et **la protection contre les failles XSS**  *(⏱ ~15 min)*
 53. [front-php/app/views/layout.php.md](front-php/app/views/layout_back.php.md) — le gabarit commun, les messages à usage unique  *(⏱ ~10 min)*
 
 **Sécurité et multilingue (les deux exigences 🟥 du sujet) :**
-54. [front-php/app/middleware/Auth.php.md](front-php/app/middleware/Auth.php.md) — **le plus important du front** : sessions, fixation de session, 401 contre 403, et pourquoi le `exit` après une redirection est obligatoire  *(⏱ ~15 min)*
-55. [front-php/app/middleware/Langue.php.md](front-php/app/middleware/Langue.php.md) — le site en 4 langues, l'ordre de priorité, le double filet de sécurité  *(⏱ ~10 min)*
+54. [front-php/app/Middleware/Auth.php.md](front-php/app/Middleware/Auth.php.md) — **le plus important du front** : sessions, fixation de session, 401 contre 403, et pourquoi le `exit` après une redirection est obligatoire  *(⏱ ~15 min)*
+55. [front-php/app/Middleware/Langue.php.md](front-php/app/Middleware/Langue.php.md) — le site en 4 langues, l'ordre de priorité, le double filet de sécurité  *(⏱ ~10 min)*
 56. [front-php/app/locales/LISEZ-MOI.md](front-php/app/locales/LISEZ-MOI.md) — les fichiers de traduction (⚠️ **régénérés depuis la base**, à ne pas modifier à la main), et pourquoi `SIRET` devient *Partita IVA* en italien  *(⏱ ~10 min)*
 
 **La séparation back-office / front-office (Phase 9) :**
@@ -135,11 +135,11 @@ Deuxième moitié du projet. À lire une fois l'API comprise, car le front ne fa
 58. [front-php/app/routes/back_routes.php.md](front-php/app/routes/back_routes.php.md) — les routes internes, la convention du préfixe `/back`  *(⏱ ~5 min)*
 
 **Les écrans :**
-59. [front-php/app/controllers/front/AuthController.php.md](front-php/app/controllers/front/AuthController.php.md) — la connexion, et **pourquoi on redemande le rôle à l'API au lieu de décoder le JWT**  *(⏱ ~10 min)*
+59. [front-php/app/Controllers/Front/AuthController.php.md](front-php/app/Controllers/Front/AuthController.php.md) — la connexion, et **pourquoi on redemande le rôle à l'API au lieu de décoder le JWT**  *(⏱ ~10 min)*
 60. [front-php/app/views/front/connexion.php.md](front-php/app/views/front/connexion.php.md) — la page de connexion multilingue (item 1.3)  *(⏱ ~5 min)*
-61. [front-php/app/controllers/back/CommercantsController.php.md](front-php/app/controllers/back/CommercantsController.php.md) — **le modèle de tout écran de back-office** (item 2.4) : garde → appel API → filtre → vue  *(⏱ ~10 min)*
+61. [front-php/app/Controllers/Back/CommercantsController.php.md](front-php/app/Controllers/Back/CommercantsController.php.md) — **le modèle de tout écran de back-office** (item 2.4) : garde → appel API → filtre → vue  *(⏱ ~10 min)*
 62. [front-php/app/views/back/commercants.php.md](front-php/app/views/back/commercants.php.md) — le tableau et son filtre  *(⏱ ~5 min)*
-63. [front-php/app/controllers/CONTROLEURS-SIMPLES.md](front-php/app/controllers/CONTROLEURS-SIMPLES.md) — les contrôleurs et vues sans logique particulière  *(⏱ ~5 min)*
+63. [front-php/app/Controllers/CONTROLEURS-SIMPLES.md](front-php/app/Controllers/CONTROLEURS-SIMPLES.md) — les contrôleurs et vues sans logique particulière  *(⏱ ~5 min)*
 64. [front-php/public/assets/BOOTSTRAP.md](front-php/public/assets/BOOTSTRAP.md) — **Bootstrap** : pourquoi il est stocké en local et pas chargé depuis internet, le piège des polices d'icônes, les classes utilisées  *(⏱ ~10 min)*
 
 > **Si tu ne dois en lire que trois** avant une session de live coding sur le front : le **49** (comment une requête traverse tout le système), le **54** (la sécurité des sessions) et le **59** (le point le plus questionnable : pourquoi ne pas décoder le JWT côté PHP).
@@ -169,7 +169,7 @@ Le premier script **vide les données métier avant de commencer**, il est donc 
 59. [front-php/app/config/menu_back.php.md](front-php/app/config/menu_back.php.md) — la barre latérale décrite une fois, la table `parents`, et pourquoi un libellé en dur casserait le multilingue sur 22 écrans  *(⏱ ~10 min)*
 
 **Le portage (vague 2 : les modules du sujet) :**
-60. [front-php/app/controllers/back/BenevolesController.php.md](front-php/app/controllers/back/BenevolesController.php.md) — **l'écran le plus important du back-office** : la validation conditionnée rendue visible avant le clic, une seule route POST pour cinq boutons  *(⏱ ~10 min)*
+60. [front-php/app/Controllers/Back/BenevolesController.php.md](front-php/app/Controllers/Back/BenevolesController.php.md) — **l'écran le plus important du back-office** : la validation conditionnée rendue visible avant le clic, une seule route POST pour cinq boutons  *(⏱ ~10 min)*
 
 ## Autres questions
 

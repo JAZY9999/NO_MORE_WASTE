@@ -8,4 +8,4 @@ La vue n'a qu'un seul cas à traiter : elle boucle sur `$produits`. C'est le con
 
 Le cas « code-barre inconnu » (`$introuvable`) s'affiche en encadré neutre, pas en bandeau rouge : scanner un code inconnu est normal, ce n'est pas une panne.
 
-➡️ **Explication complète : [../../controllers/back/StocksController.php.md](../../controllers/back/StocksController.php.md)**
+➡️ **Explication complète : [../../controllers/back/StocksController.php.md](../../Controllers/Back/StocksController.php.md)**

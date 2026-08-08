@@ -8,4 +8,4 @@ Une douchette code-barre se comporte comme un clavier : le champ est un `<input>
 
 En dessous, la liste des produits déjà scannés pendant cette collecte, et le menu de changement de statut.
 
-➡️ **Explication complète : [../../controllers/back/CollectesController.php.md](../../controllers/back/CollectesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/CollectesController.php.md](../../Controllers/Back/CollectesController.php.md)**

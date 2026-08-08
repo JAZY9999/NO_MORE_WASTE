@@ -161,5 +161,5 @@ Vérifié le 2026-08-07, dans les quatre langues.
 
 - [../../views/back/commercant_detail.php.md](../../views/back/commercant_detail.php.md) et [../../views/back/commercant_nouveau.php.md](../../views/back/commercant_nouveau.php.md)
 - [AdhesionsController.php.md](AdhesionsController.php.md) — les rappels que l'email de la fiche rend possibles
-- [../front/EspaceCommercantController.php.md](../front/EspaceCommercantController.php.md) — ce que le rattachement de compte débloque
+- [../Front/EspaceCommercantController.php.md](../Front/EspaceCommercantController.php.md) — ce que le rattachement de compte débloque
 - [../../../../api-go/app/commercants.go.md](../../../../api-go/app/commercants.go.md) — la route `PUT` et sa mise à jour partielle

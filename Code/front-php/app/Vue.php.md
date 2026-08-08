@@ -178,4 +178,4 @@ Même logique que pour l'API (Go sans framework, cURL sans Guzzle) : PHP fait d�
 ## Fichiers liés
 
 - [views/layout_back.php.md](views/layout_back.php.md) — les deux gabarits et leurs blocs
-- [controllers/back/CommercantsController.php.md](controllers/back/CommercantsController.php.md) — un contrôleur qui appelle `Vue::afficher`
+- [controllers/back/CommercantsController.php.md](Controllers/Back/CommercantsController.php.md) — un contrôleur qui appelle `Vue::afficher`

@@ -180,6 +180,6 @@ Vérifié le 2026-08-07, dans les quatre langues.
 ## Fichiers liés
 
 - [../../views/back/adhesions.php.md](../../views/back/adhesions.php.md) et [../../views/back/adhesion_detail.php.md](../../views/back/adhesion_detail.php.md)
-- [../front/EspaceCommercantController.php.md](../front/EspaceCommercantController.php.md) — le même seuil de 30 jours, côté client
+- [../Front/EspaceCommercantController.php.md](../Front/EspaceCommercantController.php.md) — le même seuil de 30 jours, côté client
 - [../../../../api-go/app/rappels.go.md](../../../../api-go/app/rappels.go.md) — le job et ses règles
 - [../../../../api-go/utils/erreurs.go.md](../../../../api-go/utils/erreurs.go.md) — `ErreurEmail` et son 502

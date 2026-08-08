@@ -17,7 +17,7 @@ Le point 4 mérite qu'on s'y arrête, parce que c'est le cœur du script.
 
 ## Le problème de l'œuf et de la poule
 
-`POST /utilisateurs/` (créer un compte **avec choix du rôle**) est réservé à `admin_back` (voir `front-php/app/controllers/back/UtilisateursController.php.md`). C'est voulu : pouvoir créer des comptes, c'est pouvoir se fabriquer un accès, donc cette capacité ne se délègue pas.
+`POST /utilisateurs/` (créer un compte **avec choix du rôle**) est réservé à `admin_back` (voir `front-php/app/Controllers/Back/UtilisateursController.php.md`). C'est voulu : pouvoir créer des comptes, c'est pouvoir se fabriquer un accès, donc cette capacité ne se délègue pas.
 
 Mais sur un serveur tout juste installé, **aucun compte n'existe encore**. Personne ne peut donc créer le premier administrateur depuis l'application — il faudrait déjà en être un.
 
@@ -89,7 +89,7 @@ done
 curl -sf "http://localhost:${NGINX_PORT}/api/"
 ```
 
-Ce script s'exécute sur la machine **hôte**, pas dans un conteneur. Depuis l'hôte, `api-go:8080` n'existe pas — ce nom n'est résolu qu'à l'intérieur du réseau Docker (voir `front-php/app/services/ApiClient.php.md` pour la même distinction, côté PHP). Le seul point d'entrée accessible depuis l'extérieur est le port publié par nginx, `${NGINX_PORT}`, exactement comme le ferait un navigateur.
+Ce script s'exécute sur la machine **hôte**, pas dans un conteneur. Depuis l'hôte, `api-go:8080` n'existe pas — ce nom n'est résolu qu'à l'intérieur du réseau Docker (voir `front-php/app/Services/ApiClient.php.md` pour la même distinction, côté PHP). Le seul point d'entrée accessible depuis l'extérieur est le port publié par nginx, `${NGINX_PORT}`, exactement comme le ferait un navigateur.
 
 ## Les variables viennent du `.env` lui-même, pas de valeurs figées
 
@@ -136,7 +136,7 @@ Vérifié le 2026-08-08 : les trois branches (création du `.env`, attente de l'
 ## Fichiers liés
 
 - `.env.example` — le modèle copié à la première installation (pas de fichier `.md` : un `.env` n'en a jamais eu non plus, ses commentaires internes suffisent)
-- [front-php/app/controllers/back/UtilisateursController.php.md](front-php/app/controllers/back/UtilisateursController.php.md) — pourquoi créer un compte avec rôle est réservé à `admin_back`
+- [front-php/app/Controllers/Back/UtilisateursController.php.md](front-php/app/Controllers/Back/UtilisateursController.php.md) — pourquoi créer un compte avec rôle est réservé à `admin_back`
 - [api-go/app/auth.go.md](api-go/app/auth.go.md) — `Register`, la route publique utilisée pour l'étape 1
 - [api-go/utils/erreurs.go.md](api-go/utils/erreurs.go.md) — le 503 qui fait boucler l'attente
 - [tests/tester-tous-les-endpoints.py.md](tests/tester-tous-les-endpoints.py.md) — le même motif (créer puis promouvoir), utilisé à chaque lancement des tests

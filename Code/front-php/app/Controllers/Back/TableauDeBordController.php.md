@@ -39,6 +39,6 @@ C'est un choix, pas un oubli : alimenter les compteurs de la barre latérale dem
 
 ## Fichiers liés
 
-- [../../middleware/Auth.php.md](../../middleware/Auth.php.md) — `exigerStaff()`
+- [../../middleware/Auth.php.md](../../Middleware/Auth.php.md) — `exigerStaff()`
 - [../../views/blocs/entete_back.php.md](../../views/blocs/entete_back.php.md) — qui met en forme le `sous_titre`
 - [BenevolesController.php.md](BenevolesController.php.md) — le même patron, sur un écran complet

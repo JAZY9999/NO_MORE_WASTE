@@ -51,4 +51,4 @@ C'est cette contrainte qui rend possible `ON CONFLICT (cle, code_langue) DO UPDA
 
 - [../app/traductions.go.md](../app/traductions.go.md) — les neuf routes qui manipulent ces structs
 - [../db/traductionsRepository.go.md](../db/traductionsRepository.go.md) — le SQL, dont `ON CONFLICT`
-- [../../front-php/app/middleware/Langue.php.md](../../front-php/app/middleware/Langue.php.md) — la lecture côté front
+- [../../front-php/app/Middleware/Langue.php.md](../../front-php/app/Middleware/Langue.php.md) — la lecture côté front

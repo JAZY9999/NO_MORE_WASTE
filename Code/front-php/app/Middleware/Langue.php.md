@@ -130,6 +130,6 @@ Vérifié le 2026-08-01 : les quatre langues, la détection navigateur et la per
 ## Fichiers liés
 
 - [../locales/LISEZ-MOI.md](../locales/LISEZ-MOI.md) — les fichiers de traduction et pourquoi on ne les édite pas à la main
-- [../services/Traductions.php.md](../services/Traductions.php.md) — la synchronisation base ↔ fichiers
+- [../services/Traductions.php.md](../Services/Traductions.php.md) — la synchronisation base ↔ fichiers
 - [../views/layout.php.md](../views/layout_back.php.md) — où se trouve le sélecteur
 - [Auth.php.md](Auth.php.md) — l'autre middleware

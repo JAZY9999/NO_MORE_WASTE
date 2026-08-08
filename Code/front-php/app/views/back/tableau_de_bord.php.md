@@ -14,5 +14,5 @@ Deux autres écrans avaient le même défaut (`back/commercants.php`, `back/trad
 
 ## Fichiers liés
 
-- [../../controllers/back/TableauDeBordController.php.md](../../controllers/back/TableauDeBordController.php.md)
+- [../../controllers/back/TableauDeBordController.php.md](../../Controllers/Back/TableauDeBordController.php.md)
 - [../blocs/entete_back.php.md](../blocs/entete_back.php.md) — qui dessine le bandeau

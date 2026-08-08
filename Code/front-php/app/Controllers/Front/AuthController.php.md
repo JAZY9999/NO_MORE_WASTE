@@ -2,7 +2,7 @@
 
 > ⏱️ **Lecture : ~10 min** · 559 mots, 44 lignes de code
 
-> **Item 1.3** de la todo. À lire après [Auth.php.md](../../middleware/Auth.php.md).
+> **Item 1.3** de la todo. À lire après [Auth.php.md](../../Middleware/Auth.php.md).
 
 ## Ce que fait un contrôleur
 
@@ -108,7 +108,7 @@ curl -s -X POST http://localhost:8080/connexion \
 
 ## Fichiers liés
 
-- [../../middleware/Auth.php.md](../../middleware/Auth.php.md) — la session et les gardes
-- [../../services/ApiClient.php.md](../../services/ApiClient.php.md) — comment l'appel part vers l'API
+- [../../middleware/Auth.php.md](../../Middleware/Auth.php.md) — la session et les gardes
+- [../../services/ApiClient.php.md](../../Services/ApiClient.php.md) — comment l'appel part vers l'API
 - [../../routes/front_routes.php.md](../../routes/front_routes.php.md) — GET et POST sur la même adresse
 - [../../../../api-go/app/auth.go.md](../../../../api-go/app/auth.go.md) — ce qui se passe côté API

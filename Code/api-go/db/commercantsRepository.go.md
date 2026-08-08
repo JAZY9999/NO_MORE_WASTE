@@ -131,4 +131,4 @@ Le mot-clé `defer` en Go dit "exécute cette instruction juste avant que la fon
 - [../app/commercants.go.md](../app/commercants.go.md) — les handlers, dont `ModifierCommercant` qui fusionne avant d'appeler `UpdateCommercant`
 - [../models/commercant.go.md](../models/commercant.go.md) — le champ `UtilisateurId`
 - [../utils/erreurs.go.md](../utils/erreurs.go.md) — le code `23505` qui protège des doublons de compte
-- [../../front-php/app/controllers/back/CommercantsController.php.md](../../front-php/app/controllers/back/CommercantsController.php.md) — l'écran qui a révélé le trou
+- [../../front-php/app/Controllers/Back/CommercantsController.php.md](../../front-php/app/Controllers/Back/CommercantsController.php.md) — l'écran qui a révélé le trou

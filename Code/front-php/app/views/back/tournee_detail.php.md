@@ -15,4 +15,4 @@ Le lien PDF pointe vers `/back/livraisons/@id/pdf` et **non** vers `/api/...` : 
 
 Les heures sont affichées telles quelles : l'API renvoie déjà `"HH:MM"`.
 
-➡️ **Explication complète : [../../controllers/back/TourneesController.php.md](../../controllers/back/TourneesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/TourneesController.php.md](../../Controllers/Back/TourneesController.php.md)**

@@ -6,4 +6,4 @@ Un tableau : date prévue, source, statut. La **source** est soit un commerçant
 
 C'est ce qui évite d'appeler l'API une fois par ligne du tableau.
 
-➡️ **Explication complète : [../../controllers/back/CollectesController.php.md](../../controllers/back/CollectesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/CollectesController.php.md](../../Controllers/Back/CollectesController.php.md)**

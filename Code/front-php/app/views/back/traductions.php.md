@@ -38,5 +38,5 @@ Le sujet demande un site multilingue, pas l'usage d'un outil particulier. Un sys
 
 ## Fichiers liés
 
-- [../../controllers/back/TraductionsController.php.md](../../controllers/back/TraductionsController.php.md)
-- [../../middleware/Langue.php.md](../../middleware/Langue.php.md) — la lecture des JSON
+- [../../controllers/back/TraductionsController.php.md](../../Controllers/Back/TraductionsController.php.md)
+- [../../middleware/Langue.php.md](../../Middleware/Langue.php.md) — la lecture des JSON

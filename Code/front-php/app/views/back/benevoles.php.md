@@ -8,4 +8,4 @@ Un tableau : nom, ville, statut, compétences. Les onglets du bandeau (Tous / Ca
 
 Chaque nom est un lien vers la fiche, qui est l'écran réellement important du module.
 
-➡️ **Explication complète : [../../controllers/back/BenevolesController.php.md](../../controllers/back/BenevolesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/BenevolesController.php.md](../../Controllers/Back/BenevolesController.php.md)**

@@ -39,4 +39,4 @@ Le contrôleur range `$_POST` en session avant de rediriger, puis l'efface aprè
 
 Ce n'est pas une politesse. L'API **refuse** la relance (400) quand l'email manque, et l'écran des adhésions cache alors le bouton. Le dire ici évite de découvrir le problème un an plus tard, au moment du renouvellement.
 
-➡️ **Explication complète : [../../controllers/back/CommercantsController.php.md](../../controllers/back/CommercantsController.php.md)**
+➡️ **Explication complète : [../../controllers/back/CommercantsController.php.md](../../Controllers/Back/CommercantsController.php.md)**

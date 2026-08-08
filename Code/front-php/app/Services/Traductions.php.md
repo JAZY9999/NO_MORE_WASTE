@@ -130,6 +130,6 @@ docker compose exec front-php cat /var/www/app/app/locales/fr.json | head -20
 ## Fichiers liés
 
 - [../locales/LISEZ-MOI.md](../locales/LISEZ-MOI.md) — pourquoi base **et** fichiers
-- [../controllers/back/TraductionsController.php.md](../controllers/back/TraductionsController.php.md) — l'écran qui appelle ces méthodes
+- [../controllers/back/TraductionsController.php.md](../Controllers/Back/TraductionsController.php.md) — l'écran qui appelle ces méthodes
 - [ApiClient.php.md](ApiClient.php.md) — comment les appels partent vers l'API
-- [../middleware/Langue.php.md](../middleware/Langue.php.md) — qui lit les fichiers produits ici
+- [../middleware/Langue.php.md](../Middleware/Langue.php.md) — qui lit les fichiers produits ici

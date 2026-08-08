@@ -2,7 +2,7 @@
 
 > ⏱️ **Lecture : ~15 min** · 1113 mots, 49 lignes de code
 
-> **À lire après** [ApiClient.php.md](../services/ApiClient.php.md).
+> **À lire après** [ApiClient.php.md](../Services/ApiClient.php.md).
 > **Phases** : 1.3 (connexion) et 9 (séparation back-office / front-office).
 
 ## Ce que ce fichier ne fait PAS
@@ -195,6 +195,6 @@ Vérifié le 2026-08-01 : bloqué correctement, et le lien « Back-office » n'a
 ## Fichiers liés
 
 - [Langue.php.md](Langue.php.md) — l'autre middleware, pour le multilingue
-- [../controllers/front/AuthController.php.md](../controllers/front/AuthController.php.md) — qui appelle `connecter()`
+- [../controllers/front/AuthController.php.md](../Controllers/Front/AuthController.php.md) — qui appelle `connecter()`
 - [../routes/back_routes.php.md](../routes/back_routes.php.md) — les routes protégées par `exigerStaff`
 - [../../../api-go/utils/guard.go.md](../../../api-go/utils/guard.go.md) — l'équivalent côté API (la vraie barrière)

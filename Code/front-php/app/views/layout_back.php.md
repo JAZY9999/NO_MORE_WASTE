@@ -110,5 +110,5 @@ Ce nettoyage a servi de **preuve** que le contrat `$options` était utilisable :
 
 - [../Vue.php.md](../Vue.php.md) — le choix du gabarit et la résolution de l'entrée de menu
 - [../config/menu_back.php](../config/menu_back.php) — la description du menu
-- [../middleware/Auth.php.md](../middleware/Auth.php.md) — `urlEspace` et les gardes de rôle
+- [../middleware/Auth.php.md](../Middleware/Auth.php.md) — `urlEspace` et les gardes de rôle
 - [../../../maquettes-v2.4/README.md](../../../maquettes-v2.4/README.md) — les maquettes portées

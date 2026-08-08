@@ -44,4 +44,4 @@ Un historique vide n'est pas une anomalie : c'est le cas normal d'une adhésion 
 
 Les seuils sont interpolés, comme sur l'écran de liste — la phrase suit la constante.
 
-➡️ **Explication complète : [../../controllers/back/AdhesionsController.php.md](../../controllers/back/AdhesionsController.php.md)**
+➡️ **Explication complète : [../../controllers/back/AdhesionsController.php.md](../../Controllers/Back/AdhesionsController.php.md)**

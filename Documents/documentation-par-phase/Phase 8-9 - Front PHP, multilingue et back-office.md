@@ -139,8 +139,8 @@ Le squelette est en place : chaque nouvel écran suit exactement la structure de
 ## Pour aller plus loin (fichiers `.md` détaillés)
 
 - [front-php/public/index.php.md](../../Code/front-php/public/index.php.md) — **à lire en premier** : le point d'entrée unique, le chemin complet d'une requête
-- [front-php/app/services/ApiClient.php.md](../../Code/front-php/app/services/ApiClient.php.md) — le pont vers l'API, le piège `localhost`
-- [front-php/app/middleware/Auth.php.md](../../Code/front-php/app/middleware/Auth.php.md) — sessions, fixation de session, 401 vs 403
-- [front-php/app/middleware/Langue.php.md](../../Code/front-php/app/middleware/Langue.php.md) — le multilingue en détail
+- [front-php/app/Services/ApiClient.php.md](../../Code/front-php/app/Services/ApiClient.php.md) — le pont vers l'API, le piège `localhost`
+- [front-php/app/Middleware/Auth.php.md](../../Code/front-php/app/Middleware/Auth.php.md) — sessions, fixation de session, 401 vs 403
+- [front-php/app/Middleware/Langue.php.md](../../Code/front-php/app/Middleware/Langue.php.md) — le multilingue en détail
 - [front-php/app/Vue.php.md](../../Code/front-php/app/Vue.php.md) — le rendu et la protection XSS
 - [front-php/app/routes/back_routes.php.md](../../Code/front-php/app/routes/back_routes.php.md) — la séparation des deux espaces

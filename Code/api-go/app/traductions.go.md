@@ -123,4 +123,4 @@ curl -X POST http://localhost:8080/api/traductions/import -H "Authorization: $TO
 
 - [../db/traductionsRepository.go.md](../db/traductionsRepository.go.md) — `EnregistrerTraduction`, l'export vers les fichiers
 - [../../front-php/app/views/back/traductions.php.md](../../front-php/app/views/back/traductions.php.md) — l'écran qui appelle ces routes, et le rappel du même piège côté front
-- [../../front-php/app/middleware/Langue.php.md](../../front-php/app/middleware/Langue.php.md) — la lecture des fichiers JSON par le site
+- [../../front-php/app/Middleware/Langue.php.md](../../front-php/app/Middleware/Langue.php.md) — la lecture des fichiers JSON par le site

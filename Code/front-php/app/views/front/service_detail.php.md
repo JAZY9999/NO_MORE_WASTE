@@ -31,4 +31,4 @@ Les heures ne sont pas découpées : l'API renvoie déjà `"HH:MM"`.
 
 Trois phrases, à droite. Elles répondent aux questions qu'on se pose avant de cliquer : est-ce payant, y a-t-il de la place, faut-il un compte. Y répondre **avant** le clic évite un aller-retour et une déception.
 
-➡️ **Explication complète : [../../controllers/front/ServicesPublicsController.php.md](../../controllers/front/ServicesPublicsController.php.md)**
+➡️ **Explication complète : [../../controllers/front/ServicesPublicsController.php.md](../../Controllers/Front/ServicesPublicsController.php.md)**

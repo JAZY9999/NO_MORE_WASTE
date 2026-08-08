@@ -19,4 +19,4 @@ foreach ($etapes as $rang => $cle):
 
 Le numéro affiché est `$rang + 1`. Ajouter une étape ne demande qu'une clé de traduction de plus — la numérotation suit toute seule, et les trois pastilles restent forcément cohérentes entre elles.
 
-➡️ **Explication complète : [../../controllers/front/CandidatureController.php.md](../../controllers/front/CandidatureController.php.md)**
+➡️ **Explication complète : [../../controllers/front/CandidatureController.php.md](../../Controllers/Front/CandidatureController.php.md)**

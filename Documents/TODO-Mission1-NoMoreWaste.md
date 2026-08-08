@@ -202,7 +202,7 @@ Décision : on termine **toute l'API Go** (Phases 4, 5, 6, 7, puis consolidation
 
 > 🎤 **Live coding #3** : le job planifié de rappel automatique — c'est un point cité littéralement dans le sujet, à maîtriser à fond.
 
-**État réel de 2.4 (fait le 2026-08-01)** — `Code/front-php/app/controllers/back/CommercantsController.php` + `app/views/back/commercants.php` :
+**État réel de 2.4 (fait le 2026-08-01)** — `Code/front-php/app/Controllers/Back/CommercantsController.php` + `app/views/back/commercants.php` :
 - Tableau des commerçants + menu déroulant qui s'envoie tout seul (`onchange="this.form.submit()"`, le seul JavaScript du projet).
 - ⚠️ **Le filtre porte sur la VILLE, pas sur le statut.** À savoir justifier : le statut appartient à l'**adhésion**, pas au commerçant — `GET /commercants/` ne le renvoie pas. Filtrer dessus demanderait un appel d'API par commerçant (trop coûteux) ou une nouvelle route côté API. La ville est directement disponible et pertinente (l'association est implantée dans 7 villes de 4 pays). Le mécanisme est identique, seul le champ change.
 - Filtre appliqué **côté PHP** car l'API n'expose pas encore `?ville=`. Limite assumée : on transfère toute la liste à chaque affichage. Sans conséquence au volume d'une association ; à déplacer côté API si la liste devenait très grande.

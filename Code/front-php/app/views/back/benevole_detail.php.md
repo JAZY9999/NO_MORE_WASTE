@@ -10,4 +10,4 @@ La règle du sujet — *« à condition de valider un certain nombre de conditio
 
 Les cinq formulaires de la page pointent tous vers `POST /back/benevoles/@id` et se distinguent par un champ caché `action`.
 
-➡️ **Explication complète : [../../controllers/back/BenevolesController.php.md](../../controllers/back/BenevolesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/BenevolesController.php.md](../../Controllers/Back/BenevolesController.php.md)**

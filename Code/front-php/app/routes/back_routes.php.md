@@ -147,8 +147,8 @@ curl -s -b /tmp/c.txt http://localhost:8080/back | grep -o "<h1>[^<]*</h1>"
 ## Fichiers liés
 
 - [front_routes.php.md](front_routes.php.md) — l'autre espace, et l'espace client
-- [../middleware/Auth.php.md](../middleware/Auth.php.md) — `exigerStaff`, la vraie protection
-- [../controllers/back/CommercantsController.php.md](../controllers/back/CommercantsController.php.md) — l'exemple de `/nouveau` avant `/@id`
-- [../controllers/back/TourneesController.php.md](../controllers/back/TourneesController.php.md) — le relais du PDF
-- [../controllers/back/AdhesionsController.php.md](../controllers/back/AdhesionsController.php.md) — le module le plus cité du sujet
+- [../middleware/Auth.php.md](../Middleware/Auth.php.md) — `exigerStaff`, la vraie protection
+- [../controllers/back/CommercantsController.php.md](../Controllers/Back/CommercantsController.php.md) — l'exemple de `/nouveau` avant `/@id`
+- [../controllers/back/TourneesController.php.md](../Controllers/Back/TourneesController.php.md) — le relais du PDF
+- [../controllers/back/AdhesionsController.php.md](../Controllers/Back/AdhesionsController.php.md) — le module le plus cité du sujet
 - [../../public/index.php.md](../../public/index.php.md) — qui charge ce fichier

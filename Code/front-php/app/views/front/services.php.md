@@ -28,4 +28,4 @@ C'est l'information de droite. Un service sans créneau à venir n'a rien à pro
 
 Le lien enveloppe la ligne entière, pas seulement le titre. Une cible large est plus facile à atteindre, surtout au doigt sur téléphone.
 
-➡️ **Explication complète : [../../controllers/front/ServicesPublicsController.php.md](../../controllers/front/ServicesPublicsController.php.md)**
+➡️ **Explication complète : [../../controllers/front/ServicesPublicsController.php.md](../../Controllers/Front/ServicesPublicsController.php.md)**

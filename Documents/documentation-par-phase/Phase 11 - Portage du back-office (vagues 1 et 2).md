@@ -166,7 +166,7 @@ done
 
 - [../../Code/front-php/app/Vue.php.md](../../Code/front-php/app/Vue.php.md) — le choix du gabarit et `$options`
 - [../../Code/front-php/app/config/menu_back.php.md](../../Code/front-php/app/config/menu_back.php.md) — le menu et la table `parents`
-- [../../Code/front-php/app/controllers/back/BenevolesController.php.md](../../Code/front-php/app/controllers/back/BenevolesController.php.md) — le patron, expliqué en détail
-- [../../Code/front-php/app/controllers/back/TourneesController.php.md](../../Code/front-php/app/controllers/back/TourneesController.php.md) — le relais de fichier et les deux correctifs API
-- [../../Code/front-php/app/controllers/back/ServicesController.php.md](../../Code/front-php/app/controllers/back/ServicesController.php.md) — les trois défauts trouvés en testant
+- [../../Code/front-php/app/Controllers/Back/BenevolesController.php.md](../../Code/front-php/app/Controllers/Back/BenevolesController.php.md) — le patron, expliqué en détail
+- [../../Code/front-php/app/Controllers/Back/TourneesController.php.md](../../Code/front-php/app/Controllers/Back/TourneesController.php.md) — le relais de fichier et les deux correctifs API
+- [../../Code/front-php/app/Controllers/Back/ServicesController.php.md](../../Code/front-php/app/Controllers/Back/ServicesController.php.md) — les trois défauts trouvés en testant
 - [Phase 10 - Consolidation API.md](Phase%2010%20-%20Consolidation%20API.md) — `utils.ErreurServeur`, enrichi ici du code `23514`

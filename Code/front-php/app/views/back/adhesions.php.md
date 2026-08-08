@@ -70,4 +70,4 @@ Le seuil orange est **le même** que celui du job — l'écran et les emails s'a
 
 `abs()` : afficher « dans -12 jours » serait illisible. Deux mots différents, deux situations différentes.
 
-➡️ **Explication complète : [../../controllers/back/AdhesionsController.php.md](../../controllers/back/AdhesionsController.php.md)**
+➡️ **Explication complète : [../../controllers/back/AdhesionsController.php.md](../../Controllers/Back/AdhesionsController.php.md)**

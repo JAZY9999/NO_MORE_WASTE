@@ -121,4 +121,4 @@ Si la vue s'appelle comme la clé de menu, il n'y a **rien** à ajouter dans `pa
 - [config.php.md](config.php.md) — l'autre fichier de configuration, même motif
 - [../locales/LISEZ-MOI.md](../locales/LISEZ-MOI.md) — pourquoi les fichiers de langue ne s'éditent pas à la main
 - [../views/blocs/menu_back.php.md](../views/blocs/menu_back.php.md) — le masquage par rôle
-- [../controllers/back/UtilisateursController.php.md](../controllers/back/UtilisateursController.php.md) — pourquoi cette entrée est réservée
+- [../controllers/back/UtilisateursController.php.md](../Controllers/Back/UtilisateursController.php.md) — pourquoi cette entrée est réservée

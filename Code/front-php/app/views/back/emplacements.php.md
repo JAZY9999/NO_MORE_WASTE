@@ -8,4 +8,4 @@ Sans cet écran, « retrouvable très rapidement » ne serait vrai qu'à moitié
 
 Le formulaire de création est sur la même page que la liste : on crée un emplacement en passant, sans changer d'écran.
 
-➡️ **Explication complète : [../../controllers/back/StocksController.php.md](../../controllers/back/StocksController.php.md)**
+➡️ **Explication complète : [../../controllers/back/StocksController.php.md](../../Controllers/Back/StocksController.php.md)**

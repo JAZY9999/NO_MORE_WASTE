@@ -63,4 +63,4 @@ if (($_POST['confirmation'] ?? '') !== 'oui') { … }
 
 La bordure rouge du bloc (`border-danger-subtle`) et le bouton `btn-danger` disent la même chose que le texte : cette action est différente des autres.
 
-➡️ **Explication complète : [../../controllers/back/CampagnesController.php.md](../../controllers/back/CampagnesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/CampagnesController.php.md](../../Controllers/Back/CampagnesController.php.md)**

@@ -112,4 +112,4 @@ C'est là qu'il faut chercher pour expliquer le mécanisme, pas dans ce fichier.
 
 - [../db/adhesionsRepository.go.md](../db/adhesionsRepository.go.md) — `ListAdhesions`, avec le filtre facultatif
 - [rappels.go.md](rappels.go.md) — le rappel automatique, ses délais, son historique
-- [../../front-php/app/controllers/back/AdhesionsController.php.md](../../front-php/app/controllers/back/AdhesionsController.php.md) — l'écran qui a fait apparaître le trou
+- [../../front-php/app/Controllers/Back/AdhesionsController.php.md](../../front-php/app/Controllers/Back/AdhesionsController.php.md) — l'écran qui a fait apparaître le trou

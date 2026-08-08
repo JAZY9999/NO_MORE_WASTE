@@ -87,5 +87,5 @@ Vérifié le 2026-08-07, dans les quatre langues.
 
 - [../../views/front/espace_benevole.php.md](../../views/front/espace_benevole.php.md) — la vue
 - [CandidatureController.php.md](CandidatureController.php.md) — comment la fiche est créée et rattachée
-- [../back/BenevolesController.php.md](../back/BenevolesController.php.md) — la même règle, côté personnel
+- [../Back/BenevolesController.php.md](../Back/BenevolesController.php.md) — la même règle, côté personnel
 - [../../../../api-go/app/monEspace.go.md](../../../../api-go/app/monEspace.go.md) — les routes `/mon-espace`

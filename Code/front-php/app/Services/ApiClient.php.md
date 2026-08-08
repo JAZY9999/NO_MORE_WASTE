@@ -146,6 +146,6 @@ docker compose logs api-go --tail 20 # que dit-il ?
 ## Fichiers liés
 
 - [../config/config.php.md](../config/config.php.md) — d'où vient `api_base_url`
-- [../middleware/Auth.php.md](../middleware/Auth.php.md) — d'où vient le jeton joint aux requêtes
-- [../controllers/back/CommercantsController.php.md](../controllers/back/CommercantsController.php.md) — un exemple d'utilisation réelle
+- [../middleware/Auth.php.md](../Middleware/Auth.php.md) — d'où vient le jeton joint aux requêtes
+- [../controllers/back/CommercantsController.php.md](../Controllers/Back/CommercantsController.php.md) — un exemple d'utilisation réelle
 - [../../../api-go/utils/jwt.go.md](../../../api-go/utils/jwt.go.md) — comment l'API lit ce jeton

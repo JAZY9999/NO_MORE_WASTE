@@ -2,7 +2,7 @@
 
 > ⏱️ **Lecture : ~5 min** · 476 mots, 19 lignes de code
 
-> La vue affichée par [CommercantsController](../../controllers/back/CommercantsController.php.md) (item 2.4).
+> La vue affichée par [CommercantsController](../../Controllers/Back/CommercantsController.php.md) (item 2.4).
 
 ## Ce qu'une vue doit faire — et ne pas faire
 
@@ -86,6 +86,6 @@ Y compris les en-têtes de colonnes. Le tableau s'affiche donc entièrement en i
 
 ## Fichiers liés
 
-- [../../controllers/back/CommercantsController.php.md](../../controllers/back/CommercantsController.php.md) — d'où viennent les données
+- [../../controllers/back/CommercantsController.php.md](../../Controllers/Back/CommercantsController.php.md) — d'où viennent les données
 - [../../Vue.php.md](../../Vue.php.md) — `Vue::e()` et la protection XSS
 - [../layout.php.md](../layout_back.php.md) — le gabarit qui entoure cette vue

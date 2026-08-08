@@ -18,4 +18,4 @@ Une boutique créée depuis le back-office **sans** `utilisateur_id`, alors que 
 
 Le rattachement ne peut se faire qu'à la création de la boutique : il n'existe pas encore de route `PUT /commercants/{id}`. C'est ce que l'écran « fiche commerçant » de la vague 4 devra combler.
 
-➡️ **Explication complète : [../../controllers/front/EspaceCommercantController.php.md](../../controllers/front/EspaceCommercantController.php.md)**
+➡️ **Explication complète : [../../controllers/front/EspaceCommercantController.php.md](../../Controllers/Front/EspaceCommercantController.php.md)**

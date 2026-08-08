@@ -256,5 +256,5 @@ curl -X POST http://localhost:8080/api/adhesions/1/relancer -H "Authorization: $
 - [guard.go.md](guard.go.md) — l'autre fonction utilitaire appelée dans les handlers (`RequireRole`)
 - [../db/produitsRepository.go.md](../db/produitsRepository.go.md) — un exemple d'enveloppement avec `%w`
 - [mailer.go.md](mailer.go.md) — l'envoi d'emails, dont `ErreurEmail` traduit les échecs
-- [../../front-php/app/controllers/back/ServicesController.php.md](../../front-php/app/controllers/back/ServicesController.php.md) — l'écran qui a révélé le code `23514`
-- [../../front-php/app/controllers/back/AdhesionsController.php.md](../../front-php/app/controllers/back/AdhesionsController.php.md) — celui qui a révélé le 500 sur l'envoi d'email
+- [../../front-php/app/Controllers/Back/ServicesController.php.md](../../front-php/app/Controllers/Back/ServicesController.php.md) — l'écran qui a révélé le code `23514`
+- [../../front-php/app/Controllers/Back/AdhesionsController.php.md](../../front-php/app/Controllers/Back/AdhesionsController.php.md) — celui qui a révélé le 500 sur l'envoi d'email

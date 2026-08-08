@@ -130,6 +130,6 @@ Vérifié le 2026-08-07, dans les quatre langues.
 ## Fichiers liés
 
 - [../../views/front/services.php.md](../../views/front/services.php.md) et [../../views/front/service_detail.php.md](../../views/front/service_detail.php.md)
-- [../back/ServicesController.php.md](../back/ServicesController.php.md) — le même domaine, côté gestion
-- [../../services/ApiClient.php.md](../../services/ApiClient.php.md) — le cas du tableau vide
+- [../Back/ServicesController.php.md](../Back/ServicesController.php.md) — le même domaine, côté gestion
+- [../../services/ApiClient.php.md](../../Services/ApiClient.php.md) — le cas du tableau vide
 - [../../../../api-go/app/services.go.md](../../../../api-go/app/services.go.md) — la règle « on ne s'inscrit que soi-même »

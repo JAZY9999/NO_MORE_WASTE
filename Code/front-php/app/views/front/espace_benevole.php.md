@@ -41,4 +41,4 @@ $couleurs = ['candidat' => 'warning', 'valide' => 'success', …];
 
 Un tableau plutôt qu'une cascade de `if`. Ajouter un statut, c'est ajouter une ligne — et la valeur par défaut (`secondary`) évite qu'un statut inconnu casse la page.
 
-➡️ **Explication complète : [../../controllers/front/EspaceBenevoleController.php.md](../../controllers/front/EspaceBenevoleController.php.md)**
+➡️ **Explication complète : [../../controllers/front/EspaceBenevoleController.php.md](../../Controllers/Front/EspaceBenevoleController.php.md)**

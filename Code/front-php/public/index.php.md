@@ -46,7 +46,7 @@ Langue::initialiser($config);
 $api = new ApiClient($config['api_base_url']);
 ```
 
-`Langue::initialiser` détermine dans quelle langue afficher le site (voir [Langue.php.md](../app/middleware/Langue.php.md)). `ApiClient` est l'objet qui parlera à l'API Go (voir [ApiClient.php.md](../app/services/ApiClient.php.md)).
+`Langue::initialiser` détermine dans quelle langue afficher le site (voir [Langue.php.md](../app/Middleware/Langue.php.md)). `ApiClient` est l'objet qui parlera à l'API Go (voir [ApiClient.php.md](../app/Services/ApiClient.php.md)).
 
 On les crée **une seule fois ici**, puis on les passe aux contrôleurs. C'est plus simple à suivre que si chaque contrôleur fabriquait les siens.
 
@@ -123,8 +123,8 @@ Trois raisons. D'abord, les règles métier (un bénévole doit avoir ses docume
 ## Fichiers liés
 
 - [../app/config/config.php.md](../app/config/config.php.md) — les réglages chargés à l'étape 2
-- [../app/services/ApiClient.php.md](../app/services/ApiClient.php.md) — le pont vers l'API Go
-- [../app/middleware/Langue.php.md](../app/middleware/Langue.php.md) — le multilingue
+- [../app/Services/ApiClient.php.md](../app/Services/ApiClient.php.md) — le pont vers l'API Go
+- [../app/Middleware/Langue.php.md](../app/Middleware/Langue.php.md) — le multilingue
 - [../app/routes/front_routes.php.md](../app/routes/front_routes.php.md) — les routes publiques
 - [../app/routes/back_routes.php.md](../app/routes/back_routes.php.md) — les routes du back-office
 - [../../nginx/conf.d/nmw.conf.md](../../nginx/conf.d/nmw.conf.md) — la réécriture d'URL qui rend tout ça possible

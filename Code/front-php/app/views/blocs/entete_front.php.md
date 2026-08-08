@@ -40,5 +40,5 @@ Quand personne n'est connecté, `urlEspace()` renvoie `null` et on affiche « Co
 ## Fichiers liés
 
 - [../layout_front.php.md](../layout_front.php.md) — le gabarit qui l'inclut
-- [../../middleware/Auth.php.md](../../middleware/Auth.php.md) — `urlEspace()`
-- [../../middleware/Langue.php.md](../../middleware/Langue.php.md) — `actuelle()` et `disponibles()`
+- [../../middleware/Auth.php.md](../../Middleware/Auth.php.md) — `urlEspace()`
+- [../../middleware/Langue.php.md](../../Middleware/Langue.php.md) — `actuelle()` et `disponibles()`

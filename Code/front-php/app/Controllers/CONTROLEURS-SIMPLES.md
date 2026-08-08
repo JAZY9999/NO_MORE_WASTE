@@ -7,7 +7,7 @@
 > `views/front/accueil.php`, `views/back/tableau_de_bord.php`.
 >
 > Les contrôleurs qui contiennent une vraie logique ont leur propre document :
-> [AuthController](front/AuthController.php.md) et [CommercantsController](back/CommercantsController.php.md).
+> [AuthController](Front/AuthController.php.md) et [CommercantsController](Back/CommercantsController.php.md).
 
 ## Le contrôleur le plus simple possible
 
@@ -77,7 +77,7 @@ C'est ce découpage qu'il faut savoir réexpliquer : à chaque question « où e
 
 ## Fichiers liés
 
-- [front/AuthController.php.md](front/AuthController.php.md) — le contrôleur le plus riche du front
-- [back/CommercantsController.php.md](back/CommercantsController.php.md) — le modèle des écrans de back-office
+- [front/AuthController.php.md](Front/AuthController.php.md) — le contrôleur le plus riche du front
+- [back/CommercantsController.php.md](Back/CommercantsController.php.md) — le modèle des écrans de back-office
 - [../Vue.php.md](../Vue.php.md) — `Vue::afficher`
-- [../middleware/Auth.php.md](../middleware/Auth.php.md) — `exigerStaff`
+- [../middleware/Auth.php.md](../Middleware/Auth.php.md) — `exigerStaff`

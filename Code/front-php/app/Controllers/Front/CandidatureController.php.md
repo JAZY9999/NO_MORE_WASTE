@@ -125,5 +125,5 @@ Vérifié le 2026-08-07, dans les quatre langues.
 
 - [../../views/front/candidature.php.md](../../views/front/candidature.php.md) et [../../views/front/candidature_merci.php.md](../../views/front/candidature_merci.php.md)
 - [EspaceBenevoleController.php.md](EspaceBenevoleController.php.md) — la suite du parcours, côté candidat
-- [../back/BenevolesController.php.md](../back/BenevolesController.php.md) — la validation, côté personnel
+- [../Back/BenevolesController.php.md](../Back/BenevolesController.php.md) — la validation, côté personnel
 - [../../../../api-go/app/benevoles.go.md](../../../../api-go/app/benevoles.go.md) — la route publique et sa règle de rattachement

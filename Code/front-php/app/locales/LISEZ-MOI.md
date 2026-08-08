@@ -96,6 +96,6 @@ La raison du changement : le sujet demande un back-office, et un tableau PHP fig
 
 ## Fichiers liés
 
-- [../middleware/Langue.php.md](../middleware/Langue.php.md) — comment la langue est choisie et les libellés lus
-- [../services/Traductions.php.md](../services/Traductions.php.md) — le code des deux synchronisations
-- [../controllers/back/TraductionsController.php.md](../controllers/back/TraductionsController.php.md) — l'écran de gestion
+- [../middleware/Langue.php.md](../Middleware/Langue.php.md) — comment la langue est choisie et les libellés lus
+- [../services/Traductions.php.md](../Services/Traductions.php.md) — le code des deux synchronisations
+- [../controllers/back/TraductionsController.php.md](../Controllers/Back/TraductionsController.php.md) — l'écran de gestion

@@ -73,7 +73,7 @@ Seule l'inscription à un créneau et la demande de collecte exigent `Auth::exig
 $this->api->post('/creneaux/' . $creneauId . '/inscriptions', [], Auth::jeton());
 ```
 
-Le corps est vide. L'API déduit du jeton **qui** s'inscrit — c'est la correction de sécurité de la vague 3 : avant elle, un adhérent pouvait envoyer l'identifiant d'une autre boutique et l'inscrire à sa place. Voir [ServicesPublicsController.php.md](../controllers/front/ServicesPublicsController.php.md) pour le détail complet, y compris le piège du tableau PHP vide qui a fallu corriger dans `ApiClient`.
+Le corps est vide. L'API déduit du jeton **qui** s'inscrit — c'est la correction de sécurité de la vague 3 : avant elle, un adhérent pouvait envoyer l'identifiant d'une autre boutique et l'inscrire à sa place. Voir [ServicesPublicsController.php.md](../Controllers/Front/ServicesPublicsController.php.md) pour le détail complet, y compris le piège du tableau PHP vide qui a fallu corriger dans `ApiClient`.
 
 ## Les deux espaces client ne prennent jamais d'identifiant dans l'URL
 
@@ -95,7 +95,7 @@ Pas un simple message flash : elle explique la suite du parcours (candidat → j
 ## Fichiers liés
 
 - [back_routes.php.md](back_routes.php.md) — l'espace réservé au personnel
-- [../controllers/front/AuthController.php.md](../controllers/front/AuthController.php.md) — connexion et déconnexion
-- [../controllers/front/ServicesPublicsController.php.md](../controllers/front/ServicesPublicsController.php.md) — la faille d'inscription et sa correction
-- [../controllers/front/EspaceCommercantController.php.md](../controllers/front/EspaceCommercantController.php.md) et [EspaceBenevoleController.php.md](../controllers/front/EspaceBenevoleController.php.md)
+- [../controllers/front/AuthController.php.md](../Controllers/Front/AuthController.php.md) — connexion et déconnexion
+- [../controllers/front/ServicesPublicsController.php.md](../Controllers/Front/ServicesPublicsController.php.md) — la faille d'inscription et sa correction
+- [../controllers/front/EspaceCommercantController.php.md](../Controllers/Front/EspaceCommercantController.php.md) et [EspaceBenevoleController.php.md](../Controllers/Front/EspaceBenevoleController.php.md)
 - [../../public/index.php.md](../../public/index.php.md) — qui charge ce fichier

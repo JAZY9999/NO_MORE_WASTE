@@ -128,5 +128,5 @@ Vérifié le 2026-08-07, dans les quatre langues.
 
 - [../../views/back/utilisateurs.php.md](../../views/back/utilisateurs.php.md) — la vue
 - [../../config/menu_back.php.md](../../config/menu_back.php.md) — la clé `role` des entrées
-- [../../middleware/Auth.php.md](../../middleware/Auth.php.md) — `role()` et `exigerStaff()`
+- [../../middleware/Auth.php.md](../../Middleware/Auth.php.md) — `role()` et `exigerStaff()`
 - [../../../../api-go/app/utilisateurs.go.md](../../../../api-go/app/utilisateurs.go.md) — la même règle côté API

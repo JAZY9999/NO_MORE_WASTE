@@ -38,4 +38,4 @@ Ni le nom du bénévole affecté, ni le nombre d'articles donnés. Les deux dema
 
 Trois chiffres justes valent mieux que quatre dont un inventé — un chiffre approximatif sur un écran client se remarque tout de suite, et discrédite les autres.
 
-➡️ **Explication complète : [../../controllers/front/EspaceCommercantController.php.md](../../controllers/front/EspaceCommercantController.php.md)**
+➡️ **Explication complète : [../../controllers/front/EspaceCommercantController.php.md](../../Controllers/Front/EspaceCommercantController.php.md)**

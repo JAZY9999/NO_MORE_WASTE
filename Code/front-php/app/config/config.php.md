@@ -22,7 +22,7 @@ $config = require __DIR__ . '/../app/config/config.php';
 
 `getenv` lit une variable d'environnement (celles du `.env`, transmises par Docker). Le `?:` fournit une valeur de repli si elle n'existe pas.
 
-⚠️ **`api-go`, pas `localhost`.** C'est le piège expliqué en détail dans [ApiClient.php.md](../services/ApiClient.php.md) : ce code s'exécute dans le conteneur PHP, pour qui `localhost` désigne lui-même. `api-go` est le nom du service dans `docker-compose.yml`, utilisable comme adresse réseau entre conteneurs.
+⚠️ **`api-go`, pas `localhost`.** C'est le piège expliqué en détail dans [ApiClient.php.md](../Services/ApiClient.php.md) : ce code s'exécute dans le conteneur PHP, pour qui `localhost` désigne lui-même. `api-go` est le nom du service dans `docker-compose.yml`, utilisable comme adresse réseau entre conteneurs.
 
 ## `langues_disponibles`
 
@@ -60,7 +60,7 @@ Ajouté en portant l'écran des utilisateurs (vague 4), plutôt que d'écrire `'
 
 ## Fichiers liés
 
-- [../services/ApiClient.php.md](../services/ApiClient.php.md) — utilise `api_base_url`
-- [../middleware/Langue.php.md](../middleware/Langue.php.md) — utilise `langues_disponibles`
-- [../middleware/Auth.php.md](../middleware/Auth.php.md) — utilise les quatre clés de rôle
-- [../controllers/back/UtilisateursController.php.md](../controllers/back/UtilisateursController.php.md) — pourquoi `role_admin_back` existe
+- [../services/ApiClient.php.md](../Services/ApiClient.php.md) — utilise `api_base_url`
+- [../middleware/Langue.php.md](../Middleware/Langue.php.md) — utilise `langues_disponibles`
+- [../middleware/Auth.php.md](../Middleware/Auth.php.md) — utilise les quatre clés de rôle
+- [../controllers/back/UtilisateursController.php.md](../Controllers/Back/UtilisateursController.php.md) — pourquoi `role_admin_back` existe

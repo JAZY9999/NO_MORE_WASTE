@@ -16,4 +16,4 @@ C'est aussi pour réduire ce cas que la candidature rattache automatiquement la 
 
 L'écran ne se contente pas de dire ce qui manque : il donne le lien qui le règle. **Un écran vide doit dire quoi faire ensuite**, pas seulement qu'il est vide.
 
-➡️ **Explication complète : [../../controllers/front/EspaceBenevoleController.php.md](../../controllers/front/EspaceBenevoleController.php.md)**
+➡️ **Explication complète : [../../controllers/front/EspaceBenevoleController.php.md](../../Controllers/Front/EspaceBenevoleController.php.md)**

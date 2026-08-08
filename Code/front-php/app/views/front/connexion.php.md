@@ -79,6 +79,6 @@ Le texte reste volontairement vague (« Email ou mot de passe incorrect ») pour
 
 ## Fichiers liés
 
-- [../../controllers/front/AuthController.php.md](../../controllers/front/AuthController.php.md) — ce qui reçoit ce formulaire
-- [../../middleware/Langue.php.md](../../middleware/Langue.php.md) — le multilingue
+- [../../controllers/front/AuthController.php.md](../../Controllers/Front/AuthController.php.md) — ce qui reçoit ce formulaire
+- [../../middleware/Langue.php.md](../../Middleware/Langue.php.md) — le multilingue
 - [../layout.php.md](../layout_back.php.md) — l'affichage des messages d'erreur

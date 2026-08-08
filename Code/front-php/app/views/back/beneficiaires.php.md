@@ -47,4 +47,4 @@ Le bloc contact fait la même chose, mais seulement si **les deux** champs sont 
 
 Elle explique **à quoi sert cet écran** dans la chaîne. Sans elle, un utilisateur qui découvre le back-office ne voit qu'un carnet d'adresses de plus.
 
-➡️ **Explication complète : [../../controllers/back/BeneficiairesController.php.md](../../controllers/back/BeneficiairesController.php.md)**
+➡️ **Explication complète : [../../controllers/back/BeneficiairesController.php.md](../../Controllers/Back/BeneficiairesController.php.md)**

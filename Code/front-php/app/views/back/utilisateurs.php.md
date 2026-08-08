@@ -61,4 +61,4 @@ La liste va du plus puissant au moins puissant, mais c'est `adherent` qui est s�
 
 `minlength="8"` sur le mot de passe double la vérification serveur — le navigateur bloque avant l'envoi, le contrôleur bloque quand même.
 
-➡️ **Explication complète : [../../controllers/back/UtilisateursController.php.md](../../controllers/back/UtilisateursController.php.md)**
+➡️ **Explication complète : [../../controllers/back/UtilisateursController.php.md](../../Controllers/Back/UtilisateursController.php.md)**

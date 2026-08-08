@@ -141,5 +141,5 @@ C'est ce que l'écran « fiche commerçant » de la vague 4 devra combler.
 
 - [../../views/front/espace_commercant.php.md](../../views/front/espace_commercant.php.md) — la vue
 - [EspaceBenevoleController.php.md](EspaceBenevoleController.php.md) — l'autre espace client
-- [../../middleware/Auth.php.md](../../middleware/Auth.php.md) — `exigerAdherent()` et `urlEspace()`
+- [../../middleware/Auth.php.md](../../Middleware/Auth.php.md) — `exigerAdherent()` et `urlEspace()`
 - [../../../../api-go/app/monEspace.go.md](../../../../api-go/app/monEspace.go.md) — les routes `/mon-espace` côté API

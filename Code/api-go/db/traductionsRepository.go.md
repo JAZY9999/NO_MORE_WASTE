@@ -104,7 +104,7 @@ Là, un `codeLangue` valant `' OR 1=1 --` changerait le sens de la requête. Ave
 
 Une seule ligne (`SELECT COUNT(*)`), mais elle sert de **garde-fou** avant de régénérer les fichiers JSON : si la base est vide, le front refuse l'export au lieu d'écraser les fichiers par du vide.
 
-Voir [`../../front-php/app/services/Traductions.php.md`](../../front-php/app/services/Traductions.php.md) pour le scénario de perte de données que ça évite.
+Voir [`../../front-php/app/Services/Traductions.php.md`](../../front-php/app/Services/Traductions.php.md) pour le scénario de perte de données que ça évite.
 
 ## Fichiers liés
 

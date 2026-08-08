@@ -65,6 +65,6 @@ Plutôt qu'un tableau à zéro ligne, on explique : *« Créez un service, puis 
 
 ## Fichiers liés
 
-- [../../controllers/back/ServicesController.php.md](../../controllers/back/ServicesController.php.md) — l'explication complète du module
+- [../../controllers/back/ServicesController.php.md](../../Controllers/Back/ServicesController.php.md) — l'explication complète du module
 - [benevoles.php.md](benevoles.php.md) — d'où vient le statut « validé » exigé pour affecter
 - [../blocs/entete_back.php.md](../blocs/entete_back.php.md) — le bandeau

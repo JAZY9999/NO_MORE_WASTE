@@ -34,4 +34,4 @@ Les deux gabarits en ont besoin. Recopier le bloc obligerait à corriger deux fo
 ## Fichiers liés
 
 - [../layout_back.php.md](../layout_back.php.md) et [../layout_front.php.md](../layout_front.php.md) — les deux gabarits qui l'incluent
-- [../../middleware/Auth.php.md](../../middleware/Auth.php.md) — `rediriger()`, qui dépose ces messages
+- [../../middleware/Auth.php.md](../../Middleware/Auth.php.md) — `rediriger()`, qui dépose ces messages

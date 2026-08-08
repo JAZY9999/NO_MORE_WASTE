@@ -34,4 +34,4 @@ On ne l'*oblige* pas à se connecter pour autant — « chacun peut s'inscrire �
 
 Une case non cochée n'est **pas envoyée du tout** par le navigateur : elle est absente, pas vide. D'où le `!empty` pour la réafficher, et le `isset` côté contrôleur pour la lire.
 
-➡️ **Explication complète : [../../controllers/front/CandidatureController.php.md](../../controllers/front/CandidatureController.php.md)**
+➡️ **Explication complète : [../../controllers/front/CandidatureController.php.md](../../Controllers/Front/CandidatureController.php.md)**
