@@ -124,6 +124,6 @@ python tests/tester-espace-client.py
 ## Fichiers liés
 
 - [tester-tous-les-endpoints.py.md](tester-tous-les-endpoints.py.md) — l'autre suite, sur un compte unique
-- [CHECKLIST-TEST-MANUEL-API.md](CHECKLIST-TEST-MANUEL-API.md) — section 13, pour explorer l'espace client à la main
+- [VISITE-GUIDEE-DU-SITE.md](VISITE-GUIDEE-DU-SITE.md) — sections 4 et 5, pour explorer l'espace client à la main dans un navigateur
 - [../front-php/app/Controllers/Front/ServicesPublicsController.php.md](../front-php/app/Controllers/Front/ServicesPublicsController.php.md) — l'écran où la faille d'inscription a été trouvée
 - [../api-go/app/services.go.md](../api-go/app/services.go.md) — la correction côté API
