@@ -96,8 +96,34 @@ set +a
 # -----------------------------------------------------------------------
 # 3. Demarrer les conteneurs
 # -----------------------------------------------------------------------
+# POURQUOI UN "if ! ... ; then" ET NON UN APPEL DIRECT
+#
+# Avec "set -e" (active en tete de script), une commande qui echoue arrete
+# le script SUR-LE-CHAMP, avant meme d'afficher un message a nous -- seule
+# l'erreur brute de Docker s'affiche, et tout ce qui suit (l'attente de
+# l'API, la creation du compte admin) est saute EN SILENCE.
+#
+# C'est exactement ce qui s'est passe la premiere fois sur un serveur ou un
+# autre programme (ici : code-server) occupait deja le port NGINX_PORT :
+# nginx a echoue a demarrer, le script s'est arrete a cette ligne, et la
+# partie interactive de l'etape 5 n'a jamais ete atteinte -- sans qu'aucun
+# message du script lui-meme ne le dise.
+#
+# Mettre la commande dans un "if" est la seule maniere standard de recevoir
+# la main malgre "set -e" : bash n'applique jamais set -e a une commande
+# testee par if/while/until. On peut alors expliquer la panne et arreter
+# proprement, plutot que de laisser le script mourir sans un mot.
 echo "Demarrage des conteneurs (--build : peut prendre une minute la premiere fois)..."
-docker compose up -d --build
+if ! docker compose up -d --build; then
+    echo
+    echo "Le demarrage des conteneurs a echoue (voir le message de Docker ci-dessus)."
+    echo "Cause frequente : un autre programme occupe deja le port \${NGINX_PORT}"
+    echo "(ici : ${NGINX_PORT}). Verifie avec :"
+    echo "    ss -tlnp | grep ${NGINX_PORT}"
+    echo "Puis soit arrete ce programme, soit change NGINX_PORT dans .env et relance"
+    echo "ce script -- il est rejouable, rien de ce qui a deja demarre ne sera perdu."
+    exit 1
+fi
 echo
 
 # -----------------------------------------------------------------------

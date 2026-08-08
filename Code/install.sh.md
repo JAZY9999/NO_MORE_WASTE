@@ -66,6 +66,23 @@ sed -i "s|JWT_SECRET=change_me_a_generer|JWT_SECRET=${secret_genere}|" .env
 
 Aucune dépendance externe (pas d'`openssl`) : `/dev/urandom`, `base64`, `tr` et `head` sont présents sur toute machine Linux, exactement l'esprit « bibliothèque standard uniquement » déjà suivi côté Go.
 
+## Ne jamais mourir en silence sur `docker compose up`
+
+Trouvé en déployant pour de vrai sur un serveur qui faisait déjà tourner autre chose sur le port `8080` (un outil de développement à distance) : `nginx` a échoué à démarrer, et le script s'est arrêté **sans un mot**.
+
+La cause est `set -e`, activé en tête de script : n'importe quelle commande qui échoue arrête tout **immédiatement**, avant même d'afficher un message. La seule chose visible à l'écran était l'erreur brute de Docker — rien qui explique quoi faire, et surtout rien qui dise que **la suite du script (l'attente de l'API, la création du compte administrateur) n'a jamais eu lieu**.
+
+```bash
+if ! docker compose up -d --build; then
+    echo "Cause frequente : un autre programme occupe deja le port ${NGINX_PORT}..."
+    exit 1
+fi
+```
+
+### Pourquoi un `if` désarme `set -e`, précisément ici
+
+C'est une règle peu connue de bash, et le seul moyen propre de reprendre la main après un échec sans désactiver `set -e` pour tout le reste du script : une commande testée par `if`, `while` ou `until` **n'est jamais soumise à `set -e`**, quel que soit son code de sortie. C'est exactement ce qui permet d'intercepter l'échec, d'expliquer la cause probable, et de s'arrêter proprement — plutôt que de laisser bash mourir sans un mot.
+
 ## Attendre que l'API soit vraiment prête
 
 ```bash
