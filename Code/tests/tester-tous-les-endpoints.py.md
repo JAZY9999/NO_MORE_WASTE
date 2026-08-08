@@ -1,17 +1,17 @@
-# `tester-tous-les-endpoints.py` — vérifier les 66 requêtes en une commande
+# `tester-tous-les-endpoints.py` — vérifier les 80 requêtes en une commande
 
 > ⏱️ **Lecture : ~10 min** · 789 mots, 46 lignes de code
 
-> **Phase** : 10 (consolidation).
+> **Phase** : 10 (consolidation), enrichi à chaque vague du portage front.
 > **Tag** : 🟦 **AJOUT PERSO** — le sujet ne demande pas de tests automatisés. C'est un bonus, à présenter comme tel.
 
 ## Pourquoi ce script existe
 
-Jusqu'ici, tester l'API voulait dire lancer des commandes `curl` à la main, une par une. Avec 63 routes, c'est long, on en oublie, et on ne le refait pas après chaque modification.
+Jusqu'ici, tester l'API voulait dire lancer des commandes `curl` à la main, une par une. Avec 78 routes, c'est long, on en oublie, et on ne le refait pas après chaque modification.
 
 Pire : la [collection Postman](../api-go/NO-MORE-WASTE.postman_collection.json) sert de documentation. Une documentation qui ment est plus dangereuse que pas de documentation du tout. Il fallait donc pouvoir **prouver** que chaque exemple documenté fonctionne vraiment.
 
-Ce script fait exactement ça : il lit la collection Postman et **rejoue les 66 requêtes** contre l'API qui tourne.
+Ce script fait exactement ça : il lit la collection Postman et **rejoue les 80 requêtes** contre l'API qui tourne.
 
 ## Comment l'utiliser
 
@@ -33,7 +33,7 @@ Sortie :
   [OK    ] 200  RECHERCHE RAPIDE PAR CODE-BARRE (exigence sujet)
   ...
 ======================================================================
-TOTAL : 66 requetes | 66 OK | 0 en echec
+TOTAL : 80 requetes | 80 OK | 0 en echec
 ======================================================================
 ```
 
@@ -106,11 +106,11 @@ Tout le reste est signalé, avec le début du message d'erreur pour comprendre t
 
 ```python
 ECHECS_ATTENDUS = {
-    "Relance manuelle (echoue en 500 tant que le SMTP n'est pas configure)",
+    "Relance manuelle (echoue en 502 tant que le SMTP n'est pas configure)",
 }
 ```
 
-Une requête envoie un vrai email. Tant que le fichier `.env` contient les identifiants SMTP par défaut, elle échoue — ce n'est pas un bug du code, c'est une configuration non renseignée.
+Une requête envoie un vrai email. Tant que le fichier `.env` contient les identifiants SMTP par défaut, elle échoue — ce n'est pas un bug du code, c'est une configuration non renseignée. Le code est `502` (et non `500`) : ce n'est pas le serveur qui a un bug, c'est le service d'envoi externe qui refuse — voir [`utils/erreurs.go.md`](../api-go/utils/erreurs.go.md), fonction `ErreurEmail`.
 
 Plutôt que de la retirer (elle fait partie de l'API et doit être documentée), on la marque comme échec attendu : elle s'affiche `[IGNORE]`. Quand tu rempliras les vraies clés Brevo, tu pourras retirer cette ligne et vérifier qu'elle passe.
 
@@ -135,7 +135,7 @@ C'est l'argument à donner si on te demande à quoi sert ce script : **il a trou
 
 ## Recréer le compte administrateur après un reset
 
-Il n'existe pas encore d'endpoint pour créer un compte staff (c'est un reste de la Phase 1.1, noté dans la todo). On passe donc par l'inscription normale puis une requête SQL :
+🔄 **Mis à jour depuis la Phase 1.1** (comblée le 2026-08-03) : `POST /utilisateurs/` existe désormais et crée un compte avec le rôle de son choix — mais elle est réservée à `admin_back`, donc inutilisable tant qu'aucun admin n'existe encore. Ce script (comme `install.sh`, voir [`install.sh.md`](../install.sh.md)) continue donc de passer par l'inscription publique puis une promotion SQL directe :
 
 ```bash
 curl -X POST http://localhost:8080/api/auth/register/ \
@@ -145,6 +145,8 @@ curl -X POST http://localhost:8080/api/auth/register/ \
 docker compose exec postgres psql -U nmw_user -d nmw \
   -c "UPDATE utilisateurs SET role='admin_back' WHERE email='staff2@nomorewaste.fr';"
 ```
+
+C'est exactement le fonction `preparer_compte_admin()` de ce script, jouée automatiquement à chaque lancement — ces deux commandes ne sont utiles que si tu veux le refaire à la main, en dehors du script.
 
 ## Fichiers liés
 
